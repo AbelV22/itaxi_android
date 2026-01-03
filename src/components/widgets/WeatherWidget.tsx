@@ -3,6 +3,10 @@ import { cn } from "@/lib/utils";
 
 interface WeatherWidgetProps {
   compact?: boolean;
+  data?: {
+    clima_prob: number;
+    clima_estado: string;
+  };
 }
 
 const weatherData = {
@@ -19,9 +23,10 @@ const weatherData = {
   ]
 };
 
-const isRainAlert = weatherData.rainProbability >= 60;
+export function WeatherWidget({ compact = false, data }: WeatherWidgetProps) {
+  const rainProbability = data?.clima_prob ?? weatherData.rainProbability;
+  const isRainAlert = rainProbability >= 60;
 
-export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
   if (compact) {
     return (
       <div className={cn(
@@ -31,7 +36,7 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
         {isRainAlert ? (
           <>
             <CloudRain className="h-4 w-4 animate-pulse" />
-            <span className="text-sm font-medium">{weatherData.rainProbability}% lluvia</span>
+            <span className="text-sm font-medium">{rainProbability}% lluvia</span>
           </>
         ) : (
           <>
@@ -85,7 +90,7 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
         <div className="flex justify-between text-xs md:text-sm mb-1.5">
           <span className="text-muted-foreground">Probabilidad de lluvia</span>
           <span className={cn("font-semibold", isRainAlert ? "text-rain" : "text-foreground")}>
-            {weatherData.rainProbability}%
+            {rainProbability}%
           </span>
         </div>
         <div className="h-1.5 md:h-2 bg-muted rounded-full overflow-hidden">
@@ -94,7 +99,7 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
               "h-full rounded-full transition-all duration-500",
               isRainAlert ? "bg-rain" : "bg-info"
             )}
-            style={{ width: `${weatherData.rainProbability}%` }}
+            style={{ width: `${rainProbability}%` }}
           />
         </div>
       </div>

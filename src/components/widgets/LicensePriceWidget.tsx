@@ -14,7 +14,14 @@ const previousPrice = 151000;
 const priceChange = ((currentPrice - previousPrice) / previousPrice) * 100;
 const isUp = priceChange > 0;
 
-export function LicensePriceWidget({ expanded = false }: { expanded?: boolean }) {
+interface LicensePriceWidgetProps {
+  expanded?: boolean;
+  precio?: number;
+  tendencia?: string;
+}
+
+export function LicensePriceWidget({ expanded = false, precio, tendencia }: LicensePriceWidgetProps) {
+  const displayPrice = precio || currentPrice;
   return (
     <div className="card-dashboard p-4 md:p-5">
       <div className="flex items-center justify-between mb-4">
@@ -32,7 +39,7 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
       {/* Current price */}
       <div className="flex items-baseline gap-2 md:gap-3 mb-4">
         <p className="text-2xl md:text-4xl font-display font-bold text-primary">
-          {(currentPrice / 1000).toFixed(0)}k€
+          {(displayPrice / 1000).toFixed(0)}k€
         </p>
         <div className={cn(
           "flex items-center gap-1 px-2 py-0.5 md:py-1 rounded-full text-xs md:text-sm font-medium",
