@@ -1,11 +1,10 @@
-import { Cloud, CloudRain, Sun, Droplets, Wind, Thermometer } from "lucide-react";
+import { Cloud, CloudRain, Sun, Droplets, Wind } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface WeatherWidgetProps {
   compact?: boolean;
 }
 
-// Mock weather data - later we'll fetch from API
 const weatherData = {
   temp: 18,
   condition: "cloudy",
@@ -27,7 +26,7 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
     return (
       <div className={cn(
         "flex items-center gap-2 px-3 py-1.5 rounded-lg",
-        isRainAlert ? "bg-rain/10 text-rain" : "bg-muted"
+        isRainAlert ? "bg-rain/10 text-rain border border-rain/20" : "bg-muted"
       )}>
         {isRainAlert ? (
           <>
@@ -36,8 +35,8 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
           </>
         ) : (
           <>
-            <Sun className="h-4 w-4 text-warning" />
-            <span className="text-sm font-medium">{weatherData.temp}°C</span>
+            <Sun className="h-4 w-4 text-primary" />
+            <span className="text-sm font-medium text-foreground">{weatherData.temp}°C</span>
           </>
         )}
       </div>
@@ -49,8 +48,8 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-display font-semibold text-foreground">Tiempo en Barcelona</h3>
         {isRainAlert && (
-          <div className="rain-alert text-sm">
-            <CloudRain className="h-4 w-4" />
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-rain/10 text-rain text-sm border border-rain/20">
+            <CloudRain className="h-4 w-4 animate-pulse" />
             <span>Alerta de lluvia</span>
           </div>
         )}
@@ -64,7 +63,7 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
             <Cloud className="h-12 w-12 text-muted-foreground" />
           )}
           <div>
-            <p className="stat-value text-foreground">{weatherData.temp}°C</p>
+            <p className="text-4xl font-bold font-display text-foreground">{weatherData.temp}°C</p>
             <p className="text-sm text-muted-foreground">Nublado</p>
           </div>
         </div>
@@ -103,9 +102,9 @@ export function WeatherWidget({ compact = false }: WeatherWidgetProps) {
       {/* Hourly forecast */}
       <div className="grid grid-cols-4 gap-2">
         {weatherData.forecast.map((hour) => (
-          <div key={hour.hour} className="text-center p-2 rounded-lg bg-muted/50">
+          <div key={hour.hour} className="text-center p-3 rounded-lg bg-muted border border-border">
             <p className="text-xs text-muted-foreground mb-1">{hour.hour}</p>
-            <p className="text-sm font-medium">{hour.temp}°</p>
+            <p className="text-sm font-medium text-foreground">{hour.temp}°</p>
             <div className="flex items-center justify-center gap-1 mt-1">
               <Droplets className="h-3 w-3 text-rain" />
               <span className="text-xs text-rain">{hour.rain}%</span>

@@ -3,7 +3,6 @@ import {
   Plane, 
   Calendar, 
   TrendingUp, 
-  CloudRain, 
   Bell, 
   Settings,
   LogOut,
@@ -26,16 +25,19 @@ const navItems = [
 
 export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-secondary text-secondary-foreground">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-sidebar border-r border-sidebar-border">
       <div className="flex h-full flex-col">
         {/* Logo */}
-        <div className="flex items-center gap-3 px-6 py-6 border-b border-secondary-foreground/10">
+        <div className="flex items-center gap-3 px-6 py-6 border-b border-sidebar-border">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary">
             <Car className="h-6 w-6 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="font-display text-lg font-bold text-primary">TaxiBCN</h1>
-            <p className="text-xs text-secondary-foreground/60">Panel del Taxista</p>
+            <h1 className="font-display text-xl font-bold">
+              <span className="text-primary">i</span>
+              <span className="text-foreground">TaxiBcn</span>
+            </h1>
+            <p className="text-xs text-muted-foreground">Panel del Taxista</p>
           </div>
         </div>
 
@@ -57,7 +59,7 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         </nav>
 
         {/* Bottom section */}
-        <div className="border-t border-secondary-foreground/10 p-3">
+        <div className="border-t border-sidebar-border p-3">
           <button className="nav-link w-full">
             <Settings className="h-5 w-5" />
             <span className="font-medium">Configuración</span>
