@@ -1,6 +1,14 @@
 import { Sparkles, TrendingUp, Clock } from "lucide-react";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  updateTime?: string;
+  weather?: {
+    clima_prob: number;
+    clima_estado: string;
+  };
+}
+
+export function HeroSection({ updateTime, weather }: HeroSectionProps) {
   const currentHour = new Date().getHours();
   const greeting = currentHour < 12 ? "Buenos días" : currentHour < 20 ? "Buenas tardes" : "Buenas noches";
   
@@ -16,6 +24,11 @@ export function HeroSection() {
           <span className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider">
             Tu copiloto profesional
           </span>
+          {updateTime && (
+            <span className="text-xs text-muted-foreground ml-auto">
+              Actualizado: {updateTime}
+            </span>
+          )}
         </div>
         
         <h1 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2">
