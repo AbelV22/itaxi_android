@@ -3,162 +3,200 @@ import json
 import os
 import sys
 from datetime import datetime
+import time
 
 # CONFIGURACIÓN
 API_KEY = os.environ.get("API_KEY") 
 BASE_URL = "http://api.aviationstack.com/v1/flights"
 
 def obtener_datos():
-    print("📡 Escaneando radar iTaxiBcn (Lógica Estricta)...")
+    print("📡 Escaneando radar iTaxiBcn (Modo Paginación Activado)...")
     
     if not API_KEY:
         print("❌ ERROR: No hay API_KEY configurada.")
         sys.exit(1)
 
-    params = {
-        'access_key': API_KEY,
-        'arr_iata': 'BCN',
-        'limit': 100 
-    }
-    
-    try:
-        response = requests.get(BASE_URL, params=params)
+    # Variables para el bucle
+    todos_vuelos_raw = []
+    offset = 0
+    limit = 100
+    total_encontrados = 0
+    max_loops = 10 # MEDIDA DE SEGURIDAD: Para no gastar más de 10 peticiones si hay un error
+
+    loop_count = 0
+
+    while True:
+        loop_count += 1
+        print(f"   ↳ Petición página {loop_count} (Offset: {offset})...")
+
+        params = {
+            'access_key': API_KEY,
+            'arr_iata': 'BCN',
+            'limit': limit,
+            'offset': offset
+        }
+        
         try:
-            data = response.json()
-        except:
-            print(f"❌ Error JSON. Status: {response.status_code}")
-            sys.exit(1)
-            
-        if 'error' in data:
-            print(f"❌ API Error: {data['error']}")
-            sys.exit(1)
-
-        # --- ESTRUCTURAS ---
-        kpis = {
-            "t1": {"vuelos": 0, "pax": 0},
-            "t2": {"vuelos": 0, "pax": 0},
-            "puente": {"vuelos": 0, "pax": 0}, 
-            "t2c": {"vuelos": 0, "pax": 0}
-        }
-        evolucion_por_hora = {str(h).zfill(2): 0 for h in range(24)}
-        lista_vuelos = []
-
-        if 'data' in data:
-            for flight in data['data']:
-                try:
-                    # --- FILTRO 1: ESTADO DEL VUELO ---
-                    status_raw = flight.get('flight_status', 'scheduled')
-                    # Si el vuelo está cancelado o desviado, NO NOS INTERESA.
-                    if status_raw in ['cancelled', 'diverted']:
-                        continue
-
-                    # --- EXTRACCIÓN ---
-                    arrival = flight.get('arrival') or {}
-                    departure = flight.get('departure') or {}
-                    airline_obj = flight.get('airline') or {}
-                    flight_obj = flight.get('flight') or {}
-                    aircraft_obj = flight.get('aircraft') or {}
-
-                    # --- LÓGICA DE TIEMPO (CORREGIDA) ---
-                    # 1. Intentamos coger la estimada (Radar)
-                    hora_str = arrival.get('estimated')
-                    
-                    # 2. Si es null, cogemos la programada (Billete)
-                    if not hora_str:
-                        hora_str = arrival.get('scheduled')
-                    
-                    # 3. Si las dos son null, DESCARTAMOS el vuelo (No inventamos datos)
-                    if not hora_str:
-                        print(f"⚠️ Saltando vuelo {flight_obj.get('iata')} sin horario.")
-                        continue
-
-                    # Procesamos la hora (quitamos la Z de UTC si existe)
-                    dt_llegada = datetime.fromisoformat(hora_str.replace("Z", "+00:00"))
-                    hora_corta = dt_llegada.strftime("%H:%M")
-                    hora_bloque = dt_llegada.strftime("%H")
-
-                    # --- RESTO DE LÓGICA (Igual que antes) ---
-                    airline = airline_obj.get('name', 'Desconocida')
-                    flight_iata = flight_obj.get('iata', 'UNK')
-                    modelo_avion = aircraft_obj.get('iata', 'Jet')
-                    
-                    terminal = arrival.get('terminal')
-                    if not terminal:
-                        if airline in ["Vueling", "Iberia", "Lufthansa", "British Airways", "Qatar Airways"]: terminal = "1"
-                        elif airline in ["Ryanair", "EasyJet", "Wizz Air", "Transavia"]: terminal = "2"
-                        else: terminal = "1"
-
-                    origen_iata = departure.get('iata', 'UNK')
-                    es_puente = (origen_iata == "MAD" and airline in ["Iberia", "Vueling", "Air Nostrum"])
-                    es_easyjet = ("easyJet" in airline)
-
-                    pax = 160
-                    if es_puente: pax = 180
-                    elif es_easyjet: pax = 170
-                    elif modelo_avion in ["380", "747", "777", "350"]: pax = 300 
-                    
-                    # KPIs
-                    if str(terminal) == "1":
-                        kpis["t1"]["vuelos"] += 1
-                        kpis["t1"]["pax"] += pax
-                        if es_puente:
-                            kpis["puente"]["vuelos"] += 1
-                            kpis["puente"]["pax"] += pax
-                    elif str(terminal) == "2":
-                        kpis["t2"]["vuelos"] += 1
-                        kpis["t2"]["pax"] += pax
-                        if es_easyjet:
-                            kpis["t2c"]["vuelos"] += 1
-                            kpis["t2c"]["pax"] += pax
-
-                    if hora_bloque in evolucion_por_hora:
-                        evolucion_por_hora[hora_bloque] += pax
-
-                    estado_ui = "En hora"
-                    estilo_estado = "secondary"
-                    if status_raw in ["active", "landed"]:
-                        estado_ui = "Aterrizando"
-                        estilo_estado = "warning"
-                    
-                    lista_vuelos.append({
-                        "id": flight_iata,
-                        "aerolinea": airline,
-                        "origen": departure.get('airport', origen_iata),
-                        "hora": hora_corta,
-                        "terminal": f"T{terminal}",
-                        "es_puente": es_puente,
-                        "es_t2c": es_easyjet,
-                        "avion": f"{modelo_avion}",
-                        "pax": pax,
-                        "estado": estado_ui,
-                        "estado_color": estilo_estado
-                    })
+            response = requests.get(BASE_URL, params=params)
+            try:
+                data = response.json()
+            except:
+                print(f"❌ Error JSON en página {loop_count}.")
+                break
                 
-                except Exception as e_inner:
-                    continue
+            if 'error' in data:
+                print(f"❌ API Error: {data['error']}")
+                # Si falla una página, salimos con lo que tengamos
+                break
 
-        lista_vuelos.sort(key=lambda x: x['hora'])
+            # Obtenemos la lista de vuelos de esta página
+            batch = data.get('data', [])
+            todos_vuelos_raw.extend(batch)
+            
+            # Revisamos la paginación para saber si seguimos o paramos
+            pagination = data.get('pagination', {})
+            total_real = pagination.get('total', 0)
+            count_actual = pagination.get('count', 0)
+            
+            print(f"      ✅ Recibidos: {count_actual} | Acumulados: {len(todos_vuelos_raw)} | Total API: {total_real}")
 
-        resultado = {
-            "meta": {
-                "update_time": datetime.now().strftime("%H:%M"),
-                "total_vuelos": len(lista_vuelos)
-            },
-            "resumen_cards": kpis,
-            "grafica": [{"name": h, "pax": p} for h, p in evolucion_por_hora.items()],
-            "vuelos": lista_vuelos,
-            "extras": {
-                "licencia": 152000,
-                "licencia_tendencia": "+1.2%",
-                "clima_prob": 75,
-                "clima_estado": "Lluvia"
-            }
+            # Si hemos conseguido todos, o si la API no devuelve más, o llegamos al límite de seguridad
+            if len(todos_vuelos_raw) >= total_real or count_actual == 0 or loop_count >= max_loops:
+                break
+            
+            # Preparamos el offset para la siguiente vuelta
+            offset += limit
+            
+            # Pequeña pausa para no saturar si fuera necesario (opcional)
+            # time.sleep(0.5) 
+
+        except Exception as e:
+            print(f"❌ Error de conexión en loop: {e}")
+            break
+
+    # --- PROCESAMIENTO DE DATOS (YA CON TODA LA LISTA COMPLETA) ---
+    print(f"✨ Procesando {len(todos_vuelos_raw)} vuelos totales...")
+
+    kpis = {
+        "t1": {"vuelos": 0, "pax": 0},
+        "t2": {"vuelos": 0, "pax": 0},
+        "puente": {"vuelos": 0, "pax": 0}, 
+        "t2c": {"vuelos": 0, "pax": 0}
+    }
+    evolucion_por_hora = {str(h).zfill(2): 0 for h in range(24)}
+    lista_vuelos = []
+
+    for flight in todos_vuelos_raw:
+        try:
+            # --- FILTRO 1: ESTADO DEL VUELO ---
+            status_raw = flight.get('flight_status', 'scheduled')
+            if status_raw in ['cancelled', 'diverted']:
+                continue
+
+            # --- EXTRACCIÓN ---
+            arrival = flight.get('arrival') or {}
+            departure = flight.get('departure') or {}
+            airline_obj = flight.get('airline') or {}
+            flight_obj = flight.get('flight') or {}
+            aircraft_obj = flight.get('aircraft') or {}
+
+            # --- LÓGICA DE TIEMPO ---
+            hora_str = arrival.get('estimated')
+            if not hora_str:
+                hora_str = arrival.get('scheduled')
+            
+            if not hora_str:
+                continue
+
+            # Procesamos la hora
+            try:
+                dt_llegada = datetime.fromisoformat(hora_str.replace("Z", "+00:00"))
+            except ValueError:
+                # Fallback por si el formato fecha viene raro
+                continue
+
+            hora_corta = dt_llegada.strftime("%H:%M")
+            hora_bloque = dt_llegada.strftime("%H")
+
+            # --- RESTO DE LÓGICA ---
+            airline = airline_obj.get('name', 'Desconocida')
+            flight_iata = flight_obj.get('iata', 'UNK')
+            modelo_avion = aircraft_obj.get('iata', 'Jet')
+            
+            terminal = arrival.get('terminal')
+            if not terminal:
+                if airline in ["Vueling", "Iberia", "Lufthansa", "British Airways", "Qatar Airways"]: terminal = "1"
+                elif airline in ["Ryanair", "EasyJet", "Wizz Air", "Transavia"]: terminal = "2"
+                else: terminal = "1"
+
+            origen_iata = departure.get('iata', 'UNK')
+            es_puente = (origen_iata == "MAD" and airline in ["Iberia", "Vueling", "Air Nostrum"])
+            es_easyjet = ("easyJet" in airline)
+
+            pax = 160
+            if es_puente: pax = 180
+            elif es_easyjet: pax = 170
+            elif modelo_avion in ["380", "747", "777", "350"]: pax = 300 
+            
+            # KPIs
+            if str(terminal) == "1":
+                kpis["t1"]["vuelos"] += 1
+                kpis["t1"]["pax"] += pax
+                if es_puente:
+                    kpis["puente"]["vuelos"] += 1
+                    kpis["puente"]["pax"] += pax
+            elif str(terminal) == "2":
+                kpis["t2"]["vuelos"] += 1
+                kpis["t2"]["pax"] += pax
+                if es_easyjet:
+                    kpis["t2c"]["vuelos"] += 1
+                    kpis["t2c"]["pax"] += pax
+
+            if hora_bloque in evolucion_por_hora:
+                evolucion_por_hora[hora_bloque] += pax
+
+            estado_ui = "En hora"
+            estilo_estado = "secondary"
+            if status_raw in ["active", "landed"]:
+                estado_ui = "Aterrizando"
+                estilo_estado = "warning"
+            
+            lista_vuelos.append({
+                "id": flight_iata,
+                "aerolinea": airline,
+                "origen": departure.get('airport', origen_iata),
+                "hora": hora_corta,
+                "terminal": f"T{terminal}",
+                "es_puente": es_puente,
+                "es_t2c": es_easyjet,
+                "avion": f"{modelo_avion}",
+                "pax": pax,
+                "estado": estado_ui,
+                "estado_color": estilo_estado
+            })
+        
+        except Exception:
+            continue
+
+    lista_vuelos.sort(key=lambda x: x['hora'])
+
+    resultado = {
+        "meta": {
+            "update_time": datetime.now().strftime("%H:%M"),
+            "total_vuelos": len(lista_vuelos),
+            "total_api_calls": loop_count # Dato útil para controlar tu quota
+        },
+        "resumen_cards": kpis,
+        "grafica": [{"name": h, "pax": p} for h, p in evolucion_por_hora.items()],
+        "vuelos": lista_vuelos,
+        "extras": {
+            "licencia": 152000,
+            "licencia_tendencia": "+1.2%",
+            "clima_prob": 75,
+            "clima_estado": "Lluvia"
         }
-        return resultado
-
-    except Exception as e:
-        print(f"❌ Error Crítico: {e}")
-        sys.exit(1)
+    }
+    return resultado
 
 if __name__ == "__main__":
     datos = obtener_datos()
