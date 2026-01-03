@@ -1,144 +1,147 @@
 import requests
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # CONFIGURACIÓN
 API_KEY = os.environ.get("API_KEY") 
 BASE_URL = "http://api.aviationstack.com/v1/flights"
 
 def obtener_datos():
-    print("📡 Iniciando escaneo de radar avanzado BCN...")
+    print("📡 Escaneando radar avanzado para iTaxiBcn...")
     
+    # Pedimos vuelos activos y programados para tener la previsión del día
     params = {
         'access_key': API_KEY,
         'arr_iata': 'BCN',
-        # 'flight_status': 'active' # Desactivado para asegurar datos en pruebas
+        # Limitamos a 100 para no saturar la respuesta en pruebas, 
+        # en producción quitamos el limit o paginamos si pagamos
+        'limit': 100 
     }
     
     try:
         response = requests.get(BASE_URL, params=params)
         data = response.json()
         
-        # --- CONTADORES ---
-        contadores = {
+        # --- ESTRUCTURAS DE DATOS ---
+        # 1. Los 4 Contadores (Top Cards)
+        kpis = {
             "t1": {"vuelos": 0, "pax": 0},
             "t2": {"vuelos": 0, "pax": 0},
-            "puente_aereo": {"vuelos": 0, "pax": 0}, # Subconjunto de T1
-            "t2c_easyjet": {"vuelos": 0, "pax": 0}   # Subconjunto de T2
+            "puente": {"vuelos": 0, "pax": 0}, # Subconjunto T1
+            "t2c": {"vuelos": 0, "pax": 0}     # Subconjunto T2 (EasyJet)
         }
         
-        # --- LISTA COMPLETA PARA DESCARGAR/VISUALIZAR ---
-        lista_vuelos_detallada = []
+        # 2. La Gráfica (Evolución por Hora) - Inicializamos las 24h a 0
+        evolucion_por_hora = {str(h).zfill(2): 0 for h in range(24)}
+        
+        # 3. La Lista Detallada (Tabla inferior)
+        lista_vuelos = []
 
         if 'data' in data:
             for flight in data['data']:
-                # 1. Extraer Datos Crudos
+                # --- EXTRACCIÓN ---
                 arrival = flight.get('arrival', {})
                 departure = flight.get('departure', {})
-                airline_data = flight.get('airline', {})
+                airline = flight.get('airline', {}).get('name', 'Desconocida')
+                flight_iata = flight.get('flight', {}).get('iata', 'UNK')
+                modelo_avion = flight.get('aircraft', {}).get('iata', 'Jet') # Ej: 320
+                status_raw = flight.get('flight_status', 'scheduled')
                 
+                # Hora estimada de llegada
+                hora_str = arrival.get('estimated', datetime.now().isoformat())
+                dt_llegada = datetime.fromisoformat(hora_str.replace("Z", "+00:00")) # Ajuste UTC básico
+                hora_corta = dt_llegada.strftime("%H:%M")
+                hora_bloque = dt_llegada.strftime("%H") # Para la gráfica (ej: "14")
+
+                # Terminal (Lógica de Inferencia)
                 terminal = arrival.get('terminal')
-                airline = airline_data.get('name', 'Desconocida')
-                origen = departure.get('iata', 'UNK')
-                flight_num = flight.get('flight', {}).get('iata', 'UNK')
-                hora_llegada = arrival.get('estimated', '00:00')
-
-                # 2. Lógica de Inferencia (Si falta terminal)
                 if not terminal:
-                    if airline in ["Vueling", "Iberia", "Lufthansa", "British Airways", "American Airlines", "Qatar Airways", "Emirates"]: 
-                        terminal = "1"
-                    elif airline in ["Ryanair", "EasyJet", "Wizz Air", "Transavia"]: 
-                        terminal = "2"
-                
-                # 3. Clasificación Especial (La Lógica del Taxista)
-                es_puente_aereo = (origen == "MAD" and airline in ["Iberia", "Vueling", "Air Nostrum"])
-                es_easyjet = (airline == "easyJet" or "easyJet" in airline)
+                    if airline in ["Vueling", "Iberia", "Lufthansa", "British Airways", "Qatar Airways"]: terminal = "1"
+                    elif airline in ["Ryanair", "EasyJet", "Wizz Air", "Transavia"]: terminal = "2"
+                    else: terminal = "1" # Ante la duda, T1
 
-                # 4. Cálculo Pax (Estimación)
-                pax_estimados = 160 # Valor por defecto
-                if es_puente_aereo: pax_estimados = 180 # A320/A321 llenos
-                elif es_easyjet: pax_estimados = 170
-                elif airline == "Ryanair": pax_estimados = 185
+                # Clasificación Especial
+                origen_iata = departure.get('iata', '')
+                es_puente = (origen_iata == "MAD" and airline in ["Iberia", "Vueling", "Air Nostrum"])
+                es_easyjet = ("easyJet" in airline)
+
+                # Pasajeros (Estimación Física)
+                pax = 160
+                if es_puente: pax = 180
+                elif es_easyjet: pax = 170
+                elif modelo_avion in ["380", "747", "777", "350"]: pax = 300 # Aviones grandes
                 
-                # 5. Sumar a los contadores
-                # T1 General
+                # --- LLENADO DE DATOS ---
+                
+                # A. KPIs (Tarjetas)
                 if str(terminal) == "1":
-                    contadores["t1"]["vuelos"] += 1
-                    contadores["t1"]["pax"] += pax_estimados
-                    # Puente Aéreo (Es T1, pero lo contamos aparte también)
-                    if es_puente_aereo:
-                        contadores["puente_aereo"]["vuelos"] += 1
-                        contadores["puente_aereo"]["pax"] += pax_estimados
-
-                # T2 General
+                    kpis["t1"]["vuelos"] += 1
+                    kpis["t1"]["pax"] += pax
+                    if es_puente:
+                        kpis["puente"]["vuelos"] += 1
+                        kpis["puente"]["pax"] += pax
                 elif str(terminal) == "2":
-                    contadores["t2"]["vuelos"] += 1
-                    contadores["t2"]["pax"] += pax_estimados
-                    # EasyJet (Es T2, pero casi siempre operan en T2C)
+                    kpis["t2"]["vuelos"] += 1
+                    kpis["t2"]["pax"] += pax
                     if es_easyjet:
-                        contadores["t2c_easyjet"]["vuelos"] += 1
-                        contadores["t2c_easyjet"]["pax"] += pax_estimados
+                        kpis["t2c"]["vuelos"] += 1
+                        kpis["t2c"]["pax"] += pax
 
-                # 6. GUARDAR EL DETALLE (Esto es lo que pedías)
-                # Formateamos la hora para que quede limpia (ej: 14:30)
-                hora_limpia = hora_llegada.split("T")[1][:5] if "T" in hora_llegada else hora_llegada
+                # B. Gráfica (Solo sumamos si es del día de hoy)
+                if hora_bloque in evolucion_por_hora:
+                    evolucion_por_hora[hora_bloque] += pax
+
+                # C. Lista Detallada (Formateo para UI)
+                # Traducir estado para el "badge" amarillo/gris
+                estado_ui = "En hora"
+                estilo_estado = "secondary" # gris
+                if status_raw == "active" or status_raw == "landed":
+                    estado_ui = "Aterrizando"
+                    estilo_estado = "warning" # amarillo/naranja
                 
-                vuelo_info = {
-                    "vuelo": flight_num,
-                    "hora": hora_limpia,
-                    "origen": origen,
+                lista_vuelos.append({
+                    "id": flight_iata,
                     "aerolinea": airline,
-                    "terminal": f"T{terminal}" + (" (Puente)" if es_puente_aereo else "") + ("C" if es_easyjet else ""),
-                    "pax_est": pax_estimados
-                }
-                lista_vuelos_detallada.append(vuelo_info)
+                    "origen": departure.get('airport', origen_iata),
+                    "hora": hora_corta,
+                    "terminal": f"T{terminal}",
+                    "es_puente": es_puente,
+                    "es_t2c": es_easyjet,
+                    "avion": f"Airbus/Boeing {modelo_avion}", # Simplificación visual
+                    "pax": pax,
+                    "estado": estado_ui,
+                    "estado_color": estilo_estado
+                })
 
-        # 7. ESTADOS SEMÁFORO
-        def get_estado(pax, umbral_fuego, umbral_normal):
-            return "FUEGO 🔥" if pax > umbral_fuego else ("Normal 🟢" if pax > umbral_normal else "Calma 🧊")
+        # Ordenar lista por hora
+        lista_vuelos.sort(key=lambda x: x['hora'])
 
-        # Generamos el JSON final
+        # --- JSON FINAL ---
         resultado = {
             "meta": {
-                "actualizado": datetime.now().strftime("%H:%M %d/%m"),
-                "total_vuelos": len(lista_vuelos_detallada)
+                "update_time": datetime.now().strftime("%H:%M"),
+                "total_vuelos": len(lista_vuelos)
             },
-            # KPI Cards (Resumen)
-            "kpis": {
-                "t1": {
-                    "vuelos": contadores["t1"]["vuelos"], 
-                    "pax": contadores["t1"]["pax"],
-                    "estado": get_estado(contadores["t1"]["pax"], 1500, 500)
-                },
-                "t2": {
-                    "vuelos": contadores["t2"]["vuelos"], 
-                    "pax": contadores["t2"]["pax"],
-                    "estado": get_estado(contadores["t2"]["pax"], 1000, 400)
-                },
-                "puente": {
-                    "vuelos": contadores["puente_aereo"]["vuelos"], 
-                    "pax": contadores["puente_aereo"]["pax"],
-                    "nota": "Corredor MAD-BCN"
-                },
-                "t2c": {
-                    "vuelos": contadores["t2c_easyjet"]["vuelos"], 
-                    "pax": contadores["t2c_easyjet"]["pax"],
-                    "nota": "Solo EasyJet"
-                }
-            },
-            # LISTA COMPLETA DE VUELOS (Aquí está la info que faltaba)
-            "lista_vuelos": lista_vuelos_detallada,
+            "resumen_cards": kpis,      # Para las 4 tarjetas de arriba
+            "grafica": [                # Para la curva naranja
+                {"name": h, "pax": p} for h, p in evolucion_por_hora.items()
+            ],
+            "vuelos": lista_vuelos,      # Para la lista detallada de abajo
             
-            # Datos fijos Fase 1
-            "licencia": 152000, 
-            "clima": {"estado": "Lluvia", "probabilidad": 75}
+            # Datos fijos Fase 1 (Licencia/Clima)
+            "extras": {
+                "licencia": 152000,
+                "licencia_tendencia": "+1.2%",
+                "clima_prob": 75,
+                "clima_estado": "Lluvia"
+            }
         }
         
         return resultado
 
     except Exception as e:
-        print(f"❌ Error crítico: {e}")
+        print(f"❌ Error: {e}")
         return None
 
 if __name__ == "__main__":
@@ -146,4 +149,4 @@ if __name__ == "__main__":
     if datos:
         with open('public/data.json', 'w') as f:
             json.dump(datos, f)
-        print("✅ Datos guardados con detalle de Puente Aéreo y T2C")
+        print("✅ Datos iTaxiBcn generados correctamente")
