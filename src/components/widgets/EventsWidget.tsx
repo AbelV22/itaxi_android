@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, Clock, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Users, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 
@@ -8,67 +8,45 @@ interface Event {
   location: string;
   date: string;
   time: string;
-  attendees: string;
-  type: "concert" | "sports" | "conference" | "festival" | "other";
-  impact: "high" | "medium" | "low";
+  attendees: number;
+  type: "Deportes" | "Música" | "Tecnología" | "Cultura";
 }
 
-// Mock events data
 const upcomingEvents: Event[] = [
   {
     id: "1",
     title: "FC Barcelona vs Real Madrid",
     location: "Camp Nou",
-    date: "Hoy",
-    time: "21:00",
-    attendees: "99.000",
-    type: "sports",
-    impact: "high"
+    date: "viernes, 15 de marzo",
+    time: "21:00h",
+    attendees: 98000,
+    type: "Deportes",
   },
   {
     id: "2",
-    title: "Coldplay - Music of the Spheres",
-    location: "Estadi Olímpic",
-    date: "Mañana",
-    time: "20:30",
-    attendees: "55.000",
-    type: "concert",
-    impact: "high"
+    title: "Primavera Sound 2024",
+    location: "Parc del Fòrum",
+    date: "sábado, 1 de junio",
+    time: "16:00h",
+    attendees: 65000,
+    type: "Música",
   },
   {
     id: "3",
     title: "Mobile World Congress",
     location: "Fira Gran Via",
-    date: "05/01",
-    time: "09:00",
-    attendees: "25.000",
-    type: "conference",
-    impact: "medium"
-  },
-  {
-    id: "4",
-    title: "Mercat de Sant Antoni",
-    location: "Sant Antoni",
-    date: "Domingo",
-    time: "08:00",
-    attendees: "5.000",
-    type: "other",
-    impact: "low"
+    date: "lunes, 26 de febrero",
+    time: "09:00h",
+    attendees: 100000,
+    type: "Tecnología",
   },
 ];
 
-const typeColors = {
-  concert: "bg-purple-500",
-  sports: "bg-green-500",
-  conference: "bg-blue-500",
-  festival: "bg-orange-500",
-  other: "bg-gray-500"
-};
-
-const impactColors = {
-  high: "bg-destructive text-destructive-foreground",
-  medium: "bg-warning text-warning-foreground",
-  low: "bg-muted text-muted-foreground"
+const typeColors: Record<string, string> = {
+  Deportes: "bg-success/20 text-success border border-success/30",
+  Música: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
+  Tecnología: "bg-info/20 text-info border border-info/30",
+  Cultura: "bg-primary/20 text-primary border border-primary/30",
 };
 
 interface EventsWidgetProps {
@@ -103,52 +81,36 @@ export function EventsWidget({ expanded = false, limit = 3 }: EventsWidgetProps)
         {displayEvents.map((event) => (
           <div 
             key={event.id}
-            className="relative flex gap-4 p-3 rounded-xl bg-muted/30 hover:bg-muted/50 transition-colors cursor-pointer group"
+            className="flex items-start justify-between p-4 rounded-xl border border-border hover:border-primary/30 transition-colors"
           >
-            {/* Type indicator */}
-            <div className={cn(
-              "absolute left-0 top-0 bottom-0 w-1 rounded-l-xl",
-              typeColors[event.type]
-            )} />
-
-            {/* Date badge */}
-            <div className="flex flex-col items-center justify-center min-w-[50px] pl-2">
-              <span className="text-xs text-muted-foreground uppercase">{event.date}</span>
-              <span className="text-lg font-bold font-display text-foreground">{event.time.split(':')[0]}</span>
-              <span className="text-xs text-muted-foreground">:{event.time.split(':')[1]}</span>
-            </div>
-
-            {/* Event details */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-2">
-                <h4 className="font-medium text-foreground truncate group-hover:text-primary transition-colors">
-                  {event.title}
-                </h4>
-                <Badge variant="secondary" className={cn("shrink-0 text-xs", impactColors[event.impact])}>
-                  {event.impact === "high" ? "Alto" : event.impact === "medium" ? "Medio" : "Bajo"}
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <Badge className={typeColors[event.type]}>
+                  {event.type}
                 </Badge>
               </div>
               
-              <div className="flex items-center gap-4 mt-1.5 text-sm text-muted-foreground">
+              <h4 className="font-medium text-foreground mb-2">{event.title}</h4>
+              
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <MapPin className="h-3.5 w-3.5" />
                   {event.location}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Users className="h-3.5 w-3.5" />
-                  {event.attendees}
+                  <Calendar className="h-3.5 w-3.5" />
+                  {event.date}
                 </span>
               </div>
+            </div>
+            
+            <div className="flex items-center gap-1 text-primary">
+              <Users className="h-4 w-4" />
+              <span className="font-medium">{event.attendees.toLocaleString()}</span>
             </div>
           </div>
         ))}
       </div>
-
-      {!expanded && upcomingEvents.length > limit && (
-        <p className="text-center text-sm text-muted-foreground mt-3">
-          +{upcomingEvents.length - limit} eventos más esta semana
-        </p>
-      )}
     </div>
   );
 }

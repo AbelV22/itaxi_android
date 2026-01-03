@@ -1,6 +1,5 @@
-import { Bell, CloudRain, Search, User } from "lucide-react";
+import { Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { WeatherWidget } from "@/components/widgets/WeatherWidget";
 
 interface HeaderProps {
@@ -25,9 +24,9 @@ export function Header({ title }: HeaderProps) {
       <div className="flex items-center gap-4">
         <WeatherWidget compact />
         
-        <Button variant="ghost" size="icon" className="relative">
+        <Button variant="ghost" size="icon" className="relative text-muted-foreground hover:text-foreground">
           <Bell className="h-5 w-5" />
-          <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] font-bold text-destructive-foreground">
+          <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
             3
           </span>
         </Button>
@@ -37,7 +36,7 @@ export function Header({ title }: HeaderProps) {
             <User className="h-5 w-5 text-primary-foreground" />
           </div>
           <div className="hidden md:block">
-            <p className="text-sm font-medium">Juan García</p>
+            <p className="text-sm font-medium text-foreground">Juan García</p>
             <p className="text-xs text-muted-foreground">Licencia #4521</p>
           </div>
         </div>

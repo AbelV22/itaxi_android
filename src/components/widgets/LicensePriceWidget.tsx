@@ -1,24 +1,24 @@
 import { TrendingUp, TrendingDown, Info, ExternalLink } from "lucide-react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Area, AreaChart } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { cn } from "@/lib/utils";
 
 // Mock data - we'll start collecting from today
 const priceHistory = [
-  { date: "01/01", price: 152000 },
-  { date: "02/01", price: 151500 },
-  { date: "03/01", price: 153000 },
-  { date: "Hoy", price: 152500 },
+  { date: "01/01", price: 178000 },
+  { date: "02/01", price: 180000 },
+  { date: "03/01", price: 181000 },
+  { date: "Hoy", price: 182000 },
 ];
 
-const currentPrice = 152500;
-const previousPrice = 153000;
+const currentPrice = 182000;
+const previousPrice = 181000;
 const priceChange = ((currentPrice - previousPrice) / previousPrice) * 100;
 const isUp = priceChange > 0;
 
 const recentListings = [
-  { source: "Milanuncios", price: 155000, includesCar: true, carValue: 8000 },
-  { source: "Wallapop", price: 148000, includesCar: false, carValue: 0 },
-  { source: "Idealista", price: 160000, includesCar: true, carValue: 12000 },
+  { source: "Milanuncios", price: 188000, includesCar: true, carValue: 8000 },
+  { source: "Wallapop", price: 178000, includesCar: false, carValue: 0 },
+  { source: "Idealista", price: 195000, includesCar: true, carValue: 12000 },
 ];
 
 export function LicensePriceWidget({ expanded = false }: { expanded?: boolean }) {
@@ -38,7 +38,7 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
 
       {/* Current price */}
       <div className="flex items-baseline gap-3 mb-4">
-        <p className="stat-value text-foreground">
+        <p className="stat-value">
           {currentPrice.toLocaleString('es-ES')}€
         </p>
         <div className={cn(
@@ -56,15 +56,15 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
           <AreaChart data={priceHistory}>
             <defs>
               <linearGradient id="priceGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="hsl(45, 100%, 50%)" stopOpacity={0.3}/>
-                <stop offset="95%" stopColor="hsl(45, 100%, 50%)" stopOpacity={0}/>
+                <stop offset="5%" stopColor="hsl(42, 100%, 50%)" stopOpacity={0.3}/>
+                <stop offset="95%" stopColor="hsl(42, 100%, 50%)" stopOpacity={0}/>
               </linearGradient>
             </defs>
             <XAxis 
               dataKey="date" 
               axisLine={false} 
               tickLine={false}
-              tick={{ fontSize: 11, fill: 'hsl(220, 15%, 45%)' }}
+              tick={{ fontSize: 11, fill: 'hsl(220, 10%, 55%)' }}
             />
             <YAxis 
               hide 
@@ -72,17 +72,17 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
             />
             <Tooltip 
               contentStyle={{
-                backgroundColor: 'hsl(0, 0%, 100%)',
-                border: '1px solid hsl(220, 15%, 88%)',
+                backgroundColor: 'hsl(220, 25%, 10%)',
+                border: '1px solid hsl(220, 15%, 18%)',
                 borderRadius: '8px',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                color: 'hsl(220, 10%, 95%)',
               }}
               formatter={(value: number) => [`${value.toLocaleString('es-ES')}€`, 'Precio']}
             />
             <Area 
               type="monotone" 
               dataKey="price" 
-              stroke="hsl(45, 100%, 50%)" 
+              stroke="hsl(42, 100%, 50%)" 
               strokeWidth={2}
               fill="url(#priceGradient)"
             />
@@ -91,7 +91,7 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
       </div>
 
       {/* Info notice */}
-      <div className="flex items-start gap-2 p-3 rounded-lg bg-muted/50 text-sm">
+      <div className="flex items-start gap-2 p-3 rounded-lg bg-muted text-sm">
         <Info className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
         <p className="text-muted-foreground">
           Empezamos a recopilar datos hoy. El histórico se irá completando automáticamente.
@@ -100,16 +100,16 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
 
       {expanded && (
         <div className="mt-4 pt-4 border-t border-border">
-          <h4 className="text-sm font-semibold mb-3">Últimos anuncios detectados</h4>
+          <h4 className="text-sm font-semibold mb-3 text-foreground">Últimos anuncios detectados</h4>
           <div className="space-y-2">
             {recentListings.map((listing, idx) => (
-              <div key={idx} className="flex items-center justify-between p-2 rounded-lg bg-muted/30">
+              <div key={idx} className="flex items-center justify-between p-3 rounded-lg bg-muted">
                 <div className="flex items-center gap-2">
                   <ExternalLink className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm">{listing.source}</span>
+                  <span className="text-sm text-foreground">{listing.source}</span>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-medium">
+                  <p className="text-sm font-medium text-primary">
                     {listing.price.toLocaleString('es-ES')}€
                   </p>
                   {listing.includesCar && (
