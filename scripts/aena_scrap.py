@@ -164,7 +164,7 @@ def obtener_vuelos_turbo():
         ultimo_minuto_check = -1
         stop_flag = False
         clicks = 0
-        MAX_PAGINAS = 70
+        MAX_PAGINAS = 80
 
         print(f"\n🚀 FASE 1: Carga Rápida (Expandiendo lista)...")
 
@@ -271,7 +271,7 @@ if __name__ == "__main__":
     
     if vuelos_raw:
         vuelos_clean = limpiar_y_deduplicar(vuelos_raw)
-        archivo = 'vuelos_bcn_turbo.json'
+        archivo = 'vuelos.json'
         with open(archivo, 'w', encoding='utf-8') as f:
             json.dump(vuelos_clean, f, indent=4, ensure_ascii=False)
         print(f"\n💾 ¡ÉXITO! {len(vuelos_clean)} vuelos guardados en: {archivo}")
