@@ -1,13 +1,22 @@
 # =============================================================================
-# 1. INSTALACIÓN
+# 1. SETUP E IMPORTS
 # =============================================================================
-print("🛠️ Preparando herramientas...")
-!apt-get remove chromium-chromedriver chromium-browser -q -y > /dev/null 2>&1
-!wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-!apt-get install -y ./google-chrome-stable_current_amd64.deb > /dev/null 2>&1
-!pip install selenium webdriver-manager -q
-
+import sys
+import os
 import time
+
+# Instalación de librerías
+if 'google.colab' in sys.modules:
+    print("🛠️ Verificando entorno e instalando librerías...")
+    if not os.path.exists("/usr/bin/google-chrome"):
+        os.system('apt-get remove chromium-chromedriver chromium-browser -q -y > /dev/null 2>&1')
+        os.system('wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb')
+        os.system('apt-get install -y ./google-chrome-stable_current_amd64.deb > /dev/null 2>&1')
+        os.system('pip install selenium webdriver-manager -q')
+        print("✅ Instalación completada.")
+    else:
+        print("✅ Entorno ya estaba listo.")
+
 import json
 import re
 from selenium import webdriver
@@ -19,143 +28,256 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # =============================================================================
-# 2. CONFIGURACIÓN
+# 2. FUNCIONES DE PARSEO (CORREGIDA: MÉTODO DEL ANCLA)
 # =============================================================================
-def iniciar_navegador():
+def parsear_fila_aena_v4(texto_fila, hora_detectada):
+    """
+    V4: Usa el CÓDIGO DE VUELO como ancla para encontrar el ORIGEN.
+    El origen SIEMPRE está justo después del vuelo.
+    """
+    partes = [p.strip() for p in texto_fila.split(" | ")]
+    
+    obj = {
+        "hora": hora_detectada, "vuelo": "N/A", "aerolinea": "N/A",
+        "origen": "N/A", "terminal": "N/A", "sala": "", "estado": "Programado"
+    }
+
+    # 1. ESTADO (Búsqueda inversa, desde el final hacia atrás)
+    # Añadimos "FINALIZADO" a la lista negra para que no se confunda nunca más
+    BLACKLIST_ESTADO = ["EN HORA", "RETRASADO", "ATERRIZADO", "PROGRAMADO", 
+                        "CANCELADO", "DESVIADO", "SALA", "CINTA", "LLEGADA", 
+                        "FINALIZADO", "OPERANDO", "EMBARCANDO", "ÚLTIMA LLAMADA"]
+    
+    # Buscamos el estado al final de la fila
+    if len(partes) > 0:
+        ultimo = partes[-1].upper()
+        if any(x in ultimo for x in BLACKLIST_ESTADO):
+            obj["estado"] = partes[-1] # Guardamos el original con mayus/minus correctas
+        elif len(partes) > 1:
+            penultimo = partes[-2].upper()
+            if any(x in penultimo for x in BLACKLIST_ESTADO):
+                obj["estado"] = partes[-2]
+
+    # 2. DETECTAR TERMINAL Y SALA
+    idx_terminal = -1
+    for i, p in enumerate(partes):
+        p_upper = p.upper()
+        if p_upper in ["T1", "T2", "TERMINAL T1", "TERMINAL T2"]:
+            obj["terminal"] = "T1" if "T1" in p_upper else "T2"
+            idx_terminal = i
+            break
+    
+    # Sala (Siguiente a Terminal)
+    if idx_terminal != -1 and len(partes) > idx_terminal + 1:
+        posible_sala = partes[idx_terminal + 1]
+        # Las salas suelen ser cortas (T1_G, B, C...). Evitamos cintas (números solos largos)
+        if len(posible_sala) < 6: 
+            obj["sala"] = posible_sala
+            # Lógica T2C EasyJet
+            if obj["terminal"] == "T2" and "C" in posible_sala.upper():
+                obj["terminal"] = "T2C (EasyJet)"
+            elif obj["terminal"] == "T2":
+                obj["terminal"] = f"T2{posible_sala}"
+
+    # 3. EL "ANCLA": BUSCAR VUELO Y CAPTURAR ORIGEN (Lo más importante)
+    for i, p in enumerate(partes):
+        # Regex Vuelo: 2-3 Letras + 3-4 Números (Ej: QTR3614, VLG2114)
+        if re.match(r"^[A-Z]{2,3}\d{3,4}$", p):
+            obj["vuelo"] = p
+            
+            # --- AQUÍ ESTÁ LA CORRECCIÓN CLAVE ---
+            # El origen es el vecino de la derecha (i + 1)
+            if i + 1 < len(partes):
+                candidato_origen = partes[i+1]
+                
+                # Validamos que no sea una Terminal ni una Hora ni el Estado
+                es_hora = ":" in candidato_origen
+                es_terminal = "T1" in candidato_origen or "T2" in candidato_origen
+                es_estado = any(x in candidato_origen.upper() for x in BLACKLIST_ESTADO)
+                
+                if not es_hora and not es_terminal and not es_estado:
+                    obj["origen"] = candidato_origen
+            
+            # Una vez encontrado el vuelo y su vecino, TERMINAMOS este bucle.
+            # Así evitamos seguir leyendo y encontrar "Finalizado" por error.
+            break 
+
+    return obj
+
+def limpiar_y_deduplicar(datos):
+    print(f"\n🧹 Procesando {len(datos)} vuelos crudos...")
+    unicos = {}
+    for v in datos:
+        origen_clean = v['origen'].strip().upper()
+        # Clave única: DÍA + HORA + ORIGEN
+        clave = (v['dia_relativo'], v['hora'], v['vuelo'] if origen_clean == "N/A" else origen_clean)
+
+        if clave in unicos:
+            existente = unicos[clave]
+            existente['aerolinea'] = "Multicompania"
+            if v['vuelo'] != "N/A" and v['vuelo'] not in existente['vuelo']:
+                existente['vuelo'] = f"{existente['vuelo']} / {v['vuelo']}"
+            if "T2C" in v['terminal'] and "T2C" not in existente['terminal']:
+                 existente['terminal'] = v['terminal']
+        else:
+            unicos[clave] = v
+    
+    lista = list(unicos.values())
+    lista.sort(key=lambda x: (x['dia_relativo'], x['hora']))
+    return lista
+
+# =============================================================================
+# 3. MOTOR TURBO (OPTIMIZADO)
+# =============================================================================
+def obtener_vuelos_turbo():
     options = Options()
     options.add_argument('--headless') 
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--window-size=1920,1080')
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    return driver
-
-# =============================================================================
-# 3. SCRAPER DEFINITIVO (CON SCROLL INFINITO)
-# =============================================================================
-def obtener_todos_los_vuelos_reales():
-    driver = iniciar_navegador()
+    
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     url = "https://www.aena.es/es/infovuelos.html"
-    
-    print(f"✈️ Entrando en {url}...")
-    datos_finales = []
-    
+    datos_recolectados = []
+
     try:
+        print(f"✈️ Entrando en AENA...")
         driver.get(url)
-        time.sleep(4)
+        time.sleep(3)
 
-        # 1. ELIMINAR COOKIES (Vital para poder hacer clicks)
-        driver.execute_script("var b=document.querySelectorAll('.onetrust-pc-dark-filter, #onetrust-consent-sdk');b.forEach(e=>e.remove());")
-
-        # 2. BUSCAR BARCELONA
-        texto_busqueda = "JOSEP TARRADELLAS BARCELONA-EL PRAT"
-        print(f"✍️ Buscando: '{texto_busqueda}'...")
-
+        # BÚSQUEDA
+        try: driver.execute_script("var b=document.querySelectorAll('.onetrust-pc-dark-filter, #onetrust-consent-sdk');b.forEach(e=>e.remove());")
+        except: pass
         try:
-            inp = driver.find_element(By.XPATH, "//input[contains(@placeholder, 'llegada')]")
-        except:
-            inp = driver.find_element(By.ID, "comboLlegada")
-            
-        inp.send_keys(texto_busqueda)
-        time.sleep(1)
+            driver.find_element(By.XPATH, "//input[contains(@placeholder, 'llegada')]").send_keys("JOSEP TARRADELLAS BARCELONA-EL PRAT")
+            time.sleep(1)
+            driver.execute_script("arguments[0].click();", driver.find_element(By.ID, "btnBuscadorVuelos"))
+        except: pass
+        
+        print("⏳ Esperando tabla...")
+        time.sleep(5)
 
-        print("🚀 Pulsando BUSCAR...")
-        try:
-            btn = driver.find_element(By.ID, "btnBuscadorVuelos")
-            driver.execute_script("arguments[0].removeAttribute('disabled'); arguments[0].click();", btn)
-        except:
-            driver.find_element(By.XPATH, "//button[contains(., 'Buscar')]").click()
-
-        print("⏳ Esperando carga inicial (8s)...")
-        time.sleep(8)
-
-        # 3. BUCLE DE CARGA INFINITA (VER MÁS)
-        print("\n🔄 --- INICIANDO CARGA COMPLETA (Paginación) ---")
+        # === FASE 1: CARGAR TODO ===
+        hora_inicio = -1
+        dia_actual = 0 
+        ultimo_minuto_check = -1
+        stop_flag = False
         clicks = 0
-        
-        while True:
+        MAX_PAGINAS = 70
+
+        print(f"\n🚀 FASE 1: Carga Rápida (Expandiendo lista)...")
+
+        while not stop_flag and clicks < MAX_PAGINAS:
             try:
-                # Buscamos el botón por su CLASE exacta (gracias a tu diagnóstico)
-                # Buscamos elementos que tengan la clase 'btn-see-more'
-                btn_ver_mas = WebDriverWait(driver, 5).until(
-                    EC.visibility_of_element_located((By.CLASS_NAME, "btn-see-more"))
-                )
+                # Chequeo rápido solo del primer y último elemento visible
+                elementos_hora = driver.find_elements(By.XPATH, "//*[contains(text(), ':') and string-length(text()) = 5]")
                 
-                # SCROLL INTELIGENTE: Lo ponemos en el centro de la pantalla
-                driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", btn_ver_mas)
-                time.sleep(1) # Esperar a que el scroll termine
-                
-                # CLIC
-                driver.execute_script("arguments[0].click();", btn_ver_mas)
+                if elementos_hora:
+                    if hora_inicio == -1:
+                        hora_str_ini = elementos_hora[0].text
+                        if re.match(r"^\d{2}:\d{2}$", hora_str_ini):
+                            hora_inicio = int(hora_str_ini.split(':')[0])*60 + int(hora_str_ini.split(':')[1])
+                            ultimo_minuto_check = hora_inicio
+                            print(f"⏱️ Hora Inicio: {hora_str_ini}")
+
+                    ultimo_el = elementos_hora[-1]
+                    hora_str_fin = ultimo_el.text
+                    
+                    if re.match(r"^\d{2}:\d{2}$", hora_str_fin):
+                        m_actual = int(hora_str_fin.split(':')[0])*60 + int(hora_str_fin.split(':')[1])
+                        
+                        if m_actual < ultimo_minuto_check and (ultimo_minuto_check - m_actual) > 600:
+                            dia_actual += 1
+                            print(f"🌙 Pasamos a mañana... (Visto: {hora_str_fin})")
+                        
+                        ultimo_minuto_check = m_actual
+
+                        if dia_actual >= 1 and m_actual >= hora_inicio:
+                            print(f"🛑 24h alcanzadas ({hora_str_fin}).")
+                            stop_flag = True
+                            break
+            except: 
+                pass
+
+            try:
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                btn = WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.CLASS_NAME, "btn-see-more")))
+                driver.execute_script("arguments[0].click();", btn)
                 clicks += 1
-                
-                # Imprimimos progreso cada 3 clicks para no ensuciar
-                print(f"   ➕ Clic {clicks}: Cargando más vuelos... (Espera breve)")
-                
-                # Esperamos a que carguen los nuevos datos
-                time.sleep(3) 
-                
-            except Exception as e:
-                # Si salta error es porque el botón YA NO EXISTE (hemos llegado al final)
-                print("   ✅ Fin de la carga: El botón 'Ver más' ha desaparecido.")
-                break
-        
-        # 4. EXTRACCIÓN MASIVA DE DATOS
-        print(f"\n🔍 --- LEYENDO TODOS LOS VUELOS ---")
-        
-        # Usamos la técnica de buscar por horas (que sabemos que funciona)
-        elementos_con_hora = driver.find_elements(By.XPATH, "//*[contains(text(), ':') and string-length(text()) < 6]")
-        filas_procesadas = set()
-
-        print(f"   📊 Elementos de hora detectados: {len(elementos_con_hora)}")
-
-        for el in elementos_con_hora:
-            try:
-                texto = el.text
-                if re.match(r"\d{2}:\d{2}", texto): # Validar formato HH:MM
-                    
-                    # Subir al contenedor padre (la fila completa)
-                    fila_padre = el.find_element(By.XPATH, "./../..")
-                    texto_fila = fila_padre.text.replace("\n", " | ")
-                    
-                    if texto_fila not in filas_procesadas and len(texto_fila) > 15:
-                        
-                        # Parseo básico para el JSON
-                        partes = texto_fila.split(" | ")
-                        
-                        # Intentamos extraer datos con seguridad (evitando errores de índice)
-                        vuelo_obj = {
-                            "hora": partes[0],
-                            "vuelo": partes[3] if len(partes) > 3 else "N/A",
-                            "aerolinea": partes[4] if len(partes) > 4 else "N/A",
-                            "origen": partes[5] if len(partes) > 5 else "N/A",
-                            "terminal": "T1" if "T1" in texto_fila else ("T2" if "T2" in texto_fila else "N/A"),
-                            "estado": partes[-1],
-                            "raw": texto_fila
-                        }
-                        
-                        datos_finales.append(vuelo_obj)
-                        filas_procesadas.add(texto_fila)
+                if clicks % 5 == 0: print(f" ⬇️ Click {clicks}...")
+                time.sleep(0.8)
             except:
-                continue
+                print("✅ Fin de botones.")
+                break
 
-        print(f"\n✅ ¡ÉXITO! Se han extraído {len(datos_finales)} vuelos.")
+        # === FASE 2: LECTURA MASIVA ===
+        print(f"\n👀 FASE 2: Procesando datos...")
+        
+        elementos_hora = driver.find_elements(By.XPATH, "//*[contains(text(), ':') and string-length(text()) = 5]")
+        
+        dia_parseo = 0
+        min_anterior_parseo = hora_inicio 
+        
+        if min_anterior_parseo == -1 and elementos_hora:
+             h_txt = elementos_hora[0].text
+             if re.match(r"^\d{2}:\d{2}$", h_txt):
+                 min_anterior_parseo = int(h_txt.split(':')[0])*60 + int(h_txt.split(':')[1])
+
+        filas_procesadas_ids = set()
+
+        for el in elementos_hora:
+            try:
+                hora_str = el.text
+                if not re.match(r"^\d{2}:\d{2}$", hora_str): continue
+                
+                fila_padre = el.find_element(By.XPATH, "./../..")
+                texto_fila = fila_padre.text.replace("\n", " | ")
+                
+                if texto_fila in filas_procesadas_ids: continue
+                
+                m_actual = int(hora_str.split(':')[0])*60 + int(hora_str.split(':')[1])
+                
+                if m_actual < min_anterior_parseo and (min_anterior_parseo - m_actual) > 600:
+                    dia_parseo += 1
+                
+                min_anterior_parseo = m_actual 
+
+                if dia_parseo >= 1 and m_actual > hora_inicio + 60:
+                     break 
+
+                # USAMOS LA V4 (PARSEO ANCLA)
+                obj = parsear_fila_aena_v4(texto_fila, hora_str)
+                obj["dia_relativo"] = dia_parseo
+                
+                if obj["vuelo"] != "N/A" or obj["origen"] != "N/A":
+                    datos_recolectados.append(obj)
+                
+                filas_procesadas_ids.add(texto_fila)
+
+            except: continue
 
     except Exception as e:
         print(f"❌ Error: {e}")
-        driver.save_screenshot("error_final.png")
     finally:
         driver.quit()
+        return datos_recolectados
+
+# =============================================================================
+# 4. EJECUCIÓN
+# =============================================================================
+if __name__ == "__main__":
+    vuelos_raw = obtener_vuelos_turbo()
     
-    return datos_finales
-
-# Ejecutar
-lista = obtener_todos_los_vuelos_reales()
-
-if lista:
-    # Guardamos el JSON definitivo
-    with open('vuelos_bcn_full.json', 'w', encoding='utf-8') as f:
-        json.dump(lista, f, indent=4, ensure_ascii=False)
-    print("\n📁 Archivo 'vuelos_bcn_full.json' listo para descargar.")
+    if vuelos_raw:
+        vuelos_clean = limpiar_y_deduplicar(vuelos_raw)
+        archivo = 'vuelos_bcn_turbo.json'
+        with open(archivo, 'w', encoding='utf-8') as f:
+            json.dump(vuelos_clean, f, indent=4, ensure_ascii=False)
+        print(f"\n💾 ¡ÉXITO! {len(vuelos_clean)} vuelos guardados en: {archivo}")
+        
+        # Muestra para verificar que 'BOLONIA' sale bien
+        print("\n🔎 Verificación (Primeros 3):")
+        print(json.dumps(vuelos_clean[:3], indent=2, ensure_ascii=False))
+    else:
+        print("⚠️ No se encontraron datos.")
