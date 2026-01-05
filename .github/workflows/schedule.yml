@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt
 
       # 4. EJECUTAR EL ROBOT
-      # Nota: Ajusta 'vuelos_turbo.json' si tu script usa otro nombre de salida
+      # Nota: Ajusta 'vuelos.json' si tu script usa otro nombre de salida
       - name: Correr script de Python
         run: python scripts/aena_scrap.py
 
