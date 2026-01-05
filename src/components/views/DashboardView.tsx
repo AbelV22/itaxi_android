@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RefreshCw, Plane, Clock } from "lucide-react";
+import { RefreshCw, Plane } from "lucide-react";
 import { TerminalCard } from "@/components/widgets/TerminalCard";
 import { TrainsWidget } from "@/components/widgets/TrainsWidget";
 import { CruisesWidget } from "@/components/widgets/CruisesWidget";
@@ -7,17 +7,16 @@ import { WeatherFloating } from "@/components/widgets/WeatherFloating";
 import { EventsWidget } from "@/components/widgets/EventsWidget";
 import { LicensePriceWidget } from "@/components/widgets/LicensePriceWidget";
 
-// Tipos para vuelos.json
+// Tipos para vuelos.json (estructura real del scraper)
 interface VueloRaw {
-  id: string;
-  origen: string;
-  destino: string;
-  fecha: string;
-  hora_prog: string;
-  hora_est: string;
-  terminal: string;
-  estado: string;
+  hora: string;
+  vuelo: string;
   aerolinea: string;
+  origen: string;
+  terminal: string;
+  sala: string;
+  estado: string;
+  dia_relativo: number;
 }
 
 // Tipos para data.json (extras)
@@ -36,47 +35,60 @@ interface DashboardViewProps {
 
 // Función para parsear hora "HH:MM" a minutos del día
 const parseHora = (hora: string): number => {
+  if (!hora) return 0;
   const [h, m] = hora.split(":").map(Number);
-  return h * 60 + (m || 0);
+  return (h || 0) * 60 + (m || 0);
 };
 
-// Determinar tipo de terminal
+// Determinar tipo de terminal basado en los datos reales del scraper
 const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
-  const term = vuelo.terminal?.toUpperCase() || "";
-  const airline = vuelo.id?.toUpperCase() || "";
+  const terminal = vuelo.terminal?.toUpperCase() || "";
+  const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
   const origen = vuelo.origen?.toUpperCase() || "";
   
-  // Puente Aéreo: vuelos IBE desde Madrid
-  if (airline.startsWith("IBE") && origen.includes("MADRID")) {
-    return "puente";
+  // T2C: EasyJet (terminal indica "T2C" o códigos EJU/EZY)
+  if (terminal.includes("T2C") || terminal.includes("EASYJET")) {
+    return "t2c";
   }
-  
-  // T2C: EasyJet (EZY, EJU)
-  if (airline.startsWith("EZY") || airline.startsWith("EJU")) {
+  if (codigosVuelo.includes("EJU") || codigosVuelo.includes("EZY")) {
     return "t2c";
   }
   
-  // T1 vs T2 por terminal
-  if (term.includes("1")) return "t1";
-  if (term.includes("2")) return "t2";
+  // Puente Aéreo: vuelos IBE desde Madrid (código IBE + origen Madrid)
+  if (origen.includes("MADRID") && codigosVuelo.includes("IBE")) {
+    // Los vuelos IBE desde Madrid son Puente Aéreo
+    return "puente";
+  }
   
-  // Default
+  // T2A/T2B: Ryanair, Wizz, etc.
+  if (terminal.includes("T2A") || terminal.includes("T2B")) {
+    return "t2";
+  }
+  
+  // T1: resto de vuelos T1
+  if (terminal.includes("T1")) {
+    return "t1";
+  }
+  
+  // Default T2 para otros casos
   return "t2";
 };
 
-// Tiempos de retén estimados por terminal y hora
-const getEsperaReten = (terminalId: string, hora: number): number => {
+// Tiempos de retén estimados por terminal y hora del día
+const getEsperaReten = (terminalId: string, currentHour: number): number => {
   // Hora punta: 10-14h y 18-21h
-  const isPeakHour = (hora >= 10 && hora <= 14) || (hora >= 18 && hora <= 21);
+  const isPeakHour = (currentHour >= 10 && currentHour <= 14) || (currentHour >= 18 && currentHour <= 21);
   
+  // Tiempos base por terminal (minutos)
   const baseWait: Record<string, number> = {
-    t1: 30,
-    t2: 20,
-    t2c: 15,
-    puente: 10
+    t1: 25,      // T1 es la más grande, más espera
+    t2: 15,      // T2 menos tráfico
+    t2c: 12,     // T2C EasyJet, vuelos low cost
+    puente: 8    // Puente Aéreo, vuelos frecuentes Madrid
   };
   
-  return isPeakHour ? baseWait[terminalId] + 15 : baseWait[terminalId];
+  const base = baseWait[terminalId] || 20;
+  return isPeakHour ? base + 12 : base;
 };
 
 export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents }: DashboardViewProps) {
@@ -111,10 +123,22 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   const currentHour = now.getHours();
   const currentMinutes = currentHour * 60 + now.getMinutes();
 
-  // Filtrar y ordenar vuelos por hora
-  const vuelosSorted = [...vuelos]
-    .filter(v => v.hora_prog || v.hora_est)
-    .sort((a, b) => parseHora(a.hora_est || a.hora_prog) - parseHora(b.hora_est || b.hora_prog));
+  // Filtrar vuelos no cancelados y futuros (próximas 24h)
+  const vuelosActivos = vuelos.filter(v => {
+    const estado = v.estado?.toLowerCase() || "";
+    // Excluir cancelados
+    if (estado.includes("cancelado")) return false;
+    return true;
+  });
+
+  // Ordenar por hora
+  const vuelosSorted = [...vuelosActivos].sort((a, b) => {
+    // Primero por día relativo, luego por hora
+    if (a.dia_relativo !== b.dia_relativo) {
+      return a.dia_relativo - b.dia_relativo;
+    }
+    return parseHora(a.hora) - parseHora(b.hora);
+  });
 
   // Agrupar por terminal
   const terminalData: Record<string, { vuelos: VueloRaw[]; pax: number }> = {
@@ -127,8 +151,9 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   vuelosSorted.forEach(vuelo => {
     const type = getTerminalType(vuelo);
     terminalData[type].vuelos.push(vuelo);
-    // Estimar ~180 pax por vuelo (promedio)
-    terminalData[type].pax += 180;
+    // Estimar pasajeros según tipo de terminal
+    const paxEstimado = type === 'puente' ? 150 : type === 't2c' ? 180 : 200;
+    terminalData[type].pax += paxEstimado;
   });
 
   // Config visual de terminales
@@ -140,6 +165,12 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   ];
 
   const totalVuelos = vuelosSorted.length;
+
+  // Obtener próximos vuelos (no finalizados)
+  const proximosVuelos = vuelosSorted.filter(v => {
+    const estado = v.estado?.toLowerCase() || "";
+    return !estado.includes("finalizado");
+  }).slice(0, 6);
 
   return (
     <div className="space-y-3 animate-fade-in pb-20">
@@ -175,7 +206,10 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       <div className="grid grid-cols-2 gap-2">
         {terminals.map(term => {
           const data = terminalData[term.id];
-          const nextFlight = data.vuelos[0];
+          const nextFlight = data.vuelos.find(v => {
+            const estado = v.estado?.toLowerCase() || "";
+            return !estado.includes("finalizado");
+          });
           return (
             <TerminalCard
               key={term.id}
@@ -186,8 +220,8 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
               esperaMinutos={getEsperaReten(term.id, currentHour)}
               color={term.color}
               nextFlight={nextFlight ? {
-                hora: nextFlight.hora_est || nextFlight.hora_prog,
-                origen: nextFlight.origen
+                hora: nextFlight.hora,
+                origen: nextFlight.origen?.split("(")[0]?.trim() || nextFlight.origen
               } : undefined}
               onClick={() => onTerminalClick?.(term.id)}
             />
@@ -195,7 +229,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
         })}
       </div>
 
-      {/* Próximos 5 vuelos rápido */}
+      {/* Próximos vuelos rápido */}
       <div className="card-dashboard p-3">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-semibold text-muted-foreground uppercase">Próximos aterrizajes</span>
@@ -207,38 +241,45 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
           </button>
         </div>
         <div className="space-y-1.5">
-          {vuelosSorted.slice(0, 5).map((vuelo, idx) => {
-            const termType = getTerminalType(vuelo);
-            const termColor = terminals.find(t => t.id === termType)?.color || "#666";
-            return (
-              <div 
-                key={idx}
-                className="flex items-center justify-between text-xs p-2 rounded-lg bg-muted/20 hover:bg-muted/40 transition-colors"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="font-display font-bold text-primary min-w-[40px]">
-                    {vuelo.hora_est || vuelo.hora_prog}
-                  </span>
-                  <div className="truncate max-w-[100px]">
-                    <span className="text-foreground">{vuelo.origen}</span>
+          {proximosVuelos.length === 0 ? (
+            <p className="text-xs text-muted-foreground text-center py-4">No hay vuelos pendientes</p>
+          ) : (
+            proximosVuelos.map((vuelo, idx) => {
+              const termType = getTerminalType(vuelo);
+              const termColor = terminals.find(t => t.id === termType)?.color || "#666";
+              const codigoPrincipal = vuelo.vuelo?.split("/")[0]?.trim() || vuelo.vuelo;
+              const origenCorto = vuelo.origen?.split("(")[0]?.trim() || vuelo.origen;
+              
+              return (
+                <div 
+                  key={idx}
+                  className="flex items-center justify-between text-xs p-2 rounded-lg bg-muted/20 hover:bg-muted/40 transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="font-display font-bold text-primary min-w-[40px]">
+                      {vuelo.hora}
+                    </span>
+                    <div className="truncate max-w-[100px]">
+                      <span className="text-foreground">{origenCorto}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-muted-foreground font-mono">{codigoPrincipal}</span>
+                    <span 
+                      className="px-1.5 py-0.5 rounded text-[9px] font-bold"
+                      style={{ 
+                        backgroundColor: `${termColor}15`, 
+                        color: termColor,
+                        border: `1px solid ${termColor}30`
+                      }}
+                    >
+                      {termType === 'puente' ? 'PA' : termType.toUpperCase()}
+                    </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] text-muted-foreground font-mono">{vuelo.id}</span>
-                  <span 
-                    className="px-1.5 py-0.5 rounded text-[9px] font-bold"
-                    style={{ 
-                      backgroundColor: `${termColor}15`, 
-                      color: termColor,
-                      border: `1px solid ${termColor}30`
-                    }}
-                  >
-                    {termType === 'puente' ? 'PA' : termType.toUpperCase()}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
 
