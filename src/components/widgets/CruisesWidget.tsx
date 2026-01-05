@@ -1,4 +1,5 @@
-import { Ship, Clock, Users, Anchor } from "lucide-react";
+import { Ship, Clock, Anchor } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface CruisesWidgetProps {
   cruceros?: number;
@@ -8,53 +9,70 @@ interface CruisesWidgetProps {
 }
 
 export function CruisesWidget({ 
-  cruceros = 3, 
-  pax = 8500, 
-  esperaMinutos = 15,
-  proximoDesembarco = "10:30"
+  cruceros = 2, 
+  pax = 6500, 
+  esperaMinutos = 18,
+  proximoDesembarco = "11:00"
 }: CruisesWidgetProps) {
+  const esperaLevel = esperaMinutos <= 15 ? "low" : esperaMinutos <= 25 ? "medium" : "high";
+  
   return (
-    <div className="card-dashboard p-4 space-y-3">
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-500/10">
-          <Ship className="h-4 w-4 text-cyan-500" />
+    <div className="card-dashboard p-3 space-y-2">
+      {/* Header compacto */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-500/10">
+            <Ship className="h-3.5 w-3.5 text-cyan-500" />
+          </div>
+          <div>
+            <h3 className="font-display font-semibold text-foreground text-xs">Puerto BCN</h3>
+            <p className="text-[10px] text-muted-foreground">Cruceros hoy</p>
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="flex items-center gap-1">
+            <Anchor className="h-3 w-3 text-cyan-400" />
+            <span className="font-display font-bold text-xl text-cyan-400">{cruceros}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Info rápida */}
+      <div className="flex items-center justify-between p-2 rounded-lg bg-muted/30 text-xs">
+        <div>
+          <span className="text-muted-foreground">Pasajeros: </span>
+          <span className="font-display font-bold text-amber-400">{(pax / 1000).toFixed(1)}k</span>
         </div>
         <div>
-          <h3 className="font-display font-semibold text-foreground text-sm">Puerto Barcelona</h3>
-          <p className="text-xs text-muted-foreground">Cruceros Hoy</p>
+          <span className="text-muted-foreground">Próximo: </span>
+          <span className="font-display font-bold text-purple-400">{proximoDesembarco}</span>
         </div>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-3 gap-2">
-        <div className="text-center p-2 rounded-xl border border-border bg-background/50">
-          <div className="flex items-center justify-center gap-1">
-            <Anchor className="h-3 w-3 text-cyan-400" />
-            <span className="text-xl font-display font-bold text-cyan-400">{cruceros}</span>
-          </div>
-          <p className="text-[10px] text-muted-foreground">cruceros</p>
+      {/* Tiempo de retén */}
+      <div className={cn(
+        "flex items-center justify-between p-2 rounded-lg text-xs",
+        esperaLevel === "low" && "bg-success/10 border border-success/20",
+        esperaLevel === "medium" && "bg-amber-500/10 border border-amber-500/20",
+        esperaLevel === "high" && "bg-destructive/10 border border-destructive/20"
+      )}>
+        <div className="flex items-center gap-1.5">
+          <Clock className={cn(
+            "h-3 w-3",
+            esperaLevel === "low" && "text-success",
+            esperaLevel === "medium" && "text-amber-400",
+            esperaLevel === "high" && "text-destructive"
+          )} />
+          <span className="text-muted-foreground">Retén Puerto</span>
         </div>
-        <div className="text-center p-2 rounded-xl border border-border bg-background/50">
-          <div className="flex items-center justify-center gap-1 text-amber-400">
-            <Users className="h-3 w-3" />
-            <span className="text-xl font-display font-bold">{(pax / 1000).toFixed(1)}k</span>
-          </div>
-          <p className="text-[10px] text-muted-foreground">pasajeros</p>
-        </div>
-        <div className="text-center p-2 rounded-xl border border-border bg-background/50">
-          <p className="text-xl font-display font-bold text-purple-400">{proximoDesembarco}</p>
-          <p className="text-[10px] text-muted-foreground">próximo</p>
-        </div>
-      </div>
-
-      {/* Espera en Reten */}
-      <div className="flex items-center justify-between p-3 rounded-xl bg-cyan-500/5 border border-cyan-500/20">
-        <div className="flex items-center gap-2">
-          <Clock className="h-4 w-4 text-cyan-400" />
-          <span className="text-xs text-muted-foreground">Espera en retén</span>
-        </div>
-        <span className="font-display font-bold text-cyan-400">~{esperaMinutos} min</span>
+        <span className={cn(
+          "font-display font-bold",
+          esperaLevel === "low" && "text-success",
+          esperaLevel === "medium" && "text-amber-400",
+          esperaLevel === "high" && "text-destructive"
+        )}>
+          ~{esperaMinutos} min
+        </span>
       </div>
     </div>
   );

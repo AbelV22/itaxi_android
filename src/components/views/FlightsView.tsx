@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { 
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer
 } from "recharts";
-import { DashboardData, Vuelo } from "./DashboardView";
+import { DashboardData, Vuelo } from "@/types/flights";
 
 export function FlightsView() {
   const [data, setData] = useState<DashboardData | null>(null);
