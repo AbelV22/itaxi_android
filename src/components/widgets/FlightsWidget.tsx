@@ -1,6 +1,6 @@
 import { Plane, Clock, Users, ArrowRight } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { DashboardData, Vuelo } from "../views/DashboardView";
+import { DashboardData, Vuelo } from "@/types/flights";
 
 // --- 1. DEFINIMOS QUÉ DATOS ESPERA RECIBIR ESTE WIDGET ---
 interface FlightsWidgetProps {
