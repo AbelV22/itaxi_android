@@ -2,53 +2,44 @@ name: Actualizar Vuelos BCN
 
 on:
   schedule:
-    # Ejecutar cada 4 horas (00:00, 04:00, 08:00...)
+    # Se ejecuta cada 4 horas
     - cron: '0 */4 * * *'
-  # Botón manual para probarlo cuando quieras
+  # Botón manual para probar
   workflow_dispatch:
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
 
-    # Permiso vital para poder guardar el archivo en tu repo
     permissions:
       contents: write
 
     steps:
-      # 1. Descargar tu código
       - name: Checkout del repositorio
         uses: actions/checkout@v3
 
-      # 2. Instalar Python
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      # 3. Instalar librerías (Selenium)
       - name: Instalar dependencias
         run: |
           pip install -r requirements.txt
 
-      # 4. EJECUTAR EL ROBOT
-      # Nota: Ajusta 'vuelos.json' si tu script usa otro nombre de salida
-      - name: Correr script de Python
+      - name: Ejecutar Scraper
+        # Esto genera el archivo 'vuelos.json' en la raíz
         run: python scripts/aena_scrap.py
 
-      # 5. MOVER Y RENOMBRAR EL JSON
-      # Movemos el resultado a la carpeta 'public' y lo llamamos 'data.json'
-      # Así tu web siempre leerá el mismo archivo actualizado.
       - name: Mover datos a public/
+        # CORRECCIÓN AQUÍ: Usamos 'vuelos.json' que es el nombre real que genera tu script
         run: |
-          # Si tu script genera 'vuelos.json', cámbialo aquí abajo:
-          mv vuelos_turbo.json public/data.json
+          mv vuelos.json public/vuelos.json
 
-      # 6. GUARDAR CAMBIOS (Commit & Push)
       - name: Guardar cambios en el repo
+        # CORRECCIÓN AQUÍ: Añadimos 'public/vuelos.json' al commit
         run: |
           git config --global user.name 'TaxiBot BCN'
           git config --global user.email 'bot@taxibcn.app'
-          git add public/data.json
-          # Solo hace commit si hay datos nuevos
+          git add public/vuelos.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Actualización auto: $(date)" && git push)
