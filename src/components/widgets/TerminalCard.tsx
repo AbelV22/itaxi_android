@@ -1,4 +1,4 @@
-import { Plane, Clock, ChevronRight, Users } from "lucide-react";
+import { Clock, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TerminalCardProps {
@@ -20,69 +20,56 @@ export function TerminalCard({
   contribuidores = 0,
   onClick 
 }: TerminalCardProps) {
-  // Determinar si la espera es alta (>25min) o baja (<10min)
   const esperaLevel = esperaMinutos <= 10 ? "low" : esperaMinutos <= 25 ? "medium" : "high";
+  const isHighDemand = vuelosProximaHora >= 8;
   
   return (
     <button 
       onClick={onClick}
-      className="w-full card-dashboard p-3 hover:border-primary/30 transition-all group text-left"
+      className="w-full p-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] transition-all group text-left"
     >
-      {/* Header con nombre y flecha - altura fija para alineación */}
-      <div className="flex items-center justify-between mb-2 min-h-[24px]">
-        <span className="font-display font-semibold text-sm text-foreground leading-tight">{name}</span>
-        <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+      {/* Header */}
+      <div className="flex items-center justify-between mb-1">
+        <span className="text-xs font-medium text-muted-foreground">{name}</span>
+        <ChevronRight className="h-3 w-3 text-muted-foreground/50 group-hover:text-primary transition-colors" />
       </div>
       
-      {/* Stats - vuelos esta hora en grande, amarillo */}
+      {/* Big Number */}
       <div className="mb-2">
-        <div className="flex items-baseline gap-1.5">
-          <Plane className="h-4 w-4 text-amber-400" />
-          <span className="font-display font-bold text-2xl text-amber-400">{vuelosProximaHora}</span>
-          <span className="text-[10px] text-muted-foreground">esta hora</span>
-        </div>
-        <div className="flex items-center gap-1 mt-1 ml-5">
-          <span className="font-display font-semibold text-sm text-muted-foreground">+{vuelosSiguienteHora}</span>
-          <span className="text-[10px] text-muted-foreground">próx. hora</span>
-        </div>
-      </div>
-      
-      {/* Tiempo de retén */}
-      <div className={cn(
-        "flex items-center justify-between p-2 rounded-lg text-xs",
-        esperaLevel === "low" && "bg-success/10 border border-success/20",
-        esperaLevel === "medium" && "bg-amber-500/10 border border-amber-500/20",
-        esperaLevel === "high" && "bg-destructive/10 border border-destructive/20"
-      )}>
-        <div className="flex items-center gap-1.5">
-          <Clock className={cn(
-            "h-3 w-3",
-            esperaLevel === "low" && "text-success",
-            esperaLevel === "medium" && "text-amber-400",
-            esperaLevel === "high" && "text-destructive"
-          )} />
-          <span className="text-muted-foreground">Retén</span>
-        </div>
         <span className={cn(
-          "font-display font-bold",
-          esperaLevel === "low" && "text-success",
-          esperaLevel === "medium" && "text-amber-400",
-          esperaLevel === "high" && "text-destructive"
+          "font-mono font-black text-4xl tabular-nums tracking-tight",
+          isHighDemand ? "text-white" : "text-muted-foreground/60"
         )}>
-          ~{esperaMinutos} min
+          {vuelosProximaHora}
         </span>
+        <span className="text-[10px] text-muted-foreground ml-1">vuelos/h</span>
+      </div>
+
+      {/* Next hour */}
+      {vuelosSiguienteHora > 0 && (
+        <div className="text-xs text-muted-foreground mb-2">
+          +{vuelosSiguienteHora} próx. hora
+        </div>
+      )}
+
+      {/* Retén Badge - High Contrast */}
+      <div className={cn(
+        "inline-flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-semibold",
+        esperaLevel === "low" && "bg-emerald-500 text-white",
+        esperaLevel === "medium" && "bg-amber-400 text-black",
+        esperaLevel === "high" && "bg-red-500 text-white"
+      )}>
+        <Clock className="h-2.5 w-2.5" />
+        ~{esperaMinutos} min
       </div>
       
-      {/* Contribuidores de datos */}
-      <div className="mt-2 flex items-center gap-1 text-[10px] text-muted-foreground">
-        <Users className="h-3 w-3" />
-        <span>
-          {contribuidores > 0 
-            ? `${contribuidores} taxista${contribuidores > 1 ? 's' : ''} informaron (última hora)`
-            : "Sin datos de taxistas aún"
-          }
-        </span>
-      </div>
+      {/* Social Proof */}
+      {contribuidores > 0 && (
+        <div className="flex items-center gap-1 mt-2 text-[9px] text-muted-foreground">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span>{contribuidores} taxista{contribuidores > 1 ? 's' : ''} informaron</span>
+        </div>
+      )}
     </button>
   );
 }
