@@ -348,11 +348,9 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                                       )}
                                     >
                                       <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
-                                      <span className="text-muted-foreground truncate flex-1">
-                                        {f.vuelo?.split("/")[0]}
-                                      </span>
+
                                       {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
-                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">
+                                      <span className="text-muted-foreground/70 truncate max-w-[80px]">
                                         {f.origen?.split("(")[0]?.trim()}
                                       </span>
                                     </div>
@@ -382,9 +380,11 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                                       )}
                                     >
                                       <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
-
+                                      <span className="text-muted-foreground truncate flex-1">
+                                        {f.vuelo?.split("/")[0]}
+                                      </span>
                                       {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
-                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">
+                                      <span className="text-muted-foreground/70 truncate max-w-[80px]">
                                         {f.origen?.split("(")[0]?.trim()}
                                       </span>
                                     </div>
