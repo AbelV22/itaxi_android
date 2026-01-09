@@ -129,36 +129,20 @@ export function FullDayView({ onBack }: FullDayViewProps) {
   }, [vuelosActivos]);
 
   // Agrupar vuelos por hora para T1 y T2
-  // Agrupar vuelos por hora para T1, T2, Puente y T2C
   const vuelosPorHora = useMemo(() => {
-    // Inicializamos las 4 categorías
-    const groups: Record<number, { t1: VueloRaw[]; t2: VueloRaw[]; puente: VueloRaw[]; t2c: VueloRaw[] }> = {};
+    const groups: Record<number, { t1: VueloRaw[]; t2: VueloRaw[] }> = {};
     for (let h = 0; h < 24; h++) {
-      groups[h] = { t1: [], t2: [], puente: [], t2c: [] };
+      groups[h] = { t1: [], t2: [] };
     }
 
-    // Rellenamos T1
     vuelosPorTerminal.t1.forEach((v) => {
       const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
       groups[hour].t1.push(v);
     });
 
-    // Rellenamos T2
     vuelosPorTerminal.t2.forEach((v) => {
       const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
       groups[hour].t2.push(v);
-    });
-
-    // NUEVO: Rellenamos Puente
-    vuelosPorTerminal.puente.forEach((v) => {
-      const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
-      groups[hour].puente.push(v);
-    });
-
-    // NUEVO: Rellenamos T2C
-    vuelosPorTerminal.t2c.forEach((v) => {
-      const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
-      groups[hour].t2c.push(v);
     });
 
     return groups;
@@ -323,6 +307,7 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                           >
                             {countT1.toString().padStart(2, "0")}
                           </span>
+                          {longHaulT1 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
                         </div>
                         <div
                           className={cn(
@@ -340,6 +325,7 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                           >
                             {countT2.toString().padStart(2, "0")}
                           </span>
+                          {longHaulT2 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
                         </div>
                       </div>
                     </AccordionTrigger>
@@ -458,32 +444,55 @@ export function FullDayView({ onBack }: FullDayViewProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 max-h-[48vh] overflow-y-auto scrollbar-dark">
-            <div className="border-r border-border">
-              {puenteVuelos.length === 0 ? (
-                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
-              ) : (
-                puenteVuelos.map((vuelo, idx) => (
-                  <div key={idx} className="flex items-center justify-between py-2 px-2.5 border-b border-border/40">
-                    <span className="font-display font-bold text-xs text-red-500">{vuelo.hora}</span>
-                    <Plane className="h-3 w-3 text-muted-foreground/60" />
-                  </div>
-                ))
-              )}
-            </div>
+          <div className="overflow-y-auto scrollbar-dark flex-1 max-h-[48vh]">
+            {/* Iteramos por las mismas horas que la columna izquierda */}
+            {hourSlots.map((slot, idx) => {
+              const hour = (startHour + idx) % 24;
+              const isCurrentHour = hour === currentHour;
 
-            <div>
-              {t2cVuelos.length === 0 ? (
-                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
-              ) : (
-                t2cVuelos.map((vuelo, idx) => (
-                  <div key={idx} className="flex items-center justify-between py-2 px-2.5 border-b border-border/40">
-                    <span className="font-display font-bold text-xs text-orange-500">{vuelo.hora}</span>
-                    <Plane className="h-3 w-3 text-muted-foreground/60" />
+              // Sacamos los vuelos de esa hora exacta usando la nueva lógica del PASO 1
+              const puenteDelSlot = vuelosPorHora[hour]?.puente || [];
+              const t2cDelSlot = vuelosPorHora[hour]?.t2c || [];
+
+              return (
+                <div
+                  key={slot}
+                  className={cn(
+                    "grid grid-cols-2 border-b border-border/40 min-h-[44px]",
+                    isCurrentHour && "bg-primary/5",
+                  )}
+                >
+                  {/* Celda Puente Aéreo */}
+                  <div className="border-r border-border/40 p-1 flex flex-col justify-center">
+                    {puenteDelSlot.length > 0 ? (
+                      puenteDelSlot.map((v, i) => (
+                        <div key={i} className="flex items-center justify-between px-1 py-0.5">
+                          <span className="font-display font-bold text-xs text-red-500">{v.hora}</span>
+                          <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
+                        </div>
+                      ))
+                    ) : (
+                      // Espacio vacío para mantener alineación
+                      <div className="h-full w-full"></div>
+                    )}
                   </div>
-                ))
-              )}
-            </div>
+
+                  {/* Celda T2C EasyJet */}
+                  <div className="p-1 flex flex-col justify-center">
+                    {t2cDelSlot.length > 0 ? (
+                      t2cDelSlot.map((v, i) => (
+                        <div key={i} className="flex items-center justify-between px-1 py-0.5">
+                          <span className="font-display font-bold text-xs text-orange-500">{v.hora}</span>
+                          <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
+                        </div>
+                      ))
+                    ) : (
+                      <div className="h-full w-full"></div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="grid grid-cols-2 bg-muted border-t border-border">
