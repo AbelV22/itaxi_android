@@ -81,12 +81,12 @@ const getTrenBgColor = (tren: string): string => {
 };
 
 // Generar array de 24 horas empezando 30 minutos antes de la hora actual
-const generateHourSlots = (startHour: number): string[] => {
-  const slots: string[] = [];
+// Formato compacto: solo muestra la hora inicio
+const generateHourSlots = (startHour: number): { label: string; hour: number }[] => {
+  const slots: { label: string; hour: number }[] = [];
   for (let i = 0; i < 24; i++) {
     const hour = (startHour + i) % 24;
-    const nextHour = (hour + 1) % 24;
-    slots.push(`${hour.toString().padStart(2, '0')} - ${nextHour.toString().padStart(2, '0')}`);
+    slots.push({ label: `${hour.toString().padStart(2, '0')}h`, hour });
   }
   return slots;
 };
@@ -249,33 +249,33 @@ export function TrainsFullDayView({ onBack, onCityClick, onOperatorClick }: Trai
           </div>
 
           <div className="max-h-[50vh] overflow-y-auto scrollbar-dark">
-            {hourSlots.map((slot, idx) => {
-              const hour = (startHour + idx) % 24;
+            {hourSlots.map((slot) => {
+              const hour = slot.hour;
               const count = countByHour[hour] || 0;
               const isHot = count >= maxPerHour * 0.7 && count > 0;
               const isCurrentHour = hour === currentHour;
               
               return (
                 <div 
-                  key={slot} 
+                  key={slot.label} 
                   className={cn(
                     "grid grid-cols-2 border-b border-border/40",
                     isCurrentHour && "bg-emerald-500/15"
                   )}
                 >
                   <div className={cn(
-                    "py-2 px-2 text-center border-r border-border/40",
+                    "py-1.5 px-2 text-center border-r border-border/40",
                     isCurrentHour && "bg-emerald-500/10"
                   )}>
                     <span className={cn(
-                      "text-[9px] font-mono font-medium",
+                      "text-[10px] font-mono font-medium",
                       isCurrentHour ? "font-bold text-emerald-500" : "text-muted-foreground"
                     )}>
-                      {slot}
+                      {slot.label}
                     </span>
                   </div>
                   <div className={cn(
-                    "py-2 px-2 text-center flex items-center justify-center gap-1",
+                    "py-1.5 px-2 text-center flex items-center justify-center gap-1",
                     isHot && "bg-amber-500/15"
                   )}>
                     {isHot && <Flame className="h-3 w-3 text-amber-500" />}

@@ -421,7 +421,7 @@ export function FullDayView({ onBack }: FullDayViewProps) {
           </div>
         </div>
 
-        {/* Columna derecha: Puente Aéreo y T2C */}
+        {/* Columna derecha: Puente Aéreo y T2C - Aligned with hour slots */}
         <div className="rounded-xl border border-border bg-card overflow-hidden shadow-lg shadow-black/10">
           <div className="grid grid-cols-2 border-b border-border bg-muted">
             <div className="py-2.5 px-2 text-center border-r border-border">
@@ -442,32 +442,71 @@ export function FullDayView({ onBack }: FullDayViewProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 max-h-[48vh] overflow-y-auto scrollbar-dark">
-            <div className="border-r border-border">
-              {puenteVuelos.length === 0 ? (
-                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
-              ) : (
-                puenteVuelos.map((vuelo, idx) => (
-                  <div key={idx} className="flex items-center justify-between py-2 px-2.5 border-b border-border/40">
-                    <span className="font-display font-bold text-xs text-red-500">{vuelo.hora}</span>
-                    <Plane className="h-3 w-3 text-muted-foreground/60" />
+          {/* Rows aligned with hourSlots */}
+          <div className="max-h-[55vh] overflow-y-auto scrollbar-dark">
+            {hourSlots.map((slot, idx) => {
+              const hour = (startHour + idx) % 24;
+              const isCurrentHour = hour === currentHour;
+              
+              // Get flights for this hour
+              const puenteForHour = vuelosPorTerminal.puente.filter(v => {
+                const h = parseInt(v.hora?.split(":")[0] || "0", 10);
+                return h === hour;
+              }).sort((a, b) => a.hora.localeCompare(b.hora));
+              
+              const t2cForHour = vuelosPorTerminal.t2c.filter(v => {
+                const h = parseInt(v.hora?.split(":")[0] || "0", 10);
+                return h === hour;
+              }).sort((a, b) => a.hora.localeCompare(b.hora));
+              
+              const maxFlights = Math.max(puenteForHour.length, t2cForHour.length, 1);
+              
+              return (
+                <div 
+                  key={slot}
+                  className={cn(
+                    "grid grid-cols-2 border-b border-border/40",
+                    isCurrentHour && "bg-primary/10"
+                  )}
+                >
+                  {/* Puente Aéreo column */}
+                  <div className="border-r border-border/40 min-h-[32px]">
+                    {puenteForHour.length === 0 ? (
+                      <div className="h-full flex items-center justify-center">
+                        <span className="text-[9px] text-muted-foreground/30">-</span>
+                      </div>
+                    ) : (
+                      <div className="space-y-0">
+                        {puenteForHour.map((vuelo, i) => (
+                          <div key={i} className="flex items-center justify-between py-1 px-2">
+                            <span className="font-mono font-bold text-[10px] text-red-500">{vuelo.hora}</span>
+                            <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))
-              )}
-            </div>
-
-            <div>
-              {t2cVuelos.length === 0 ? (
-                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
-              ) : (
-                t2cVuelos.map((vuelo, idx) => (
-                  <div key={idx} className="flex items-center justify-between py-2 px-2.5 border-b border-border/40">
-                    <span className="font-display font-bold text-xs text-orange-500">{vuelo.hora}</span>
-                    <Plane className="h-3 w-3 text-muted-foreground/60" />
+                  
+                  {/* T2C column */}
+                  <div className="min-h-[32px]">
+                    {t2cForHour.length === 0 ? (
+                      <div className="h-full flex items-center justify-center">
+                        <span className="text-[9px] text-muted-foreground/30">-</span>
+                      </div>
+                    ) : (
+                      <div className="space-y-0">
+                        {t2cForHour.map((vuelo, i) => (
+                          <div key={i} className="flex items-center justify-between py-1 px-2">
+                            <span className="font-mono font-bold text-[10px] text-orange-500">{vuelo.hora}</span>
+                            <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))
-              )}
-            </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="grid grid-cols-2 bg-muted border-t border-border">
