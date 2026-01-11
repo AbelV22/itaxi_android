@@ -58,19 +58,27 @@ def tasar_coche(texto_raw):
     return int(max(1000, valor_base * factor_edad * factor_km)), modelo
 
 def extraer_precio(raw):
+    """
+    Extrae el precio buscando patrones de euros o números grandes.
+    """
     raw_clean = raw.replace('\n', ' ').upper()
-    # Prioridad: "Precio: X" > "X €" > Número suelto grande
+    
+    # 1. Prioridad: "Precio: X" o "X €"
     match_p = re.search(r'PRECIO:?\s*\|?\s*(\d{1,3}[\.,]?\d{3})', raw_clean)
     if match_p: return int(match_p.group(1).replace('.','').replace(',',''))
     
     match_e = re.search(r'(\d{1,3}[\.,]?\d{3})\s*€', raw_clean)
     if match_e: return int(match_e.group(1).replace('.','').replace(',',''))
     
+    # 2. Prioridad: Números sueltos lógicos (entre 50k y 600k)
     candidatos = re.finditer(r'(\d{5,6})', raw_clean.replace('.','').replace(',',''))
     for m in candidatos:
         val = int(m.group(1))
-        if 80000 <= val <= 300000: # Rango lógico licencia
-            if "KM" not in raw_clean[max(0, m.start()-10):min(len(raw_clean), m.end()+10)]:
+        # Rango lógico ampliado para evitar falsos positivos
+        if 50000 <= val <= 600000: 
+            # Verificamos que no sea KM (ej: 150000 KM)
+            contexto = raw_clean[max(0, m.start()-10):min(len(raw_clean), m.end()+10)]
+            if "KM" not in contexto:
                 return val
     return 0
 
@@ -90,19 +98,33 @@ def main():
         print("No hay datos nuevos. Fin.")
         return
 
-    with open(FILE_INPUT_RAW, 'r') as f: raw_data = json.load(f)
+    with open(FILE_INPUT_RAW, 'r', encoding='utf-8') as f: 
+        raw_data = json.load(f)
     
     clean_items = []
+    
+    print(f"🔄 Procesando {len(raw_data)} registros...")
+
     for item in raw_data:
         raw = item.get('raw', '')
         fuente = item.get('fuente', 'DESCONOCIDO')
         
-        # Filtros básicos
+        # --- LÓGICA ESPECÍFICA MILANUNCIOS (CORREGIDA) ---
+        if fuente == 'MILANUNCIOS':
+            # Filtro Anti-Chatarra (Placas antiguas, llaveros, alquiler)
+            texto_lower = raw.lower()
+            palabras_prohibidas = ['antigua', 'colección', 'alquilo', 'alquiler', 'compartir', 'chapa', 'taxi inglés', 'conductor']
+            if any(p in texto_lower for p in palabras_prohibidas):
+                continue
+        # ------------------------------------------------
+        
+        # Filtros generales (VTC, etc)
         if any(x in raw.upper() for x in ["VTC", "SANTA MARGARIDA", "3 LICENCIA"]): continue
         
         # Extracción inteligente STAC vs General
         texto_coche = raw
         precio = 0
+        
         if fuente == "STAC":
             parts = raw.split('|')
             precio_part = next((p for p in parts if "PRECIO" in p.upper() or "€" in p), None)
@@ -111,8 +133,11 @@ def main():
             coche_part = next((p for p in parts if len(p)>15 and "REF" not in p.upper() and "PRECIO" not in p.upper()), raw)
             texto_coche = coche_part
         
+        # Si no se encontró precio en STAC o es otra fuente, buscamos globalmente
         if precio == 0: precio = extraer_precio(raw)
-        if precio < 50000: continue # Filtro basura
+        
+        # Filtro final de precio lógico (Evitamos errores de OCR o precios simbólicos)
+        if precio < 50000: continue 
 
         valor_coche, modelo = tasar_coche(texto_coche)
         
@@ -124,14 +149,16 @@ def main():
             "precio_total": precio,
             "valor_coche": valor_coche,
             "precio_neto": precio - valor_coche,
-            "raw": raw[:100]
+            "raw": raw[:100] + "..."
         })
 
     df = pd.DataFrame(clean_items)
     
-    # 2. CALCULAR MÉTRICAS DEL DÍA (SNAPSHOT)
-    if df.empty: return
+    if df.empty: 
+        print("⚠️ No se generaron ofertas válidas.")
+        return
     
+    # 2. CALCULAR MÉTRICAS DEL DÍA (SNAPSHOT)
     today_stats = {
         "date": datetime.now().strftime("%Y-%m-%d"),
         "avg_price": int(df['precio_neto'].mean()),
@@ -143,30 +170,24 @@ def main():
     }
 
     # 3. ACTUALIZAR HISTÓRICO Y CALCULAR TENDENCIAS
-    # Crear carpeta si no existe
     os.makedirs(os.path.dirname(FILE_HISTORY), exist_ok=True)
     
     history_df = pd.DataFrame()
     if os.path.exists(FILE_HISTORY):
         history_df = pd.read_csv(FILE_HISTORY)
     
-    # Añadir hoy (si no existe ya para hoy)
+    # Añadir hoy (si no existe ya para hoy, reemplazamos, si no añadimos)
     if not history_df.empty and today_stats['date'] in history_df['date'].values:
-        # Actualizamos el registro de hoy
         history_df.loc[history_df['date'] == today_stats['date']] = pd.DataFrame([today_stats]).values
     else:
-        # Añadimos nueva fila
         history_df = pd.concat([history_df, pd.DataFrame([today_stats])], ignore_index=True)
     
-    # Guardar histórico actualizado
     history_df.to_csv(FILE_HISTORY, index=False)
     
     # --- CÁLCULOS FINANCIEROS AVANZADOS (BLOOMBERG STYLE) ---
-    # Calcular Media Móvil (SMA) 7 días y 30 días
     history_df['sma_7'] = history_df['median_price'].rolling(window=7).mean().fillna(0).astype(int)
     history_df['sma_30'] = history_df['median_price'].rolling(window=30).mean().fillna(0).astype(int)
     
-    # Calcular Cambio Porcentual Diario (Delta)
     current_median = today_stats['median_price']
     prev_median = current_median
     if len(history_df) > 1:
@@ -176,20 +197,19 @@ def main():
     delta_pct = round((delta_abs / prev_median) * 100, 2) if prev_median else 0
 
     # 4. GENERAR JSON PARA LA WEB
-    # Agrupación por días (Lunes, Martes...) para gráfico de barras "Precio por Día"
-    precio_por_dia = df.groupby('dia')['precio_neto'].median().to_dict()
+    # Convertir a tipos nativos de Python (int) para evitar errores de serialización JSON con numpy
+    precio_por_dia = df.groupby('dia')['precio_neto'].median().astype(int).to_dict()
     
-    # Top 5 Ofertas más baratas (El "Hot List")
     top_baratas = df.sort_values('precio_neto').head(5)[['fuente', 'dia', 'modelo', 'precio_neto', 'precio_total', 'valor_coche']].to_dict('records')
 
     web_output = {
         "ticker": {
-            "current_price": current_median,
+            "current_price": int(current_median),
             "delta_value": int(delta_abs),
-            "delta_percent": delta_pct,
+            "delta_percent": float(delta_pct),
             "direction": "up" if delta_abs >= 0 else "down",
-            "volume": today_stats['volume'],
-            "volatility": today_stats['volatility_std']
+            "volume": int(today_stats['volume']),
+            "volatility": int(today_stats['volatility_std'])
         },
         "charts": {
             "history_dates": history_df['date'].tolist(),
@@ -204,10 +224,11 @@ def main():
         "updated_at": datetime.now().strftime("%d/%m/%Y %H:%M")
     }
 
+    os.makedirs(os.path.dirname(FILE_OUTPUT_WEB), exist_ok=True)
     with open(FILE_OUTPUT_WEB, 'w', encoding='utf-8') as f:
         json.dump(web_output, f, ensure_ascii=False, indent=4)
     
-    print(f"✅ Proceso completado. Precio actual: {current_median}€ ({delta_pct}%)")
+    print(f"✅ Proceso completado. Precio actual: {current_median}€ ({delta_pct}%) - Volumen: {len(df)}")
 
 if __name__ == "__main__":
     main()
