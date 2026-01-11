@@ -29,18 +29,31 @@ from selenium.webdriver.common.keys import Keys
 
 def iniciar_driver():
     options = Options()
-    options.add_argument('--headless') # Vital para servidores sin pantalla
+    options.add_argument('--headless') 
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--window-size=1920,1080')
     
-    # --- NOVEDAD: Forzar Español para evitar popups en inglés ---
-    options.add_argument("--lang=es-ES") 
-    options.add_experimental_option('prefs', {'intl.accept_languages': 'es,es_ES'})
+    # --- CONFIGURACIÓN ANTI-BOT CRÍTICA PARA GITHUB ACTIONS ---
+    # 1. Desactiva la bandera que dice "Soy un robot"
+    options.add_argument("--disable-blink-features=AutomationControlled") 
     
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    # 2. Excluye switches de automatización
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
     
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    # 3. Forzamos idioma (Vital para el popup que se ve en tu foto)
+    options.add_argument("--lang=en-US") # Ponemos inglés porque tu foto muestra inglés, así coincidimos con el botón
+    
+    # 4. User Agent rotativo o fijo muy común
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36")
+    
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
+    # 5. Truco final: Eliminar la propiedad 'webdriver' de Javascript
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    
+    return driver
 
 # =============================================================================
 # 2. MOTORES DE EXTRACCIÓN
@@ -49,47 +62,58 @@ def iniciar_driver():
 # --- A. MILANUNCIOS (LÓGICA NUEVA: SCROLL PROGRESIVO + JS) ---
 def scrape_milanuncios(driver):
     datos = []
-    print(f"\n🌍 [1/4] MILANUNCIOS (Modo Scroll Progresivo)...")
+    print(f"\n🌍 [1/4] MILANUNCIOS (Modo Stealth GitHub)...")
     try:
-        # 1. Enlace Directo (Evita errores de buscador)
+        # 1. Ir directo
         driver.get("https://www.milanuncios.com/anuncios/?s=Licencia%20taxi%20barcelona")
-        time.sleep(4)
+        time.sleep(5) # Un segundo extra para GitHub Actions
 
-        # 2. Gestión de Cookies (Multilenguaje)
-        try: 
-            xpath_cookies = "//button[contains(., 'Agree') or contains(., 'Aceptar') or contains(., 'Consentir')]"
-            boton = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, xpath_cookies)))
-            boton.click()
-            print("   -> Cookies cerradas.")
-            time.sleep(2)
-        except: pass
+        # 2. ATAQUE AL POPUP (Visto en tu imagen: "Agree and close")
+        print("   -> Intentando cerrar cookies...")
+        try:
+            # Tu imagen muestra 'Agree and close', buscamos 'Agree' específicamente
+            # Usamos un selector CSS genérico para el botón verde si el texto falla
+            boton = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Agree') or contains(., 'Aceptar') or contains(., 'Consentir')]"))
+            )
+            driver.execute_script("arguments[0].click();", boton) # Click vía JS es más seguro
+            print("   ✅ Cookies cerradas.")
+            time.sleep(3)
+        except:
+            # PLAN B: Si no encuentra el botón por texto, busca por clase común de botones de consentimiento
+            print("   ⚠️ Botón de texto no encontrado, intentando fuerza bruta en el centro...")
+            try:
+                # A veces un click en el body cierra modales mal hechos, o enviamos ESCAPE
+                webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+            except: pass
 
-        # 3. Scroll Humano (Baja poco a poco para forzar carga de ofertas)
+        # 3. SCROLL (Igual que antes)
         print("   -> Bajando para cargar ofertas...")
         viewport_height = driver.execute_script("return window.innerHeight")
-        
-        for _ in range(50): # Límite de seguridad
+        for _ in range(40): 
             driver.execute_script(f"window.scrollBy(0, {viewport_height});")
-            time.sleep(1.5) # Espera carga de imágenes
+            time.sleep(1) 
             
-            # Chequeo de final
+            # Chequeo rápido de final
             new_height = driver.execute_script("return document.body.scrollHeight")
             current_scroll = driver.execute_script("return window.pageYOffset + window.innerHeight")
-            
             if current_scroll >= new_height - 100:
-                time.sleep(2) # Última oportunidad de carga
-                if driver.execute_script("return document.body.scrollHeight") == new_height:
-                    break # Fin real
+                break
 
-        # 4. Extracción Blindada (JS textContent)
+        # 4. EXTRACCIÓN
         anuncios = driver.find_elements(By.TAG_NAME, "article")
         print(f"   -> Elementos visualizados: {len(anuncios)}")
 
+        # SI FALLA AQUÍ (0 elementos), IMPRIMIMOS EL HTML PARA VER QUÉ PASA
+        if len(anuncios) == 0:
+            print("   ⚠️ ALERTA: 0 anuncios. Posible bloqueo antibot.")
+            # Opcional: Imprimir título de la página para ver si nos redirigieron
+            print(f"   Título de la página: {driver.title}")
+
         for anuncio in anuncios:
             try:
-                # Extraemos con JS directo del HTML (bypassea bloqueos visuales de Selenium)
                 raw = driver.execute_script("return arguments[0].textContent;", anuncio).strip()
-                raw = re.sub(r'\s+', ' ', raw) # Limpieza de espacios
+                raw = re.sub(r'\s+', ' ', raw)
 
                 if len(raw) > 20 and ("TAXI" in raw.upper() or "LICENCIA" in raw.upper()):
                     datos.append({"fuente": "MILANUNCIOS", "raw": raw})
@@ -101,7 +125,6 @@ def scrape_milanuncios(driver):
         
     print(f"   -> {len(datos)} ofertas válidas extraídas.")
     return datos
-
 # --- B. ASESORÍA SOLANO ---
 def scrape_solano(driver):
     datos = []
