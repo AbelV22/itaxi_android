@@ -25,6 +25,10 @@ jobs:
           pip install -r requirements.txt
         # Asegúrate de que requirements.txt esté en la raíz y tenga: pandas, numpy, requests, beautifulsoup4 (o lo que use tu scraper)
 
+      - name: 🔍 Debug - Ver estructura de archivos
+        run: ls -R
+     
+
       - name: 🕵️ Ejecutar Scraper
         run: python scripts/licencia_scrap.py
         # Esto ejecutará tu script de scraping.
