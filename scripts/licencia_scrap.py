@@ -28,121 +28,96 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
+# =============================================================================
+# MODIFICACIÓN: MODO MÓVIL (LA ÚLTIMA ESPERANZA GRATUITA)
+# =============================================================================
 def iniciar_driver():
-    print("🚀 Iniciando Chrome en modo INDETECTABLE...")
+    print("📱 Iniciando Chrome en MODO MÓVIL...")
     
-    options = uc.ChromeOptions()
-    # headless=new es mucho más difícil de detectar que el headless antiguo
-    options.add_argument('--headless=new') 
+    options = Options()
+    options.add_argument('--headless=new') # El nuevo headless es vital
     options.add_argument('--no-sandbox')
-    options.add_argument('--window-size=1920,1080')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--window-size=375,812') # Tamaño de pantalla de iPhone/Pixel
     options.add_argument("--lang=es-ES")
     
-    # Esto evita errores de memoria en entornos Docker/Linux limitados
-    options.add_argument('--disable-dev-shm-usage') 
+    # --- TRUCO MAESTRO: EMULACIÓN MÓVIL NATIVA ---
+    # Esto configura Chrome para que actúe internamente como un teléfono
+    # (Touch events, User Agent, Resolución, Pixel Ratio...)
+    mobile_emulation = {
+        "deviceName": "Pixel 5" 
+    }
+    options.add_experimental_option("mobileEmulation", mobile_emulation)
+    
+    # Ocultar rastro de automatización
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
 
-    # Iniciar el driver parcheado. 
-    # version_main=None hace que busque la versión correcta automáticamente
-    driver = uc.Chrome(options=options, version_main=None)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     
     return driver
 
-# =============================================================================
-# 2. MOTORES DE EXTRACCIÓN
-# =============================================================================
-
-# --- A. MILANUNCIOS (LÓGICA NUEVA: SCROLL PROGRESIVO + JS) ---
 def scrape_milanuncios(driver):
+    datos = []
+    print(f"\n🌍 [1/4] MILANUNCIOS (Vista Móvil)...")
+    try:
+        # 1. Navegación
+        driver.get("https://www.milanuncios.com/anuncios/?s=Licencia%20taxi%20barcelona")
+        time.sleep(5) # Espera prudencial
 
-    # --- 🕵️ BLOQUE DE DEPURACIÓN FORENSE ---
-        titulo = driver.title
-        print(f"   🔎 Título detectado: '{titulo}'")
-        
-        if "Interruption" in titulo or "Access Denied" in titulo or "Robot" in titulo:
-            print("   🚨 BLOQUEO DETECTADO. Generando pruebas...")
-            
-            # 1. Guardar HTML del bloqueo (para ver si pide Captcha o es IP ban)
-            with open("error_milanuncios.html", "w", encoding="utf-8") as f:
-                f.write(driver.page_source)
-            
-            # 2. Guardar FOTO del bloqueo
-            driver.save_screenshot("error_milanuncios.png")
-            
-            print("   📸 Captura guardada como 'error_milanuncios.png'")
-            print("   📄 HTML guardado como 'error_milanuncios.html'")
-            
-            # Intentamos leer el mensaje de error en pantalla
-            try:
-                mensaje = driver.find_element(By.TAG_NAME, "h1").text
-                print(f"   ⚠️ Mensaje en pantalla: {mensaje}")
-            except: pass
-            
-            return [] # Cortamos aquí, no tiene sentido seguir
-        # ----------------------------------------
-        datos = []
-        print(f"\n🌍 [1/4] MILANUNCIOS (Modo Stealth GitHub)...")
+        # 2. Verificar Bloqueo
+        if "Interruption" in driver.title or "Denied" in driver.title:
+            print("   🚨 BLOQUEO DE IP CONFIRMADO (El modo móvil tampoco funcionó).")
+            print("   💡 Solución: Ejecutar en local o usar Proxy.")
+            return []
+
+        # 3. Cookies (En móvil suelen ser un banner abajo)
         try:
-            # 1. Ir directo
-            driver.get("https://www.milanuncios.com/anuncios/?s=Licencia%20taxi%20barcelona")
-            time.sleep(5) # Un segundo extra para GitHub Actions
-    
-            # 2. ATAQUE AL POPUP (Visto en tu imagen: "Agree and close")
-            print("   -> Intentando cerrar cookies...")
+            # Buscamos botones genéricos de aceptar
+            boton = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Aceptar') or contains(., 'Consentir') or contains(., 'Agree')]"))
+            )
+            # En móvil a veces es mejor usar Javascript para el click
+            driver.execute_script("arguments[0].click();", boton)
+            print("   ✅ Cookies cerradas.")
+            time.sleep(2)
+        except: 
+            print("   ⚠️ No se vieron cookies (o el banner es diferente en móvil).")
+
+        # 4. Scroll Móvil (Es más corto)
+        print("   -> Bajando...")
+        for _ in range(20): # Menos scrolls porque la lista móvil carga distinto
+            driver.execute_script("window.scrollBy(0, 800);")
+            time.sleep(1)
+
+        # 5. Extracción
+        # En versión móvil, la estructura HTML puede cambiar ligeramente,
+        # pero la etiqueta 'article' suele mantenerse.
+        anuncios = driver.find_elements(By.TAG_NAME, "article")
+        
+        # Si falla article, probamos clases comunes de móvil
+        if not anuncios:
+            anuncios = driver.find_elements(By.CLASS_NAME, "ma-AdCard")
+
+        print(f"   -> Elementos visualizados: {len(anuncios)}")
+
+        for anuncio in anuncios:
             try:
-                # Tu imagen muestra 'Agree and close', buscamos 'Agree' específicamente
-                # Usamos un selector CSS genérico para el botón verde si el texto falla
-                boton = WebDriverWait(driver, 5).until(
-                    EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Agree') or contains(., 'Aceptar') or contains(., 'Consentir')]"))
-                )
-                driver.execute_script("arguments[0].click();", boton) # Click vía JS es más seguro
-                print("   ✅ Cookies cerradas.")
-                time.sleep(3)
-            except:
-                # PLAN B: Si no encuentra el botón por texto, busca por clase común de botones de consentimiento
-                print("   ⚠️ Botón de texto no encontrado, intentando fuerza bruta en el centro...")
-                try:
-                    # A veces un click en el body cierra modales mal hechos, o enviamos ESCAPE
-                    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-                except: pass
-    
-            # 3. SCROLL (Igual que antes)
-            print("   -> Bajando para cargar ofertas...")
-            viewport_height = driver.execute_script("return window.innerHeight")
-            for _ in range(40): 
-                driver.execute_script(f"window.scrollBy(0, {viewport_height});")
-                time.sleep(1) 
-                
-                # Chequeo rápido de final
-                new_height = driver.execute_script("return document.body.scrollHeight")
-                current_scroll = driver.execute_script("return window.pageYOffset + window.innerHeight")
-                if current_scroll >= new_height - 100:
-                    break
-    
-            # 4. EXTRACCIÓN
-            anuncios = driver.find_elements(By.TAG_NAME, "article")
-            print(f"   -> Elementos visualizados: {len(anuncios)}")
-    
-            # SI FALLA AQUÍ (0 elementos), IMPRIMIMOS EL HTML PARA VER QUÉ PASA
-            if len(anuncios) == 0:
-                print("   ⚠️ ALERTA: 0 anuncios. Posible bloqueo antibot.")
-                # Opcional: Imprimir título de la página para ver si nos redirigieron
-                print(f"   Título de la página: {driver.title}")
-    
-            for anuncio in anuncios:
-                try:
-                    raw = driver.execute_script("return arguments[0].textContent;", anuncio).strip()
-                    raw = re.sub(r'\s+', ' ', raw)
-    
-                    if len(raw) > 20 and ("TAXI" in raw.upper() or "LICENCIA" in raw.upper()):
-                        datos.append({"fuente": "MILANUNCIOS", "raw": raw})
-                except: continue
-                
-        except Exception as e: 
-            print(f"   ⚠️ Error en Milanuncios: {e}")
-            pass
+                raw = driver.execute_script("return arguments[0].textContent;", anuncio).strip()
+                raw = re.sub(r'\s+', ' ', raw)
+
+                if len(raw) > 15 and ("TAXI" in raw.upper() or "LICENCIA" in raw.upper()):
+                    datos.append({"fuente": "MILANUNCIOS", "raw": raw})
+            except: continue
             
-        print(f"   -> {len(datos)} ofertas válidas extraídas.")
-        return datos
+    except Exception as e: 
+        print(f"   ⚠️ Error: {e}")
+        pass
+        
+    print(f"   -> {len(datos)} ofertas válidas extraídas.")
+    return datos
+    
 # --- B. ASESORÍA SOLANO ---
 def scrape_solano(driver):
     datos = []
