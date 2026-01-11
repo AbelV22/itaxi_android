@@ -1,29 +1,30 @@
 {
     "ticker": {
-        "current_price": 165296,
+        "current_price": 166147,
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 18,
-        "volatility": 8543
+        "volume": 22,
+        "volatility": 9683
     },
     "charts": {
         "history_dates": [
             "2026-01-11"
         ],
         "history_prices": [
-            165296
+            166147
         ],
         "history_sma_7": [
             0
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165571.0,
-            "JUEVES PAR": 165000.0,
-            "LUNES PAR": 175062.0,
+            "JUEVES PAR": 165575.5,
+            "LUNES IMPAR": 187050.0,
+            "LUNES PAR": 181157.0,
             "MARTES PAR": 165021.0,
             "NO ESPECIFICADO": 162552.0,
-            "VIERNES IMPAR": 168600.5
+            "VIERNES IMPAR": 166776.0
         }
     },
     "market_depth": {
@@ -70,6 +71,34 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 187050,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES IMPAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 210.000 € | Barcelona (Barcelona) | NO NEGOCIABLE \nFiesta Lun"
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 187252,
+                "modelo": "TOYOTA CAMRY",
+                "dia": "LUNES PAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC"
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 166776,
+                "modelo": "FORD",
+                "dia": "VIERNES IMPAR",
+                "raw": "Licencia Taxi Barcelona + coche | 170.000 € | Barcelona (Barcelona) | Vendo Licencia Taxi Barcelona "
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 170802,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "JUEVES PAR",
+                "raw": "3 | Licencia Taxi Barcelona   185.000 € | Sant Quirze del Valles (Barcelona) | Numero de licencia te"
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 171213,
@@ -198,5 +227,5 @@
             }
         ]
     },
-    "updated_at": "11/01/2026 13:29"
+    "updated_at": "11/01/2026 13:40"
 }
