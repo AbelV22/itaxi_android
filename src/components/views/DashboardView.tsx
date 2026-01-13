@@ -230,27 +230,22 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     <div className="space-y-3 pb-16">
 
       {/* === QUICK NAV BUTTONS === */}
-      <div className="grid grid-cols-3 gap-2 animate-fade-in" style={{ animationDelay: '100ms' }}>
+      <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '100ms' }}>
         <button
           onClick={onViewFullDay}
           className="card-glass-hover flex items-center justify-center gap-2 h-11 text-white/80 hover:text-white font-medium text-sm transition-all duration-200"
         >
-          <Plane className="h-4 w-4 text-primary" />
-          <span>Vuelos</span>
+          <Calendar className="h-4 w-4 text-primary" />
+          <Plane className="h-4 w-4" />
+          <span>Ver Vuelos</span>
         </button>
         <button
           onClick={onViewTrainsFullDay}
           className="card-glass-hover flex items-center justify-center gap-2 h-11 text-white/80 hover:text-white font-medium text-sm transition-all duration-200"
         >
-          <Train className="h-4 w-4 text-emerald-400" />
-          <span>Trenes</span>
-        </button>
-        <button
-          onClick={() => navigate('/admin')}
-          className="card-glass-hover flex items-center justify-center gap-2 h-11 text-white/80 hover:text-white font-medium text-sm transition-all duration-200"
-        >
-          <Settings className="h-4 w-4 text-muted-foreground" />
-          <span>Admin</span>
+          <Calendar className="h-4 w-4 text-emerald-400" />
+          <Train className="h-4 w-4" />
+          <span>Ver Trenes</span>
         </button>
       </div>
 
@@ -426,6 +421,14 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
           </div>
         </button>
       </div>
+
+      {/* Hidden Admin Access - Triple tap on version to access */}
+      <button
+        onClick={() => navigate('/admin')}
+        className="w-full py-4 text-[10px] text-muted-foreground/30 hover:text-muted-foreground/60 transition-colors"
+      >
+        v1.0.0
+      </button>
     </div>
   );
 }
