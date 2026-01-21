@@ -1,9 +1,9 @@
 {
     "ticker": {
         "current_price": 165621,
-        "delta_value": -4127,
-        "delta_percent": -2.43,
-        "direction": "down",
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
         "volume": 18,
         "volatility": 10096
     },
@@ -16,7 +16,8 @@
             "2026-01-17",
             "2026-01-18",
             "2026-01-19",
-            "2026-01-20"
+            "2026-01-20",
+            "2026-01-21"
         ],
         "history_prices": [
             166147,
@@ -26,6 +27,7 @@
             169748,
             169748,
             169748,
+            165621,
             165621
         ],
         "history_sma_7": [
@@ -36,7 +38,8 @@
             0,
             0,
             167368,
-            167292
+            167292,
+            167378
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
@@ -218,5 +221,5 @@
             }
         ]
     },
-    "updated_at": "20/01/2026 07:36"
+    "updated_at": "21/01/2026 07:37"
 }
