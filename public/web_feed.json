@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163052,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 15,
-        "volatility": 9519
+        "current_price": 162821,
+        "delta_value": -231,
+        "delta_percent": -0.14,
+        "direction": "down",
+        "volume": 16,
+        "volatility": 9696
     },
     "charts": {
         "history_dates": [
@@ -29,7 +29,8 @@
             "2026-01-30",
             "2026-01-31",
             "2026-02-01",
-            "2026-02-02"
+            "2026-02-02",
+            "2026-02-03"
         ],
         "history_prices": [
             166147,
@@ -52,7 +53,8 @@
             167058,
             163052,
             163052,
-            163052
+            163052,
+            162821
         ],
         "history_sma_7": [
             0,
@@ -75,13 +77,14 @@
             165143,
             165209,
             165275,
-            165341
+            165341,
+            164735
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
             "JUEVES PAR": 171213,
             "MARTES PAR": 174285,
-            "NO ESPECIFICADO": 162513,
+            "NO ESPECIFICADO": 160538,
             "VIERNES IMPAR": 166143
         }
     },
@@ -107,6 +110,14 @@
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
+                "precio_neto": 153563,
+                "precio_total": 158000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
+                "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
@@ -118,14 +129,6 @@
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
-            },
-            {
-                "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DACIA",
-                "precio_neto": 159582,
-                "precio_total": 173000,
-                "valor_coche": 13418
             }
         ],
         "all_offers": [
@@ -187,6 +190,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 153563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 940 |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFO..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 162513,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
@@ -236,5 +246,5 @@
             }
         ]
     },
-    "updated_at": "02/02/2026 07:55"
+    "updated_at": "03/02/2026 07:49"
 }
