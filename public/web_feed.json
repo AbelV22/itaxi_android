@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 162821,
-        "delta_value": -231,
-        "delta_percent": -0.14,
-        "direction": "down",
-        "volume": 16,
-        "volatility": 9696
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
+        "volume": 14,
+        "volatility": 10255
     },
     "charts": {
         "history_dates": [
@@ -30,7 +30,8 @@
             "2026-01-31",
             "2026-02-01",
             "2026-02-02",
-            "2026-02-03"
+            "2026-02-03",
+            "2026-02-05"
         ],
         "history_prices": [
             166147,
@@ -54,6 +55,7 @@
             163052,
             163052,
             163052,
+            162821,
             162821
         ],
         "history_sma_7": [
@@ -78,13 +80,13 @@
             165209,
             165275,
             165341,
-            164735
+            164735,
+            164130
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
-            "JUEVES PAR": 171213,
             "MARTES PAR": 174285,
-            "NO ESPECIFICADO": 160538,
+            "NO ESPECIFICADO": 160375,
             "VIERNES IMPAR": 166143
         }
     },
@@ -93,17 +95,9 @@
             {
                 "fuente": "SOLANO",
                 "dia": "VIERNES IMPAR",
-                "modelo": "TOYOTA PRIUS",
-                "precio_neto": 153264,
-                "precio_total": 176000,
-                "valor_coche": 22736
-            },
-            {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 153563,
-                "precio_total": 158000,
+                "precio_neto": 150563,
+                "precio_total": 155000,
                 "valor_coche": 4437
             },
             {
@@ -118,8 +112,8 @@
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
+                "precio_neto": 153563,
+                "precio_total": 158000,
                 "valor_coche": 4437
             },
             {
@@ -129,9 +123,31 @@
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "JUEVES IMPAR",
+                "modelo": "DACIA",
+                "precio_neto": 159582,
+                "precio_total": 173000,
+                "valor_coche": 13418
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 150563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 38599 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166733,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 38594 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 174285,
@@ -145,13 +161,6 @@
                 "modelo": "DACIA",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38570 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 153264,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38561 | DIA DE FIESTA:  | VIERNES IMPAR | JUBILACIÓN FINAL ABRIL 2026 | LICENCIA TAXI EN VEN..."
             },
             {
                 "fuente": "SOLANO",
@@ -169,20 +178,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 171213,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 38502 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA DE TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 167058,
-                "modelo": "DACIA JOGGER",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38500 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 166143,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
@@ -190,17 +185,17 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 160375,
+                "modelo": "SKODA OCTAVIA",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi 1.5 GNC con 5 años de antigü..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 940 |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 162513,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 937 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Automatico con 4 años de an..."
             },
             {
                 "fuente": "STAC",
@@ -225,13 +220,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 886 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
@@ -246,5 +234,5 @@
             }
         ]
     },
-    "updated_at": "03/02/2026 07:49"
+    "updated_at": "05/02/2026 07:54"
 }
