@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 163052,
-        "delta_value": 231,
-        "delta_percent": 0.14,
+        "delta_value": 0,
+        "delta_percent": 0.0,
         "direction": "up",
-        "volume": 15,
-        "volatility": 9680
+        "volume": 13,
+        "volatility": 9549
     },
     "charts": {
         "history_dates": [
@@ -32,7 +32,8 @@
             "2026-02-02",
             "2026-02-03",
             "2026-02-05",
-            "2026-02-06"
+            "2026-02-06",
+            "2026-02-07"
         ],
         "history_prices": [
             166147,
@@ -58,6 +59,7 @@
             163052,
             162821,
             162821,
+            163052,
             163052
         ],
         "history_sma_7": [
@@ -84,12 +86,12 @@
             165341,
             164735,
             164130,
-            163558
+            163558,
+            162986
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 175896,
-            "MARTES PAR": 174285,
-            "NO ESPECIFICADO": 160375,
+            "NO ESPECIFICADO": 161483,
             "VIERNES IMPAR": 166143,
             "VIERNES PAR": 169345
         }
@@ -116,14 +118,6 @@
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 153563,
-                "precio_total": 158000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
@@ -135,6 +129,14 @@
                 "precio_neto": 159582,
                 "precio_total": 173000,
                 "valor_coche": 13418
+            },
+            {
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
+                "modelo": "SKODA OCTAVIA",
+                "precio_neto": 160375,
+                "precio_total": 170000,
+                "valor_coche": 9625
             }
         ],
         "all_offers": [
@@ -168,13 +170,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 174285,
-                "modelo": "FORD CUSTOM",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 38572 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAX..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 159582,
                 "modelo": "DACIA",
                 "dia": "JUEVES IMPAR",
@@ -200,13 +195,6 @@
                 "modelo": "SKODA OCTAVIA",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi 1.5 GNC con 5 años de antigü..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 153563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 940 |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFO..."
             },
             {
                 "fuente": "STAC",
@@ -245,5 +233,5 @@
             }
         ]
     },
-    "updated_at": "06/02/2026 07:51"
+    "updated_at": "07/02/2026 07:38"
 }
