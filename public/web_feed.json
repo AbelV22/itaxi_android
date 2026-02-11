@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 13,
-        "volatility": 9549
+        "volatility": 9685
     },
     "charts": {
         "history_dates": [
@@ -36,7 +36,8 @@
             "2026-02-07",
             "2026-02-08",
             "2026-02-09",
-            "2026-02-10"
+            "2026-02-10",
+            "2026-02-11"
         ],
         "history_prices": [
             166147,
@@ -62,6 +63,7 @@
             163052,
             162821,
             162821,
+            163052,
             163052,
             163052,
             163052,
@@ -96,12 +98,13 @@
             162986,
             162986,
             162986,
-            162986
+            162986,
+            163019
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 175896,
+            "JUEVES IMPAR": 173528,
             "NO ESPECIFICADO": 161483,
-            "VIERNES IMPAR": 166143,
+            "VIERNES IMPAR": 158353,
             "VIERNES PAR": 169345
         }
     },
@@ -151,6 +154,13 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 171161,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 38613 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 175896,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
@@ -169,13 +179,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 38599 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 166733,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38594 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
             },
             {
                 "fuente": "SOLANO",
@@ -242,5 +245,5 @@
             }
         ]
     },
-    "updated_at": "10/02/2026 08:02"
+    "updated_at": "11/02/2026 07:58"
 }
