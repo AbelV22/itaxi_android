@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163052,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 13,
-        "volatility": 9685
+        "current_price": 161483,
+        "delta_value": -1569,
+        "delta_percent": -0.96,
+        "direction": "down",
+        "volume": 8,
+        "volatility": 10095
     },
     "charts": {
         "history_dates": [
@@ -37,7 +37,8 @@
             "2026-02-08",
             "2026-02-09",
             "2026-02-10",
-            "2026-02-11"
+            "2026-02-11",
+            "2026-02-12"
         ],
         "history_prices": [
             166147,
@@ -68,7 +69,8 @@
             163052,
             163052,
             163052,
-            163052
+            163052,
+            161483
         ],
         "history_sma_7": [
             0,
@@ -99,25 +101,17 @@
             162986,
             162986,
             162986,
-            163019
+            163019,
+            162827
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 173528,
-            "NO ESPECIFICADO": 161483,
-            "VIERNES IMPAR": 158353,
-            "VIERNES PAR": 169345
+            "LUNES": 183637,
+            "NO ESPECIFICADO": 155563,
+            "VIERNES": 162821
         }
     },
     "market_depth": {
         "cheapest_offers": [
-            {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
-            },
             {
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
@@ -130,83 +124,56 @@
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
+                "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
             },
             {
-                "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DACIA",
-                "precio_neto": 159582,
-                "precio_total": 173000,
-                "valor_coche": 13418
-            },
-            {
                 "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
+                "dia": "VIERNES",
                 "modelo": "SKODA OCTAVIA",
                 "precio_neto": 160375,
                 "precio_total": 170000,
                 "valor_coche": 9625
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES",
+                "modelo": "DACIA JOGGER",
+                "precio_neto": 162591,
+                "precio_total": 170000,
+                "valor_coche": 7409
             }
         ],
         "all_offers": [
             {
-                "fuente": "SOLANO",
-                "precio_neto": 171161,
+                "fuente": "STAC",
+                "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38613 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 175896,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38605 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 169345,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38602 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38599 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 159582,
-                "modelo": "DACIA",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38570 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 177830,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38525 | DIA DE FIESTA:  | JUEVES IMPAR | licencia taxi en venta barcelona | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 166143,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38404 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
+                "dia": "VIERNES",
+                "raw": "Referencia: 943 |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con 6 años de a..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 160375,
                 "modelo": "SKODA OCTAVIA",
+                "dia": "VIERNES",
+                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1.5 GNC con 5..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi 1.5 GNC con 5 años de antigü..."
+                "raw": "Referencia: 920/2 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
             },
             {
                 "fuente": "STAC",
@@ -226,24 +193,24 @@
                 "fuente": "STAC",
                 "precio_neto": 163052,
                 "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de antigüedad y ..."
+                "dia": "VIERNES",
+                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN FIESTA VIERNES con 3 años d..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 847 |  | Se vende licencia con vehículo Dacia Jogger GLP Manual con 2 años de antigüedad..."
+                "dia": "VIERNES",
+                "raw": "Referencia: 847 |  | Se vende licencia con vehículo Dacia Jogger FIESTA VIERNES GLP Manual con 2 año..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 183637,
                 "modelo": "TESLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 734 |  | Se vende licencia con vehículo Tesla ELECTRICO con 1 años de antigüedad y 52000..."
+                "dia": "LUNES",
+                "raw": "Referencia: 734 |  | Se vende licencia con vehículo Tesla FIESTA LUNES 100% ELECTRICO con 1 años de ..."
             }
         ]
     },
-    "updated_at": "11/02/2026 07:58"
+    "updated_at": "12/02/2026 07:57"
 }
