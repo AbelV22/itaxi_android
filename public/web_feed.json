@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 166143,
-        "delta_value": 4660,
-        "delta_percent": 2.89,
+        "current_price": 168000,
+        "delta_value": 1857,
+        "delta_percent": 1.12,
         "direction": "up",
         "volume": 17,
-        "volatility": 9104
+        "volatility": 9147
     },
     "charts": {
         "history_dates": [
@@ -39,7 +39,8 @@
             "2026-02-10",
             "2026-02-11",
             "2026-02-12",
-            "2026-02-13"
+            "2026-02-13",
+            "2026-02-14"
         ],
         "history_prices": [
             166147,
@@ -72,7 +73,8 @@
             163052,
             163052,
             161483,
-            166143
+            166143,
+            168000
         ],
         "history_sma_7": [
             0,
@@ -105,14 +107,16 @@
             162986,
             163019,
             162827,
-            163269
+            163269,
+            163976
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 172528,
             "LUNES": 183637,
+            "MARTES": 170774,
             "MARTES PAR": 168000,
             "NO ESPECIFICADO": 155563,
-            "VIERNES": 162821,
+            "VIERNES": 162591,
             "VIERNES IMPAR": 158353,
             "VIERNES PAR": 170686
         }
@@ -226,6 +230,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 170774,
+                "modelo": "SEAT",
+                "dia": "MARTES",
+                "raw": "Referencia: 944 |  | Se vende licencia con vehículo Seat Toledo MARTES con 8 años de antigüedad y 37..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES",
@@ -261,13 +272,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 163052,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES",
-                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN FIESTA VIERNES con 3 años d..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
                 "dia": "VIERNES",
@@ -282,5 +286,5 @@
             }
         ]
     },
-    "updated_at": "13/02/2026 07:55"
+    "updated_at": "14/02/2026 07:39"
 }
