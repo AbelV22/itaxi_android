@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 17,
-        "volatility": 9147
+        "volume": 15,
+        "volatility": 9654
     },
     "charts": {
         "history_dates": [
@@ -41,7 +41,8 @@
             "2026-02-12",
             "2026-02-13",
             "2026-02-14",
-            "2026-02-16"
+            "2026-02-16",
+            "2026-02-17"
         ],
         "history_prices": [
             166147,
@@ -75,6 +76,7 @@
             163052,
             161483,
             166143,
+            168000,
             168000,
             168000
         ],
@@ -111,15 +113,15 @@
             162827,
             163269,
             163976,
-            164683
+            164683,
+            165390
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 172528,
             "LUNES": 183637,
-            "MARTES": 170774,
             "MARTES PAR": 168000,
             "NO ESPECIFICADO": 155563,
-            "VIERNES": 162591,
+            "VIERNES": 167241,
             "VIERNES IMPAR": 158353,
             "VIERNES PAR": 170686
         }
@@ -233,13 +235,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 170774,
-                "modelo": "SEAT",
-                "dia": "MARTES",
-                "raw": "Referencia: 944 |  | Se vende licencia con vehículo Seat Toledo MARTES con 8 años de antigüedad y 37..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES",
@@ -275,13 +270,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 162591,
-                "modelo": "DACIA JOGGER",
-                "dia": "VIERNES",
-                "raw": "Referencia: 847 |  | Se vende licencia con vehículo Dacia Jogger FIESTA VIERNES GLP Manual con 2 año..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 183637,
                 "modelo": "TESLA",
                 "dia": "LUNES",
@@ -289,5 +277,5 @@
             }
         ]
     },
-    "updated_at": "16/02/2026 07:59"
+    "updated_at": "17/02/2026 07:55"
 }
