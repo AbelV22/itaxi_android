@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168580,
-        "delta_value": 580,
-        "delta_percent": 0.35,
+        "current_price": 169161,
+        "delta_value": 581,
+        "delta_percent": 0.34,
         "direction": "up",
-        "volume": 18,
-        "volatility": 8983
+        "volume": 19,
+        "volatility": 8849
     },
     "charts": {
         "history_dates": [
@@ -43,7 +43,8 @@
             "2026-02-14",
             "2026-02-16",
             "2026-02-17",
-            "2026-02-18"
+            "2026-02-18",
+            "2026-02-19"
         ],
         "history_prices": [
             166147,
@@ -80,7 +81,8 @@
             168000,
             168000,
             168000,
-            168580
+            168580,
+            169161
         ],
         "history_sma_7": [
             0,
@@ -117,7 +119,8 @@
             163976,
             164683,
             165390,
-            166179
+            166179,
+            167052
         ],
         "price_by_day_descanso": {
             "JUEVES": 164563,
@@ -127,6 +130,7 @@
             "LUNES PAR": 171563,
             "MARTES PAR": 168000,
             "MIERCOLES PAR": 171563,
+            "NO ESPECIFICADO": 172830,
             "VIERNES": 157063,
             "VIERNES PAR": 169345
         }
@@ -247,6 +251,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 172830,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 947 |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2.0 TDI Cambio Manual (embrague..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 164563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES",
@@ -303,5 +314,5 @@
             }
         ]
     },
-    "updated_at": "18/02/2026 07:56"
+    "updated_at": "19/02/2026 07:54"
 }
