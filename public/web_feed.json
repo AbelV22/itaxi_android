@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169161,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 169253,
+        "delta_value": 92,
+        "delta_percent": 0.05,
         "direction": "up",
-        "volume": 19,
-        "volatility": 8842
+        "volume": 20,
+        "volatility": 8818
     },
     "charts": {
         "history_dates": [
@@ -48,7 +48,8 @@
             "2026-02-20",
             "2026-02-21",
             "2026-02-22",
-            "2026-02-23"
+            "2026-02-23",
+            "2026-02-24"
         ],
         "history_prices": [
             166147,
@@ -90,7 +91,8 @@
             169161,
             169161,
             169161,
-            169161
+            169161,
+            169253
         ],
         "history_sma_7": [
             0,
@@ -132,9 +134,11 @@
             168149,
             168580,
             168746,
-            168912
+            168912,
+            169091
         ],
         "price_by_day_descanso": {
+            "JUEVES": 175492,
             "JUEVES IMPAR": 169161,
             "LUNES": 183637,
             "LUNES IMPAR": 178937,
@@ -261,6 +265,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 175492,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "JUEVES",
+                "raw": "Referencia: 949 JUEVES |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR. Cambio manual. Diés..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 165161,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES",
@@ -324,5 +335,5 @@
             }
         ]
     },
-    "updated_at": "23/02/2026 07:59"
+    "updated_at": "24/02/2026 07:56"
 }
