@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169253,
+        "current_price": 169345,
         "delta_value": 92,
         "delta_percent": 0.05,
         "direction": "up",
-        "volume": 20,
-        "volatility": 8818
+        "volume": 19,
+        "volatility": 9044
     },
     "charts": {
         "history_dates": [
@@ -49,7 +49,8 @@
             "2026-02-21",
             "2026-02-22",
             "2026-02-23",
-            "2026-02-24"
+            "2026-02-24",
+            "2026-02-25"
         ],
         "history_prices": [
             166147,
@@ -92,7 +93,8 @@
             169161,
             169161,
             169161,
-            169253
+            169253,
+            169345
         ],
         "history_sma_7": [
             0,
@@ -135,7 +137,8 @@
             168580,
             168746,
             168912,
-            169091
+            169091,
+            169200
         ],
         "price_by_day_descanso": {
             "JUEVES": 175492,
@@ -145,7 +148,7 @@
             "LUNES PAR": 171563,
             "MARTES PAR": 168000,
             "MIERCOLES PAR": 171563,
-            "VIERNES": 159469,
+            "VIERNES": 158563,
             "VIERNES PAR": 169345
         }
     },
@@ -272,13 +275,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 165161,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES",
-                "raw": "Referencia: 948 VIERNES |  | Se vende licencia con vehículo Toyota Prius Plus con 7 años de antigüed..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 172830,
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "VIERNES",
@@ -335,5 +331,5 @@
             }
         ]
     },
-    "updated_at": "24/02/2026 07:56"
+    "updated_at": "25/02/2026 07:57"
 }
