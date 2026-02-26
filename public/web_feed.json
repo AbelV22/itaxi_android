@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169345,
-        "delta_value": 92,
-        "delta_percent": 0.05,
+        "current_price": 170563,
+        "delta_value": 1218,
+        "delta_percent": 0.72,
         "direction": "up",
-        "volume": 19,
-        "volatility": 9044
+        "volume": 18,
+        "volatility": 9237
     },
     "charts": {
         "history_dates": [
@@ -50,7 +50,8 @@
             "2026-02-22",
             "2026-02-23",
             "2026-02-24",
-            "2026-02-25"
+            "2026-02-25",
+            "2026-02-26"
         ],
         "history_prices": [
             166147,
@@ -94,7 +95,8 @@
             169161,
             169161,
             169253,
-            169345
+            169345,
+            170563
         ],
         "history_sma_7": [
             0,
@@ -138,14 +140,15 @@
             168746,
             168912,
             169091,
-            169200
+            169200,
+            169400
         ],
         "price_by_day_descanso": {
             "JUEVES": 175492,
-            "JUEVES IMPAR": 169161,
+            "JUEVES IMPAR": 176863,
+            "JUEVES PAR": 176831,
             "LUNES": 183637,
-            "LUNES IMPAR": 178937,
-            "LUNES PAR": 171563,
+            "LUNES IMPAR": 169563,
             "MARTES PAR": 168000,
             "MIERCOLES PAR": 171563,
             "VIERNES": 158563,
@@ -198,6 +201,20 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 176831,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38649 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA-JUEVES PAR- CADDY P...."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 169563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 38647 | DIA DE FIESTA:  | LUNES IMPAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI VENT..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 171563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MIERCOLES PAR",
@@ -205,24 +222,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 171563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 38634 | DIA DE FIESTA:  | LUNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAXI..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38631 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 178937,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38628 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
             },
             {
                 "fuente": "SOLANO",
@@ -240,13 +243,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 169161,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38613 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 175896,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
@@ -261,10 +257,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 159582,
-                "modelo": "DACIA",
+                "precio_neto": 177830,
+                "modelo": "VOLKSWAGEN CADDY",
                 "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38570 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+                "raw": "Ref:  | 38525 | DIA DE FIESTA:  | JUEVES IMPAR | licencia taxi en venta barcelona | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -331,5 +327,5 @@
             }
         ]
     },
-    "updated_at": "25/02/2026 07:57"
+    "updated_at": "26/02/2026 07:55"
 }
