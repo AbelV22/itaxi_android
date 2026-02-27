@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 170563,
-        "delta_value": 1218,
-        "delta_percent": 0.72,
-        "direction": "up",
-        "volume": 18,
-        "volatility": 9237
+        "current_price": 169563,
+        "delta_value": -1000,
+        "delta_percent": -0.59,
+        "direction": "down",
+        "volume": 17,
+        "volatility": 9189
     },
     "charts": {
         "history_dates": [
@@ -51,7 +51,8 @@
             "2026-02-23",
             "2026-02-24",
             "2026-02-25",
-            "2026-02-26"
+            "2026-02-26",
+            "2026-02-27"
         ],
         "history_prices": [
             166147,
@@ -96,7 +97,8 @@
             169161,
             169253,
             169345,
-            170563
+            170563,
+            169563
         ],
         "history_sma_7": [
             0,
@@ -141,11 +143,12 @@
             168912,
             169091,
             169200,
-            169400
+            169400,
+            169458
         ],
         "price_by_day_descanso": {
             "JUEVES": 175492,
-            "JUEVES IMPAR": 176863,
+            "JUEVES IMPAR": 175896,
             "JUEVES PAR": 176831,
             "LUNES": 183637,
             "LUNES IMPAR": 169563,
@@ -256,13 +259,6 @@
                 "raw": "Ref:  | 38602 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 177830,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38525 | DIA DE FIESTA:  | JUEVES IMPAR | licencia taxi en venta barcelona | LICENCIA TAXI EN..."
-            },
-            {
                 "fuente": "STAC",
                 "precio_neto": 175492,
                 "modelo": "VOLKSWAGEN CADDY",
@@ -327,5 +323,5 @@
             }
         ]
     },
-    "updated_at": "26/02/2026 07:55"
+    "updated_at": "27/02/2026 07:51"
 }
