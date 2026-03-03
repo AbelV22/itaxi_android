@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 168563,
+        "delta_value": -1000,
+        "delta_percent": -0.59,
+        "direction": "down",
         "volume": 15,
-        "volatility": 9011
+        "volatility": 9933
     },
     "charts": {
         "history_dates": [
@@ -55,7 +55,8 @@
             "2026-02-27",
             "2026-02-28",
             "2026-03-01",
-            "2026-03-02"
+            "2026-03-02",
+            "2026-03-03"
         ],
         "history_prices": [
             166147,
@@ -104,7 +105,8 @@
             169563,
             169563,
             169563,
-            169563
+            169563,
+            168563
         ],
         "history_sma_7": [
             0,
@@ -153,15 +155,16 @@
             169458,
             169515,
             169573,
-            169630
+            169630,
+            169531
         ],
         "price_by_day_descanso": {
             "JUEVES": 175492,
-            "JUEVES PAR": 176831,
             "LUNES": 183637,
-            "LUNES IMPAR": 169563,
+            "LUNES IMPAR": 168563,
+            "MARTES": 186357,
             "MARTES PAR": 168000,
-            "MIERCOLES PAR": 171563,
+            "MIERCOLES PAR": 168563,
             "VIERNES": 159469,
             "VIERNES PAR": 169345
         }
@@ -212,21 +215,14 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
-                "precio_neto": 176831,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 38649 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA-JUEVES PAR- CADDY P...."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 169563,
+                "precio_neto": 168563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 38647 | DIA DE FIESTA:  | LUNES IMPAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI VENT..."
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 171563,
+                "precio_neto": 168563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MIERCOLES PAR",
                 "raw": "Ref:  | 38639 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
@@ -258,6 +254,13 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38602 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 186357,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MARTES",
+                "raw": "Referencia: 950 MARTES |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de antigü..."
             },
             {
                 "fuente": "STAC",
@@ -299,14 +302,14 @@
                 "precio_neto": 158563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES",
-                "raw": "Referencia: 939 VIERNES |  | Se vende licencia sin vehículo. | Precio: 163000€ | RESERVADA..."
+                "raw": "Referencia: 939 VIERNES |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES",
-                "raw": "Referencia: 932 VIERNES |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 932 VIERNES |  | Se vende licencia sin vehículo. | Precio: 158000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -317,5 +320,5 @@
             }
         ]
     },
-    "updated_at": "02/03/2026 07:53"
+    "updated_at": "03/03/2026 07:48"
 }
