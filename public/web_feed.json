@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 169172,
+        "delta_value": 609,
+        "delta_percent": 0.36,
         "direction": "up",
-        "volume": 15,
-        "volatility": 9229
+        "volume": 20,
+        "volatility": 8650
     },
     "charts": {
         "history_dates": [
@@ -58,7 +58,8 @@
             "2026-03-02",
             "2026-03-03",
             "2026-03-04",
-            "2026-03-05"
+            "2026-03-05",
+            "2026-03-07"
         ],
         "history_prices": [
             166147,
@@ -110,7 +111,8 @@
             169563,
             168563,
             168563,
-            168563
+            168563,
+            169172
         ],
         "history_sma_7": [
             0,
@@ -162,24 +164,25 @@
             169630,
             169531,
             169420,
-            169134
+            169134,
+            169078
         ],
         "price_by_day_descanso": {
-            "JUEVES": 175492,
-            "LUNES": 175563,
-            "LUNES IMPAR": 168563,
-            "MARTES": 186357,
+            "JUEVES IMPAR": 169000,
+            "JUEVES PAR": 175492,
+            "LUNES IMPAR": 175563,
+            "MARTES IMPAR": 186357,
             "MARTES PAR": 168000,
             "MIERCOLES PAR": 168563,
-            "VIERNES": 159469,
-            "VIERNES PAR": 169345
+            "VIERNES IMPAR": 165696,
+            "VIERNES PAR": 157969
         }
     },
     "market_depth": {
         "cheapest_offers": [
             {
                 "fuente": "STAC",
-                "dia": "VIERNES",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 153563,
                 "precio_total": 158000,
@@ -195,7 +198,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -203,7 +206,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES",
+                "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
@@ -211,7 +214,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES",
+                "dia": "VIERNES PAR",
                 "modelo": "SKODA OCTAVIA",
                 "precio_neto": 160375,
                 "precio_total": 170000,
@@ -219,6 +222,20 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 175026,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38665 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 169000,
+                "modelo": "SIN COCHE",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 38659 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI VE..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 168563,
@@ -242,13 +259,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 172028,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38621 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 168000,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
@@ -263,68 +273,96 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 179111,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES PAR",
+                "raw": "Referencia: 953 JUEVES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Hibrido, automát..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 165563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 952/2 JUEVES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | + INFORMACIÓ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 169818,
+                "modelo": "DACIA",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 952 JUEVES IMPAR |  | Se vende licencia con vehículo Dacia Lodgy con 8 años de antigüeda..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 176725,
+                "modelo": "DACIA JOGGER",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 951 LUNES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Híbrido con cambio auto..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 186357,
                 "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES",
-                "raw": "Referencia: 950 MARTES |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de antigü..."
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 950 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de ..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 175492,
                 "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES",
-                "raw": "Referencia: 949 JUEVES |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR. Cambio manual. Diés..."
+                "dia": "JUEVES PAR",
+                "raw": "Referencia: 949 JUEVES PAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR. Cambio manual. ..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 172830,
                 "modelo": "VOLKSWAGEN CADDY",
-                "dia": "VIERNES",
-                "raw": "Referencia: 947 VIERNES |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2.0 TDI Cambio Manual (..."
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 947 VIERNES IMPAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2.0 TDI Cambio Ma..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES",
-                "raw": "Referencia: 943 VIERNES |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con 6 a..."
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 943 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 160375,
                 "modelo": "SKODA OCTAVIA",
-                "dia": "VIERNES",
-                "raw": "Referencia: 920 VIERNES |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1.5 G..."
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 920 VIERNES PAR |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
-                "dia": "VIERNES",
-                "raw": "Referencia: 920/2 VIERNES |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFORMACIÓN..."
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 920/2 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 158563,
                 "modelo": "DESCONOCIDO",
-                "dia": "VIERNES",
-                "raw": "Referencia: 939 VIERNES |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFORMACIÓN..."
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 939 VIERNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
-                "dia": "VIERNES",
-                "raw": "Referencia: 932 VIERNES |  | Se vende licencia sin vehículo. | Precio: 158000€ | RESERVADA..."
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 932 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 158000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 175563,
                 "modelo": "DESCONOCIDO",
-                "dia": "LUNES",
-                "raw": "Referencia: 734 LUNES |  | Se vende licencia sin vehículo. | Precio: 180000€ | + INFORMACIÓN..."
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 734 LUNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 180000€ | + INFORMACIÓN..."
             }
         ]
     },
-    "updated_at": "05/03/2026 07:48"
+    "updated_at": "07/03/2026 07:36"
 }
