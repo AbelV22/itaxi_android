@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169172,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 172830,
+        "delta_value": 3658,
+        "delta_percent": 2.16,
         "direction": "up",
-        "volume": 20,
-        "volatility": 8650
+        "volume": 23,
+        "volatility": 8726
     },
     "charts": {
         "history_dates": [
@@ -61,7 +61,8 @@
             "2026-03-05",
             "2026-03-07",
             "2026-03-08",
-            "2026-03-09"
+            "2026-03-09",
+            "2026-03-10"
         ],
         "history_prices": [
             166147,
@@ -116,7 +117,8 @@
             168563,
             169172,
             169172,
-            169172
+            169172,
+            172830
         ],
         "history_sma_7": [
             0,
@@ -171,17 +173,20 @@
             169134,
             169078,
             169022,
-            168966
+            168966,
+            169433
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169000,
             "JUEVES PAR": 175492,
             "LUNES IMPAR": 175563,
-            "MARTES IMPAR": 186357,
+            "LUNES PAR": 176442,
+            "MARTES IMPAR": 179678,
             "MARTES PAR": 168000,
+            "MIERCOLES IMPAR": 180693,
             "MIERCOLES PAR": 168563,
             "VIERNES IMPAR": 165696,
-            "VIERNES PAR": 157969
+            "VIERNES PAR": 155563
         }
     },
     "market_depth": {
@@ -230,6 +235,34 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 180693,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 38678 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 173000,
+                "modelo": "SIN COCHE",
+                "dia": "LUNES PAR",
+                "raw": "Ref:  | 38676 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 179884,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES PAR",
+                "raw": "Ref:  | 38672 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 173000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 38668 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 175026,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES PAR",
@@ -269,13 +302,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
                 "raw": "Ref:  | 38619 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA D..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 169345,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38602 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
             },
             {
                 "fuente": "STAC",
@@ -370,5 +396,5 @@
             }
         ]
     },
-    "updated_at": "09/03/2026 07:54"
+    "updated_at": "10/03/2026 07:47"
 }
