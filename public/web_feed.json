@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 173000,
-        "delta_value": 170,
-        "delta_percent": 0.1,
+        "delta_value": 0,
+        "delta_percent": 0.0,
         "direction": "up",
         "volume": 23,
-        "volatility": 7955
+        "volatility": 7755
     },
     "charts": {
         "history_dates": [
@@ -63,7 +63,8 @@
             "2026-03-08",
             "2026-03-09",
             "2026-03-10",
-            "2026-03-11"
+            "2026-03-11",
+            "2026-03-12"
         ],
         "history_prices": [
             166147,
@@ -120,6 +121,7 @@
             169172,
             169172,
             172830,
+            173000,
             173000
         ],
         "history_sma_7": [
@@ -177,14 +179,16 @@
             169022,
             168966,
             169433,
-            170067
+            170067,
+            170701
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169818,
             "JUEVES PAR": 175492,
             "LUNES IMPAR": 175563,
-            "LUNES PAR": 176442,
+            "LUNES PAR": 173000,
             "MARTES IMPAR": 179678,
+            "MARTES PAR": 168000,
             "MIERCOLES IMPAR": 173128,
             "MIERCOLES PAR": 168563,
             "VIERNES IMPAR": 158563,
@@ -258,13 +262,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 179884,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 38672 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 173000,
                 "modelo": "SIN COCHE",
                 "dia": "MARTES IMPAR",
@@ -304,6 +301,13 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38631 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 168000,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES PAR",
+                "raw": "Ref:  | 38619 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA D..."
             },
             {
                 "fuente": "STAC",
@@ -398,5 +402,5 @@
             }
         ]
     },
-    "updated_at": "11/03/2026 07:49"
+    "updated_at": "12/03/2026 07:51"
 }
