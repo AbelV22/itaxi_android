@@ -9,12 +9,6 @@
         "hora": "07:15",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03662",
-        "via": "1"
-    },
-    {
-        "hora": "07:15",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03662",
         "via": ""
     },
     {
@@ -33,13 +27,13 @@
         "hora": "08:11",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 33077",
-        "via": "4"
+        "via": ""
     },
     {
-        "hora": "08:11",
+        "hora": "08:16",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 33077",
-        "via": ""
+        "via": "4"
     },
     {
         "hora": "08:23",
@@ -57,7 +51,7 @@
         "hora": "08:50",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03092",
-        "via": ""
+        "via": "5"
     },
     {
         "hora": "08:50",
@@ -69,7 +63,7 @@
         "hora": "09:15",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08087",
-        "via": ""
+        "via": "1"
     },
     {
         "hora": "09:15",
@@ -126,9 +120,15 @@
         "via": ""
     },
     {
-        "hora": "09:50",
+        "hora": "09:57",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03063",
+        "via": ""
+    },
+    {
+        "hora": "09:59",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03071",
         "via": ""
     },
     {
@@ -234,13 +234,7 @@
         "via": ""
     },
     {
-        "hora": "12:20",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01092",
-        "via": ""
-    },
-    {
-        "hora": "12:20",
+        "hora": "12:27",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01092",
         "via": ""
@@ -306,21 +300,21 @@
         "via": ""
     },
     {
-        "hora": "13:09",
+        "hora": "13:14",
+        "origen": "Sevilla Santa Justa",
+        "tren": "IRYO 06011",
+        "via": ""
+    },
+    {
+        "hora": "13:14",
+        "origen": "Sevilla Santa Justa",
+        "tren": "IRYO 06011",
+        "via": ""
+    },
+    {
+        "hora": "13:18",
         "origen": "Donostia / San Sebastián",
         "tren": "ALVIA 00532",
-        "via": ""
-    },
-    {
-        "hora": "13:14",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06011",
-        "via": ""
-    },
-    {
-        "hora": "13:14",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06011",
         "via": ""
     },
     {
@@ -807,6 +801,12 @@
         "hora": "21:40",
         "origen": "Salamanca",
         "tren": "ALVIA 00631",
+        "via": ""
+    },
+    {
+        "hora": "21:40",
+        "origen": "Vigo Urzaiz",
+        "tren": "ALVIA I0620",
         "via": ""
     },
     {
