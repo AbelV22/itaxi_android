@@ -30,12 +30,6 @@
         "via": ""
     },
     {
-        "hora": "09:39",
-        "origen": "València Estació del Nord",
-        "tren": "INTERCITY 01072",
-        "via": ""
-    },
-    {
         "hora": "09:45",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06471",
@@ -150,6 +144,12 @@
         "via": ""
     },
     {
+        "hora": "14:08",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVANT 34394",
+        "via": ""
+    },
+    {
         "hora": "14:32",
         "origen": "Paris Gare de Lyon",
         "tren": "TGV INOUI 09713",
@@ -222,6 +222,12 @@
         "via": ""
     },
     {
+        "hora": "18:54",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06151",
+        "via": ""
+    },
+    {
         "hora": "19:14",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03305",
@@ -246,21 +252,9 @@
         "via": ""
     },
     {
-        "hora": "19:33",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 08187",
-        "via": "1"
-    },
-    {
         "hora": "19:39",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 11661",
-        "via": ""
-    },
-    {
-        "hora": "19:40",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06571",
         "via": ""
     },
     {
@@ -270,46 +264,22 @@
         "via": ""
     },
     {
-        "hora": "19:48",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 11661",
-        "via": ""
-    },
-    {
-        "hora": "19:54",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03163",
-        "via": "3"
-    },
-    {
         "hora": "20:07",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34742",
         "via": ""
-    },
-    {
-        "hora": "20:07",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34742",
-        "via": ""
-    },
-    {
-        "hora": "20:11",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03171",
-        "via": "3"
-    },
-    {
-        "hora": "20:33",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03292",
-        "via": "1"
     },
     {
         "hora": "20:35",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 33205",
         "via": ""
+    },
+    {
+        "hora": "20:40",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03292",
+        "via": "1"
     },
     {
         "hora": "20:42",
@@ -327,6 +297,12 @@
         "hora": "20:51",
         "origen": "Córdoba Julio Anguita",
         "tren": "ALVIA 00694",
+        "via": "2"
+    },
+    {
+        "hora": "20:51",
+        "origen": "Córdoba Julio Anguita",
+        "tren": "ALVIA 00694",
         "via": ""
     },
     {
@@ -336,13 +312,13 @@
         "via": ""
     },
     {
-        "hora": "21:02",
+        "hora": "20:57",
         "origen": "València Estació del Nord",
         "tren": "INTERCITY 00460",
         "via": ""
     },
     {
-        "hora": "21:04",
+        "hora": "21:06",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03181",
         "via": ""
@@ -354,7 +330,7 @@
         "via": ""
     },
     {
-        "hora": "21:11",
+        "hora": "21:20",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03173",
         "via": ""
@@ -384,10 +360,10 @@
         "via": ""
     },
     {
-        "hora": "21:41",
+        "hora": "21:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06181",
-        "via": ""
+        "via": "3"
     },
     {
         "hora": "21:49",
@@ -405,30 +381,12 @@
         "hora": "21:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03191",
-        "via": ""
+        "via": "5"
     },
     {
         "hora": "22:04",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01192",
-        "via": ""
-    },
-    {
-        "hora": "22:04",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01192",
-        "via": ""
-    },
-    {
-        "hora": "22:10",
-        "origen": "A Coruña",
-        "tren": "ALVIA 00625",
-        "via": ""
-    },
-    {
-        "hora": "22:10",
-        "origen": "Salamanca",
-        "tren": "ALVIA 00631",
         "via": ""
     },
     {
@@ -438,9 +396,21 @@
         "via": ""
     },
     {
-        "hora": "22:24",
-        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00437",
+        "hora": "22:16",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "EUROMED 01192",
+        "via": "4"
+    },
+    {
+        "hora": "22:37",
+        "origen": "A Coruña",
+        "tren": "ALVIA 00625",
+        "via": ""
+    },
+    {
+        "hora": "22:37",
+        "origen": "Salamanca",
+        "tren": "ALVIA 00631",
         "via": ""
     },
     {
@@ -450,9 +420,9 @@
         "via": ""
     },
     {
-        "hora": "22:59",
-        "origen": "Sevilla Santa Justa",
-        "tren": "AVE 03941",
+        "hora": "22:53",
+        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
+        "tren": "ALVIA 00437",
         "via": ""
     },
     {
@@ -462,9 +432,21 @@
         "via": ""
     },
     {
-        "hora": "23:02",
+        "hora": "22:59",
+        "origen": "Sevilla Santa Justa",
+        "tren": "AVE 03941",
+        "via": ""
+    },
+    {
+        "hora": "23:13",
         "origen": "Sevilla Santa Justa",
         "tren": "IRYO 06013",
+        "via": ""
+    },
+    {
+        "hora": "23:20",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03309",
         "via": ""
     },
     {
@@ -480,7 +462,7 @@
         "via": ""
     },
     {
-        "hora": "23:28",
+        "hora": "23:39",
         "origen": "Sevilla Santa Justa",
         "tren": "OUIGO 06415",
         "via": ""
