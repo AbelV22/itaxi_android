@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 174020,
-        "delta_value": 1020,
-        "delta_percent": 0.59,
+        "current_price": 174108,
+        "delta_value": 88,
+        "delta_percent": 0.05,
         "direction": "up",
         "volume": 23,
-        "volatility": 7835
+        "volatility": 7696
     },
     "charts": {
         "history_dates": [
@@ -65,7 +65,8 @@
             "2026-03-10",
             "2026-03-11",
             "2026-03-12",
-            "2026-03-13"
+            "2026-03-13",
+            "2026-03-14"
         ],
         "history_prices": [
             166147,
@@ -124,7 +125,8 @@
             172830,
             173000,
             173000,
-            174020
+            174020,
+            174108
         ],
         "history_sma_7": [
             0,
@@ -183,7 +185,8 @@
             169433,
             170067,
             170701,
-            171480
+            171480,
+            172186
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 171919,
@@ -194,7 +197,7 @@
             "MIERCOLES IMPAR": 180693,
             "MIERCOLES PAR": 173000,
             "VIERNES IMPAR": 158563,
-            "VIERNES PAR": 162187
+            "VIERNES PAR": 167241
         }
     },
     "market_depth": {
@@ -225,25 +228,25 @@
             },
             {
                 "fuente": "SOLANO",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 164000,
-                "precio_total": 165000,
-                "valor_coche": 1000
-            },
-            {
-                "fuente": "SOLANO",
                 "dia": "JUEVES IMPAR",
                 "modelo": "SIN COCHE",
                 "precio_neto": 165000,
                 "precio_total": 165000,
                 "valor_coche": 0
+            },
+            {
+                "fuente": "STAC",
+                "dia": "JUEVES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 165563,
+                "precio_total": 170000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
             {
                 "fuente": "SOLANO",
-                "precio_neto": 164000,
+                "precio_neto": 177000,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38703 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
@@ -404,5 +407,5 @@
             }
         ]
     },
-    "updated_at": "13/03/2026 07:50"
+    "updated_at": "14/03/2026 07:39"
 }
