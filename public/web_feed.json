@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 23,
-        "volatility": 7696
+        "volatility": 8122
     },
     "charts": {
         "history_dates": [
@@ -68,7 +68,8 @@
             "2026-03-13",
             "2026-03-14",
             "2026-03-15",
-            "2026-03-16"
+            "2026-03-16",
+            "2026-03-17"
         ],
         "history_prices": [
             166147,
@@ -128,6 +129,7 @@
             173000,
             173000,
             174020,
+            174108,
             174108,
             174108,
             174108
@@ -192,18 +194,19 @@
             171480,
             172186,
             172891,
-            173596
+            173596,
+            173778
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 171919,
+            "JUEVES IMPAR": 174020,
             "JUEVES PAR": 175492,
             "LUNES IMPAR": 176144,
             "LUNES PAR": 173000,
-            "MARTES IMPAR": 179678,
+            "MARTES IMPAR": 173000,
             "MIERCOLES IMPAR": 180693,
             "MIERCOLES PAR": 173000,
-            "VIERNES IMPAR": 158563,
-            "VIERNES PAR": 167241
+            "VIERNES IMPAR": 157063,
+            "VIERNES PAR": 174108
         }
     },
     "market_depth": {
@@ -211,6 +214,14 @@
             {
                 "fuente": "STAC",
                 "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 153563,
+                "precio_total": 158000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -226,19 +237,11 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "SKODA OCTAVIA",
-                "precio_neto": 160375,
+                "dia": "MIERCOLES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 165563,
                 "precio_total": 170000,
-                "valor_coche": 9625
-            },
-            {
-                "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "SIN COCHE",
-                "precio_neto": 165000,
-                "precio_total": 165000,
-                "valor_coche": 0
+                "valor_coche": 4437
             },
             {
                 "fuente": "STAC",
@@ -263,13 +266,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38701 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 165000,
-                "modelo": "SIN COCHE",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38699 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "SOLANO",
@@ -322,6 +318,27 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 153563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 932 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 958 VIERNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 168563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 957 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 177345,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
@@ -336,7 +353,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 179111,
+                "precio_neto": 177111,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES PAR",
                 "raw": "Referencia: 953 JUEVES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Hibrido, automát..."
@@ -385,20 +402,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160375,
-                "modelo": "SKODA OCTAVIA",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 920 VIERNES PAR |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 920/2 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | RESERVADA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 158563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
@@ -413,5 +416,5 @@
             }
         ]
     },
-    "updated_at": "16/03/2026 08:11"
+    "updated_at": "17/03/2026 07:58"
 }
