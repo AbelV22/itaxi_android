@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 174108,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 174567,
+        "delta_value": 459,
+        "delta_percent": 0.26,
         "direction": "up",
-        "volume": 23,
-        "volatility": 8122
+        "volume": 24,
+        "volatility": 8085
     },
     "charts": {
         "history_dates": [
@@ -69,7 +69,8 @@
             "2026-03-14",
             "2026-03-15",
             "2026-03-16",
-            "2026-03-17"
+            "2026-03-17",
+            "2026-03-18"
         ],
         "history_prices": [
             166147,
@@ -132,7 +133,8 @@
             174108,
             174108,
             174108,
-            174108
+            174108,
+            174567
         ],
         "history_sma_7": [
             0,
@@ -195,7 +197,8 @@
             172186,
             172891,
             173596,
-            173778
+            173778,
+            174002
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 174020,
@@ -205,6 +208,7 @@
             "MARTES IMPAR": 173000,
             "MIERCOLES IMPAR": 180693,
             "MIERCOLES PAR": 173000,
+            "NO ESPECIFICADO": 179764,
             "VIERNES IMPAR": 157063,
             "VIERNES PAR": 174108
         }
@@ -318,6 +322,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 179764,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 959 MIÉRCOLES PAR |  | Se vende licencia con vehículo Toyota Corolla Touring con 1.5 año..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
@@ -416,5 +427,5 @@
             }
         ]
     },
-    "updated_at": "17/03/2026 07:58"
+    "updated_at": "18/03/2026 07:58"
 }
