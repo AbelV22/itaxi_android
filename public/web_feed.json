@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 175400,
-        "delta_value": 833,
-        "delta_percent": 0.48,
-        "direction": "up",
-        "volume": 30,
-        "volatility": 8901
+        "current_price": 175309,
+        "delta_value": -91,
+        "delta_percent": -0.05,
+        "direction": "down",
+        "volume": 31,
+        "volatility": 8893
     },
     "charts": {
         "history_dates": [
@@ -73,7 +73,8 @@
             "2026-03-18",
             "2026-03-19",
             "2026-03-20",
-            "2026-03-21"
+            "2026-03-21",
+            "2026-03-23"
         ],
         "history_prices": [
             166147,
@@ -140,7 +141,8 @@
             174567,
             174567,
             174567,
-            175400
+            175400,
+            175309
         ],
         "history_sma_7": [
             0,
@@ -207,11 +209,12 @@
             174002,
             174226,
             174304,
-            174489
+            174489,
+            174660
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 174020,
-            "JUEVES PAR": 177111,
+            "JUEVES PAR": 176301,
             "LUNES IMPAR": 176144,
             "LUNES PAR": 170563,
             "MARTES IMPAR": 173000,
@@ -283,6 +286,13 @@
             },
             {
                 "fuente": "SOLANO",
+                "precio_neto": 174404,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38726 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 180086,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MIERCOLES PAR",
@@ -332,7 +342,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 185563,
+                "precio_neto": 188379,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 964 LUNES IMPAR |  | Se vende licencia con vehículo FIAT TALENTO 8 PLAZAS con 8 años de ..."
@@ -479,5 +489,5 @@
             }
         ]
     },
-    "updated_at": "21/03/2026 07:38"
+    "updated_at": "23/03/2026 08:06"
 }
