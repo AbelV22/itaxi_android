@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 175309,
-        "delta_value": -91,
-        "delta_percent": -0.05,
+        "current_price": 174404,
+        "delta_value": -905,
+        "delta_percent": -0.52,
         "direction": "down",
-        "volume": 31,
-        "volatility": 8893
+        "volume": 33,
+        "volatility": 9177
     },
     "charts": {
         "history_dates": [
@@ -74,7 +74,8 @@
             "2026-03-19",
             "2026-03-20",
             "2026-03-21",
-            "2026-03-23"
+            "2026-03-23",
+            "2026-03-24"
         ],
         "history_prices": [
             166147,
@@ -142,7 +143,8 @@
             174567,
             174567,
             175400,
-            175309
+            175309,
+            174404
         ],
         "history_sma_7": [
             0,
@@ -210,19 +212,20 @@
             174226,
             174304,
             174489,
-            174660
+            174660,
+            174703
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 174020,
+            "JUEVES IMPAR": 169818,
             "JUEVES PAR": 176301,
-            "LUNES IMPAR": 176144,
+            "LUNES IMPAR": 176725,
             "LUNES PAR": 170563,
             "MARTES IMPAR": 173000,
             "MARTES PAR": 180951,
             "MIERCOLES IMPAR": 165563,
             "MIERCOLES PAR": 177697,
             "NO ESPECIFICADO": 179076,
-            "VIERNES IMPAR": 158563,
+            "VIERNES IMPAR": 158781,
             "VIERNES PAR": 174108
         }
     },
@@ -254,22 +257,29 @@
             },
             {
                 "fuente": "SOLANO",
-                "dia": "LUNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 165563,
-                "precio_total": 170000,
-                "valor_coche": 4437
+                "dia": "VIERNES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 159000,
+                "precio_total": 159000,
+                "valor_coche": 0
             },
             {
                 "fuente": "STAC",
                 "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 165563,
-                "precio_total": 170000,
+                "precio_neto": 162563,
+                "precio_total": 167000,
                 "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 159000,
+                "modelo": "SIN COCHE",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 38735 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 166501,
@@ -334,11 +344,18 @@
                 "raw": "Ref:  | 38668 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
-                "fuente": "SOLANO",
+                "fuente": "STAC",
+                "precio_neto": 162563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 966 JUEVES IMPAR |  | Se vende licencia sin vehículo. | Precio: 167000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38647 | DIA DE FIESTA:  | LUNES IMPAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI VENT..."
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 965 JUEVES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -373,7 +390,7 @@
                 "precio_neto": 170563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES PAR",
-                "raw": "Referencia: 961 LUNES PAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 961 LUNES PAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -489,5 +506,5 @@
             }
         ]
     },
-    "updated_at": "23/03/2026 08:06"
+    "updated_at": "24/03/2026 07:59"
 }
