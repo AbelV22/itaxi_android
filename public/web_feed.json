@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 174404,
-        "delta_value": -905,
-        "delta_percent": -0.52,
-        "direction": "down",
-        "volume": 33,
-        "volatility": 9177
+        "current_price": 174856,
+        "delta_value": 452,
+        "delta_percent": 0.26,
+        "direction": "up",
+        "volume": 32,
+        "volatility": 9226
     },
     "charts": {
         "history_dates": [
@@ -75,7 +75,8 @@
             "2026-03-20",
             "2026-03-21",
             "2026-03-23",
-            "2026-03-24"
+            "2026-03-24",
+            "2026-03-25"
         ],
         "history_prices": [
             166147,
@@ -144,7 +145,8 @@
             174567,
             175400,
             175309,
-            174404
+            174404,
+            174856
         ],
         "history_sma_7": [
             0,
@@ -213,7 +215,8 @@
             174304,
             174489,
             174660,
-            174703
+            174703,
+            174810
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169818,
@@ -222,7 +225,6 @@
             "LUNES PAR": 170563,
             "MARTES IMPAR": 173000,
             "MARTES PAR": 180951,
-            "MIERCOLES IMPAR": 165563,
             "MIERCOLES PAR": 177697,
             "NO ESPECIFICADO": 179076,
             "VIERNES IMPAR": 158781,
@@ -397,7 +399,7 @@
                 "precio_neto": 168563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
-                "raw": "Referencia: 960 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 960 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -433,13 +435,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 955 JUEVES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Referencia: 954 MIERCOLES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -506,5 +501,5 @@
             }
         ]
     },
-    "updated_at": "24/03/2026 07:59"
+    "updated_at": "25/03/2026 07:58"
 }
