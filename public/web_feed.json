@@ -1,9 +1,9 @@
 {
     "ticker": {
         "current_price": 173256,
-        "delta_value": -1544,
-        "delta_percent": -0.88,
-        "direction": "down",
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
         "volume": 34,
         "volatility": 8988
     },
@@ -78,7 +78,8 @@
             "2026-03-24",
             "2026-03-25",
             "2026-03-26",
-            "2026-03-27"
+            "2026-03-27",
+            "2026-03-28"
         ],
         "history_prices": [
             166147,
@@ -150,6 +151,7 @@
             174404,
             174856,
             174800,
+            173256,
             173256
         ],
         "history_sma_7": [
@@ -222,7 +224,8 @@
             174703,
             174810,
             174843,
-            174656
+            174656,
+            174468
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
@@ -356,7 +359,7 @@
                 "precio_neto": 168563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
-                "raw": "Referencia: 968 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 968 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -521,5 +524,5 @@
             }
         ]
     },
-    "updated_at": "27/03/2026 08:03"
+    "updated_at": "28/03/2026 07:49"
 }
