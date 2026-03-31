@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 174708,
-        "delta_value": 1452,
-        "delta_percent": 0.84,
-        "direction": "up",
+        "current_price": 173256,
+        "delta_value": -1452,
+        "delta_percent": -0.83,
+        "direction": "down",
         "volume": 28,
-        "volatility": 8998
+        "volatility": 9506
     },
     "charts": {
         "history_dates": [
@@ -81,7 +81,8 @@
             "2026-03-27",
             "2026-03-28",
             "2026-03-29",
-            "2026-03-30"
+            "2026-03-30",
+            "2026-03-31"
         ],
         "history_prices": [
             166147,
@@ -156,7 +157,8 @@
             173256,
             173256,
             173256,
-            174708
+            174708,
+            173256
         ],
         "history_sma_7": [
             0,
@@ -231,18 +233,19 @@
             174656,
             174468,
             174162,
-            174076
+            174076,
+            173912
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
-            "JUEVES PAR": 175492,
+            "JUEVES PAR": 177862,
             "LUNES IMPAR": 176725,
             "MARTES IMPAR": 182536,
             "MARTES PAR": 174345,
-            "MIERCOLES PAR": 179086,
+            "MIERCOLES PAR": 179292,
             "NO ESPECIFICADO": 174476,
             "VIERNES IMPAR": 158563,
-            "VIERNES PAR": 175554
+            "VIERNES PAR": 166054
         }
     },
     "market_depth": {
@@ -254,6 +257,14 @@
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "VIERNES PAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 158000,
+                "precio_total": 158000,
+                "valor_coche": 0
             },
             {
                 "fuente": "SOLANO",
@@ -278,17 +289,23 @@
                 "precio_neto": 162563,
                 "precio_total": 167000,
                 "valor_coche": 4437
-            },
-            {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DACIA JOGGER",
-                "precio_neto": 165501,
-                "precio_total": 178000,
-                "valor_coche": 12499
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 180232,
+                "modelo": "TESLA",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38757 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 158000,
+                "modelo": "SIN COCHE",
+                "dia": "VIERNES PAR",
+                "raw": "Ref:  | 38755 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 179499,
@@ -344,20 +361,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MIERCOLES PAR",
                 "raw": "Ref:  | 38724 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA VENTA ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 175309,
-                "modelo": "DACIA JOGGER",
-                "dia": "MIERCOLES PAR",
-                "raw": "Ref:  | 38720 | DIA DE FIESTA:  | MIERCOLES PAR | LICE3NCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 177000,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38703 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
                 "fuente": "STAC",
@@ -487,5 +490,5 @@
             }
         ]
     },
-    "updated_at": "30/03/2026 08:26"
+    "updated_at": "31/03/2026 08:12"
 }
