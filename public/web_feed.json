@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 173256,
-        "delta_value": -1452,
-        "delta_percent": -0.83,
+        "current_price": 171483,
+        "delta_value": -1773,
+        "delta_percent": -1.02,
         "direction": "down",
-        "volume": 28,
-        "volatility": 9506
+        "volume": 26,
+        "volatility": 9814
     },
     "charts": {
         "history_dates": [
@@ -82,7 +82,8 @@
             "2026-03-28",
             "2026-03-29",
             "2026-03-30",
-            "2026-03-31"
+            "2026-03-31",
+            "2026-04-01"
         ],
         "history_prices": [
             166147,
@@ -158,7 +159,8 @@
             173256,
             173256,
             174708,
-            173256
+            173256,
+            171483
         ],
         "history_sma_7": [
             0,
@@ -234,11 +236,12 @@
             174468,
             174162,
             174076,
-            173912
+            173912,
+            173430
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
-            "JUEVES PAR": 177862,
+            "JUEVES PAR": 180232,
             "LUNES IMPAR": 176725,
             "MARTES IMPAR": 182536,
             "MARTES PAR": 174345,
@@ -427,13 +430,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 177345,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 955 JUEVES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de ..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -462,13 +458,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 175492,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES PAR",
-                "raw": "Referencia: 949 JUEVES PAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR. Cambio manual. ..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES PAR",
@@ -490,5 +479,5 @@
             }
         ]
     },
-    "updated_at": "31/03/2026 08:12"
+    "updated_at": "01/04/2026 08:19"
 }
