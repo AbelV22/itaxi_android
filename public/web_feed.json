@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 170410,
-        "delta_value": -1073,
-        "delta_percent": -0.63,
-        "direction": "down",
+        "current_price": 172335,
+        "delta_value": 1925,
+        "delta_percent": 1.13,
+        "direction": "up",
         "volume": 26,
-        "volatility": 9743
+        "volatility": 9595
     },
     "charts": {
         "history_dates": [
@@ -84,7 +84,8 @@
             "2026-03-30",
             "2026-03-31",
             "2026-04-01",
-            "2026-04-02"
+            "2026-04-02",
+            "2026-04-03"
         ],
         "history_prices": [
             166147,
@@ -162,7 +163,8 @@
             174708,
             173256,
             171483,
-            170410
+            170410,
+            172335
         ],
         "history_sma_7": [
             0,
@@ -240,17 +242,18 @@
             174076,
             173912,
             173430,
-            172803
+            172803,
+            172672
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
-            "JUEVES PAR": 180232,
+            "JUEVES PAR": 186491,
             "LUNES IMPAR": 176725,
             "LUNES PAR": 168563,
-            "MARTES IMPAR": 182536,
-            "MARTES PAR": 174345,
-            "MIERCOLES PAR": 179499,
-            "NO ESPECIFICADO": 174476,
+            "MARTES IMPAR": 180034,
+            "MARTES PAR": 180951,
+            "MIERCOLES PAR": 179086,
+            "NO ESPECIFICADO": 170563,
             "VIERNES IMPAR": 158563,
             "VIERNES PAR": 166054
         }
@@ -336,13 +339,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 167739,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 38747 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 158000,
                 "modelo": "SIN COCHE",
                 "dia": "VIERNES IMPAR",
@@ -364,17 +360,31 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 172404,
+                "precio_neto": 179086,
                 "modelo": "TOYOTA COROLLA",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 38726 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+                "dia": "MIERCOLES PAR",
+                "raw": "Ref:  | 38724 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA VENTA ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 175309,
+                "modelo": "DACIA JOGGER",
+                "dia": "MIERCOLES PAR",
+                "raw": "Ref:  | 38720 | DIA DE FIESTA:  | MIERCOLES PAR | LICE3NCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI ..."
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 168563,
-                "modelo": "DESCONOCIDO",
+                "precio_neto": 175018,
+                "modelo": "DACIA JOGGER",
                 "dia": "MARTES IMPAR",
-                "raw": "Referencia: 968 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | RESERVADA..."
+                "raw": "Referencia: 970 MARTES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP y cambio ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 969 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -455,13 +465,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 182536,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 950 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de ..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES PAR",
@@ -483,5 +486,5 @@
             }
         ]
     },
-    "updated_at": "02/04/2026 08:11"
+    "updated_at": "03/04/2026 08:05"
 }
