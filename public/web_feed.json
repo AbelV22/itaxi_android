@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 171781,
-        "delta_value": -1773,
-        "delta_percent": -1.02,
+        "current_price": 170563,
+        "delta_value": -1218,
+        "delta_percent": -0.71,
         "direction": "down",
         "volume": 26,
-        "volatility": 8956
+        "volatility": 9253
     },
     "charts": {
         "history_dates": [
@@ -92,7 +92,8 @@
             "2026-04-07",
             "2026-04-08",
             "2026-04-09",
-            "2026-04-10"
+            "2026-04-10",
+            "2026-04-11"
         ],
         "history_prices": [
             166147,
@@ -178,7 +179,8 @@
             172335,
             172335,
             173554,
-            171781
+            171781,
+            170563
         ],
         "history_sma_7": [
             0,
@@ -264,21 +266,29 @@
             171938,
             172060,
             172509,
-            172430
+            172430,
+            172176
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
             "JUEVES PAR": 180232,
             "LUNES IMPAR": 176725,
             "MARTES IMPAR": 175018,
-            "MARTES PAR": 180951,
             "NO ESPECIFICADO": 170563,
-            "VIERNES IMPAR": 158563,
-            "VIERNES PAR": 174108
+            "VIERNES IMPAR": 162032,
+            "VIERNES PAR": 158000
         }
     },
     "market_depth": {
         "cheapest_offers": [
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
             {
                 "fuente": "STAC",
                 "dia": "VIERNES IMPAR",
@@ -309,14 +319,6 @@
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 162563,
-                "precio_total": 167000,
                 "valor_coche": 4437
             }
         ],
@@ -393,6 +395,20 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 174009,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 972 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring con 1 años ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 971 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 175018,
                 "modelo": "DACIA JOGGER",
                 "dia": "MARTES IMPAR",
@@ -442,13 +458,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 180951,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES PAR",
-                "raw": "Referencia: 963 MARTES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 5 años de an..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 178389,
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
@@ -484,13 +493,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 174108,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 943 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 158563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
@@ -505,5 +507,5 @@
             }
         ]
     },
-    "updated_at": "10/04/2026 08:24"
+    "updated_at": "11/04/2026 07:54"
 }
