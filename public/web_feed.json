@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 170258,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 170563,
+        "delta_value": 305,
+        "delta_percent": 0.18,
         "direction": "up",
-        "volume": 27,
-        "volatility": 8948
+        "volume": 28,
+        "volatility": 8600
     },
     "charts": {
         "history_dates": [
@@ -98,7 +98,8 @@
             "2026-04-13",
             "2026-04-14",
             "2026-04-15",
-            "2026-04-16"
+            "2026-04-16",
+            "2026-04-17"
         ],
         "history_prices": [
             166147,
@@ -190,7 +191,8 @@
             170410,
             170258,
             170258,
-            170258
+            170258,
+            170563
         ],
         "history_sma_7": [
             0,
@@ -282,16 +284,17 @@
             171648,
             171352,
             171055,
-            170584
+            170584,
+            170410
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
-            "JUEVES PAR": 180232,
+            "JUEVES PAR": 178491,
             "LUNES IMPAR": 176725,
             "MARTES IMPAR": 180034,
             "NO ESPECIFICADO": 171563,
             "VIERNES IMPAR": 165501,
-            "VIERNES PAR": 156781
+            "VIERNES PAR": 155563
         }
     },
     "market_depth": {
@@ -321,23 +324,30 @@
                 "valor_coche": 0
             },
             {
-                "fuente": "SOLANO",
-                "dia": "VIERNES PAR",
-                "modelo": "SIN COCHE",
-                "precio_neto": 158000,
-                "precio_total": 158000,
-                "valor_coche": 0
-            },
-            {
                 "fuente": "STAC",
                 "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "JUEVES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 162563,
+                "precio_total": 167000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 176750,
+                "modelo": "DACIA JOGGER",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38798 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 166978,
@@ -375,13 +385,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 158000,
-                "modelo": "SIN COCHE",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38755 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 170258,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES IMPAR",
@@ -400,6 +403,13 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 38732 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA- | LICENCIA TAXI ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 175192,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 38701 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -529,5 +539,5 @@
             }
         ]
     },
-    "updated_at": "16/04/2026 08:50"
+    "updated_at": "17/04/2026 08:49"
 }
