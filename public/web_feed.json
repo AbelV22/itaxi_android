@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 170410,
-        "delta_value": -153,
-        "delta_percent": -0.09,
-        "direction": "down",
-        "volume": 28,
-        "volatility": 8849
+        "current_price": 170563,
+        "delta_value": 153,
+        "delta_percent": 0.09,
+        "direction": "up",
+        "volume": 31,
+        "volatility": 8483
     },
     "charts": {
         "history_dates": [
@@ -102,7 +102,8 @@
             "2026-04-17",
             "2026-04-18",
             "2026-04-19",
-            "2026-04-20"
+            "2026-04-20",
+            "2026-04-21"
         ],
         "history_prices": [
             166147,
@@ -198,7 +199,8 @@
             170563,
             170563,
             170563,
-            170410
+            170410,
+            170563
         ],
         "history_sma_7": [
             0,
@@ -294,14 +296,17 @@
             170410,
             170410,
             170410,
-            170410
+            170410,
+            170454
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165563,
             "JUEVES PAR": 176750,
             "LUNES IMPAR": 176725,
-            "MARTES IMPAR": 180034,
-            "NO ESPECIFICADO": 171563,
+            "MARTES IMPAR": 175018,
+            "MARTES PAR": 167563,
+            "MIERCOLES PAR": 176728,
+            "NO ESPECIFICADO": 170563,
             "VIERNES IMPAR": 165501,
             "VIERNES PAR": 155563
         }
@@ -310,7 +315,7 @@
         "cheapest_offers": [
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -318,7 +323,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -422,10 +427,31 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 172563,
+                "precio_neto": 167563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES PAR",
+                "raw": "Referencia: 976 MARTES PAR |  | Se vende licencia sin vehículo. | Precio: 172000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 975 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 176728,
+                "modelo": "DESCONOCIDO",
+                "dia": "MIERCOLES PAR",
+                "raw": "Referencia: 974/2 MIERCOLES PAR |  | Se vende licencia con vehículo Fiat Tipo manual con 6 años de a..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 974 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 177000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 974 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -548,5 +574,5 @@
             }
         ]
     },
-    "updated_at": "20/04/2026 09:12"
+    "updated_at": "21/04/2026 08:56"
 }
