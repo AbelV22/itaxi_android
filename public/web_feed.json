@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 33,
-        "volatility": 8385
+        "volume": 34,
+        "volatility": 8115
     },
     "charts": {
         "history_dates": [
@@ -109,7 +109,8 @@
             "2026-04-24",
             "2026-04-25",
             "2026-04-26",
-            "2026-04-27"
+            "2026-04-27",
+            "2026-04-28"
         ],
         "history_prices": [
             166147,
@@ -206,6 +207,7 @@
             170563,
             170563,
             170410,
+            170563,
             170563,
             170563,
             170563,
@@ -315,16 +317,18 @@
             170541,
             170541,
             170541,
+            170563,
             170563
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
-            "LUNES IMPAR": 175563,
+            "JUEVES PAR": 172591,
+            "LUNES IMPAR": 174281,
             "LUNES PAR": 173000,
-            "MARTES IMPAR": 173000,
+            "MARTES IMPAR": 171290,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 173000,
-            "MIERCOLES PAR": 175678,
+            "MIERCOLES PAR": 173178,
             "NO ESPECIFICADO": 170563,
             "VIERNES IMPAR": 157281,
             "VIERNES PAR": 155563
@@ -425,13 +429,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 173988,
-                "modelo": "DACIA JOGGER",
-                "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 38819 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 170000,
                 "modelo": "SIN COCHE",
                 "dia": "MARTES IMPAR",
@@ -443,6 +440,20 @@
                 "modelo": "SIN COCHE",
                 "dia": "LUNES PAR",
                 "raw": "Ref:  | 38815 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI VENTA..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 173000,
+                "modelo": "SIN COCHE",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 38813 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 172591,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES PAR",
+                "raw": "Referencia: 979 JUEVES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 4 años de an..."
             },
             {
                 "fuente": "STAC",
@@ -474,17 +485,17 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 176728,
+                "precio_neto": 171728,
                 "modelo": "DESCONOCIDO",
                 "dia": "MIERCOLES PAR",
                 "raw": "Referencia: 974/2 MIERCOLES PAR |  | Se vende licencia con vehículo Fiat Tipo manual con 6 años de a..."
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 170563,
+                "precio_neto": 168563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 974 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 974 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -509,7 +520,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 175018,
+                "precio_neto": 172018,
                 "modelo": "DACIA JOGGER",
                 "dia": "MARTES IMPAR",
                 "raw": "Referencia: 970 MARTES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP y cambio ..."
@@ -607,5 +618,5 @@
             }
         ]
     },
-    "updated_at": "27/04/2026 09:25"
+    "updated_at": "28/04/2026 09:29"
 }
