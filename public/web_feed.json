@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 36,
-        "volatility": 8468
+        "volatility": 8721
     },
     "charts": {
         "history_dates": [
@@ -112,7 +112,8 @@
             "2026-04-27",
             "2026-04-28",
             "2026-04-29",
-            "2026-04-30"
+            "2026-04-30",
+            "2026-05-02"
         ],
         "history_prices": [
             166147,
@@ -217,6 +218,7 @@
             170563,
             170563,
             170563,
+            169909,
             169909,
             169909
         ],
@@ -324,19 +326,18 @@
             170563,
             170563,
             170469,
-            170376
+            170376,
+            170282
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163063,
-            "JUEVES PAR": 164077,
-            "LUNES IMPAR": 175563,
-            "MARTES IMPAR": 171290,
-            "MARTES PAR": 167563,
+            "JUEVES IMPAR": 163563,
+            "JUEVES PAR": 155563,
+            "LUNES IMPAR": 173063,
+            "MARTES IMPAR": 172018,
             "MIERCOLES IMPAR": 173000,
             "MIERCOLES PAR": 173178,
             "NO ESPECIFICADO": 170563,
-            "VIERNES IMPAR": 157281,
-            "VIERNES PAR": 155563
+            "VIERNES IMPAR": 157281
         }
     },
     "market_depth": {
@@ -347,6 +348,14 @@
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 149563,
                 "precio_total": 154000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "JUEVES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 153563,
+                "precio_total": 158000,
                 "valor_coche": 4437
             },
             {
@@ -367,14 +376,6 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
                 "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
@@ -383,6 +384,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 153563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38855 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA D..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 154563,
@@ -447,11 +455,18 @@
                 "raw": "Ref:  | 38821 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN VENT..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 170000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 38817 | DIA DE FIESTA:  | MARTES IMPAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+                "fuente": "STAC",
+                "precio_neto": 177963,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 983 JUEVES IMPAR |  | Se vende licencia con vehículo Kia Ceed Híbrido enchufable. Cambio..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 167563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 982 LUNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 172000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -490,13 +505,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 167563,
-                "modelo": "DESCONOCIDO",
-                "dia": "MARTES PAR",
-                "raw": "Referencia: 976 MARTES PAR |  | Se vende licencia sin vehículo. | Precio: 172000€ | RESERVADA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 170563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
@@ -529,13 +537,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 972 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring con 1 años ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 971 VIERNES PAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -637,5 +638,5 @@
             }
         ]
     },
-    "updated_at": "30/04/2026 09:21"
+    "updated_at": "02/05/2026 08:25"
 }
