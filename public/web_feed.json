@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 36,
-        "volatility": 8247
+        "volume": 37,
+        "volatility": 8142
     },
     "charts": {
         "history_dates": [
@@ -116,7 +116,8 @@
             "2026-05-02",
             "2026-05-03",
             "2026-05-04",
-            "2026-05-05"
+            "2026-05-05",
+            "2026-05-06"
         ],
         "history_prices": [
             166147,
@@ -225,6 +226,7 @@
             169909,
             169909,
             169909,
+            168563,
             168563,
             168563
         ],
@@ -336,14 +338,15 @@
             170282,
             170189,
             169903,
-            169617
+            169617,
+            169332
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 164563,
             "JUEVES PAR": 161577,
             "LUNES IMPAR": 173063,
             "LUNES PAR": 168563,
-            "MARTES IMPAR": 171290,
+            "MARTES IMPAR": 170563,
             "MIERCOLES IMPAR": 170781,
             "MIERCOLES PAR": 173178,
             "NO ESPECIFICADO": 170563,
@@ -466,6 +469,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 165563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 970/2 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | + INFORMACIÓ..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 177963,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -504,7 +514,7 @@
                 "precio_neto": 163563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
-                "raw": "Referencia: 978 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 168000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 978 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 168000€ | RESERVADA..."
             },
             {
                 "fuente": "STAC",
@@ -648,5 +658,5 @@
             }
         ]
     },
-    "updated_at": "05/05/2026 09:12"
+    "updated_at": "06/05/2026 09:31"
 }
