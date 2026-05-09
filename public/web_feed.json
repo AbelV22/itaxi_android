@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 37,
-        "volatility": 8092
+        "volatility": 8168
     },
     "charts": {
         "history_dates": [
@@ -119,7 +119,8 @@
             "2026-05-05",
             "2026-05-06",
             "2026-05-07",
-            "2026-05-08"
+            "2026-05-08",
+            "2026-05-09"
         ],
         "history_prices": [
             166147,
@@ -228,6 +229,7 @@
             169909,
             169909,
             169909,
+            168563,
             168563,
             168563,
             168563,
@@ -345,16 +347,16 @@
             169617,
             169332,
             169139,
-            168947
+            168947,
+            168755
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 164563,
             "JUEVES PAR": 161577,
             "LUNES IMPAR": 173063,
-            "LUNES PAR": 168563,
             "MARTES IMPAR": 165563,
             "MIERCOLES IMPAR": 170781,
-            "MIERCOLES PAR": 171864,
+            "MIERCOLES PAR": 172000,
             "NO ESPECIFICADO": 170563,
             "VIERNES IMPAR": 158563
         }
@@ -412,13 +414,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 168563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 38865 | DIA DE FIESTA:  | LUNES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA DE..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 167563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
@@ -472,6 +467,13 @@
                 "modelo": "SIN COCHE",
                 "dia": "MIERCOLES IMPAR",
                 "raw": "Ref:  | 38826 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 174628,
+                "modelo": "TOYOTA",
+                "dia": "MIERCOLES PAR",
+                "raw": "Ref:  | 38823 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -664,5 +666,5 @@
             }
         ]
     },
-    "updated_at": "08/05/2026 08:25"
+    "updated_at": "09/05/2026 08:46"
 }
