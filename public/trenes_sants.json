@@ -1,5 +1,11 @@
 [
     {
+        "hora": "00:00",
+        "origen": "Sevilla Santa Justa",
+        "tren": "OUIGO 06415",
+        "via": ""
+    },
+    {
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03062",
@@ -279,12 +285,6 @@
         "hora": "19:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03163",
-        "via": "4"
-    },
-    {
-        "hora": "19:44",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03163",
         "via": ""
     },
     {
@@ -303,18 +303,6 @@
         "hora": "20:07",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34742",
-        "via": ""
-    },
-    {
-        "hora": "20:07",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34742",
-        "via": ""
-    },
-    {
-        "hora": "20:14",
-        "origen": "Barcelona Estació de França",
-        "tren": "MD 30597",
         "via": ""
     },
     {
@@ -342,21 +330,9 @@
         "via": ""
     },
     {
-        "hora": "20:42",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06171",
-        "via": ""
-    },
-    {
         "hora": "20:51",
         "origen": "Córdoba Julio Anguita",
         "tren": "ALVIA 00694",
-        "via": ""
-    },
-    {
-        "hora": "20:56",
-        "origen": "Figueres",
-        "tren": "MD 78884",
         "via": ""
     },
     {
@@ -375,24 +351,6 @@
         "hora": "21:10",
         "origen": "Portbou",
         "tren": "MD 78886",
-        "via": ""
-    },
-    {
-        "hora": "21:10",
-        "origen": "Portbou",
-        "tren": "MD 78886",
-        "via": ""
-    },
-    {
-        "hora": "21:11",
-        "origen": "València Estació del Nord",
-        "tren": "INTERCITY 00460",
-        "via": ""
-    },
-    {
-        "hora": "21:11",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03173",
         "via": ""
     },
     {
@@ -420,28 +378,10 @@
         "via": ""
     },
     {
-        "hora": "21:44",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06181",
-        "via": "3"
-    },
-    {
         "hora": "21:49",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03183",
         "via": ""
-    },
-    {
-        "hora": "21:56",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03183",
-        "via": ""
-    },
-    {
-        "hora": "21:58",
-        "origen": "Córdoba Julio Anguita",
-        "tren": "ALVIA 00694",
-        "via": "5"
     },
     {
         "hora": "21:59",
@@ -462,16 +402,16 @@
         "via": ""
     },
     {
-        "hora": "22:26",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01192",
-        "via": "4"
-    },
-    {
-        "hora": "22:39",
+        "hora": "22:21",
         "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
         "tren": "ALVIA 00437",
         "via": ""
+    },
+    {
+        "hora": "22:40",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "EUROMED 01192",
+        "via": "4"
     },
     {
         "hora": "22:46",
@@ -486,22 +426,22 @@
         "via": ""
     },
     {
-        "hora": "23:00",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06013",
-        "via": ""
-    },
-    {
-        "hora": "23:09",
+        "hora": "22:59",
         "origen": "Sevilla Santa Justa",
         "tren": "AVE 03941",
         "via": ""
     },
     {
+        "hora": "23:07",
+        "origen": "Sevilla Santa Justa",
+        "tren": "IRYO 06013",
+        "via": "4"
+    },
+    {
         "hora": "23:20",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03193",
-        "via": ""
+        "via": "4"
     },
     {
         "hora": "23:20",
@@ -522,13 +462,7 @@
         "via": ""
     },
     {
-        "hora": "23:28",
-        "origen": "Sevilla Santa Justa",
-        "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:34",
+        "hora": "23:40",
         "origen": "Vigo Urzaiz",
         "tren": "ALVIA 00621",
         "via": ""
