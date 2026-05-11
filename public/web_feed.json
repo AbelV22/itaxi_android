@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 37,
-        "volatility": 8168
+        "current_price": 168063,
+        "delta_value": -500,
+        "delta_percent": -0.3,
+        "direction": "down",
+        "volume": 32,
+        "volatility": 8316
     },
     "charts": {
         "history_dates": [
@@ -121,7 +121,8 @@
             "2026-05-07",
             "2026-05-08",
             "2026-05-09",
-            "2026-05-10"
+            "2026-05-10",
+            "2026-05-11"
         ],
         "history_prices": [
             166147,
@@ -236,7 +237,8 @@
             168563,
             168563,
             168563,
-            168563
+            168563,
+            168063
         ],
         "history_sma_7": [
             0,
@@ -351,17 +353,19 @@
             169139,
             168947,
             168755,
-            168563
+            168563,
+            168491
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 164563,
+            "JUEVES IMPAR": 163563,
             "JUEVES PAR": 161577,
             "LUNES IMPAR": 173063,
-            "MARTES IMPAR": 165563,
+            "MARTES IMPAR": 168790,
             "MIERCOLES IMPAR": 170781,
-            "MIERCOLES PAR": 172000,
+            "MIERCOLES PAR": 173314,
             "NO ESPECIFICADO": 170563,
-            "VIERNES IMPAR": 158563
+            "VIERNES IMPAR": 155563,
+            "VIERNES PAR": 169060
         }
     },
     "market_depth": {
@@ -480,17 +484,17 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 169060,
+                "modelo": "FORD",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 984 VIERNES PAR |  | Se vende licencia con vehículo FORD MONDEO Híbrido y motor NUEVO co..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
                 "raw": "Referencia: 970/2 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | + INFORMACIÓ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 177963,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 983 JUEVES IMPAR |  | Se vende licencia con vehículo Kia Ceed Híbrido enchufable. Cambio..."
             },
             {
                 "fuente": "STAC",
@@ -522,13 +526,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 163563,
-                "modelo": "DESCONOCIDO",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 978 MARTES IMPAR |  | Se vende licencia sin vehículo. | Precio: 168000€ | RESERVADA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -543,31 +540,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 171728,
-                "modelo": "DESCONOCIDO",
-                "dia": "MIERCOLES PAR",
-                "raw": "Referencia: 974/2 MIERCOLES PAR |  | Se vende licencia con vehículo Fiat Tipo manual con 6 años de a..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 168563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 974 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. | Precio: 173000€ | RESERVADA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 170563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 973 LUNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 174009,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 972 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring con 1 años ..."
             },
             {
                 "fuente": "STAC",
@@ -627,13 +603,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 958 VIERNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | RESERVADA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -655,10 +624,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 158563,
+                "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 939 VIERNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 939 VIERNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -669,5 +638,5 @@
             }
         ]
     },
-    "updated_at": "10/05/2026 08:59"
+    "updated_at": "11/05/2026 10:41"
 }
