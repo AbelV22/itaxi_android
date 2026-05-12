@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168063,
+        "current_price": 167563,
         "delta_value": -500,
         "delta_percent": -0.3,
         "direction": "down",
         "volume": 32,
-        "volatility": 8316
+        "volatility": 8310
     },
     "charts": {
         "history_dates": [
@@ -122,7 +122,8 @@
             "2026-05-08",
             "2026-05-09",
             "2026-05-10",
-            "2026-05-11"
+            "2026-05-11",
+            "2026-05-12"
         ],
         "history_prices": [
             166147,
@@ -238,7 +239,8 @@
             168563,
             168563,
             168563,
-            168063
+            168063,
+            167563
         ],
         "history_sma_7": [
             0,
@@ -354,12 +356,13 @@
             168947,
             168755,
             168563,
-            168491
+            168491,
+            168348
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163563,
             "JUEVES PAR": 161577,
-            "LUNES IMPAR": 173063,
+            "LUNES IMPAR": 171563,
             "MARTES IMPAR": 168790,
             "MIERCOLES IMPAR": 170781,
             "MIERCOLES PAR": 173314,
@@ -540,10 +543,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 170563,
+                "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
-                "raw": "Referencia: 973 LUNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 175000€ | + INFORMACIÓN..."
+                "raw": "Referencia: 973 LUNES IMPAR |  | Se vende licencia sin vehículo. | Precio: 170000€ | + INFORMACIÓN..."
             },
             {
                 "fuente": "STAC",
@@ -638,5 +641,5 @@
             }
         ]
     },
-    "updated_at": "11/05/2026 10:41"
+    "updated_at": "12/05/2026 09:46"
 }
