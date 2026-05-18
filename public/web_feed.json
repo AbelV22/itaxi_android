@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169135,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 36,
-        "volatility": 7575
+        "current_price": 168530,
+        "delta_value": -605,
+        "delta_percent": -0.36,
+        "direction": "down",
+        "volume": 34,
+        "volatility": 7741
     },
     "charts": {
         "history_dates": [
@@ -125,7 +125,8 @@
             "2026-05-11",
             "2026-05-12",
             "2026-05-15",
-            "2026-05-16"
+            "2026-05-16",
+            "2026-05-18"
         ],
         "history_prices": [
             166147,
@@ -244,7 +245,8 @@
             168063,
             167563,
             169135,
-            169135
+            169135,
+            168530
         ],
         "history_sma_7": [
             0,
@@ -363,13 +365,14 @@
             168491,
             168348,
             168430,
-            168512
+            168512,
+            168507
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163063,
             "JUEVES PAR": 169591,
-            "LUNES IMPAR": 169606,
-            "LUNES PAR": 170929,
+            "LUNES IMPAR": 169677,
+            "LUNES PAR": 172000,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 173000,
             "NO ESPECIFICADO": 170563,
@@ -493,24 +496,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 162563,
+                "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 987/2 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 169859,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 987 LUNES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Híbrido, cambio AUTOMÁT..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 169859,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES PAR",
-                "raw": "Referencia: 986 LUNES PAR |  | Se vende licencia con vehículo Dacia Jogger GLP con cambio MANUAL con..."
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 988 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
             },
             {
                 "fuente": "STAC",
@@ -675,5 +664,5 @@
             }
         ]
     },
-    "updated_at": "16/05/2026 08:52"
+    "updated_at": "18/05/2026 11:10"
 }
