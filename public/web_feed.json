@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 168000,
-        "delta_value": -530,
-        "delta_percent": -0.31,
-        "direction": "down",
-        "volume": 33,
-        "volatility": 6942
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
+        "volume": 34,
+        "volatility": 7137
     },
     "charts": {
         "history_dates": [
@@ -127,7 +127,8 @@
             "2026-05-15",
             "2026-05-16",
             "2026-05-18",
-            "2026-05-19"
+            "2026-05-19",
+            "2026-05-20"
         ],
         "history_prices": [
             166147,
@@ -248,6 +249,7 @@
             169135,
             169135,
             168530,
+            168000,
             168000
         ],
         "history_sma_7": [
@@ -369,14 +371,16 @@
             168430,
             168512,
             168507,
-            168427
+            168427,
+            168346
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163563,
             "JUEVES PAR": 167620,
-            "LUNES IMPAR": 168792,
+            "LUNES IMPAR": 173952,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 171255,
+            "MIERCOLES IMPAR": 172414,
             "NO ESPECIFICADO": 168563,
             "VIERNES IMPAR": 155563,
             "VIERNES PAR": 169210
@@ -428,6 +432,20 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 168000,
+                "modelo": "SIN COCHE",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 38953 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 175905,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 38949 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 171309,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
@@ -442,10 +460,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 168792,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38934 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+                "precio_neto": 176828,
+                "modelo": "DESCONOCIDO",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 38931 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICEBNCIA TAXI EN VENTA BARCELO..."
             },
             {
                 "fuente": "SOLANO",
@@ -481,13 +499,6 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38909 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 168000,
-                "modelo": "SIN COCHE",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38904 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
                 "fuente": "STAC",
@@ -561,7 +572,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 165563,
+                "precio_neto": 163563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 973 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
@@ -659,5 +670,5 @@
             }
         ]
     },
-    "updated_at": "19/05/2026 10:40"
+    "updated_at": "20/05/2026 10:27"
 }
