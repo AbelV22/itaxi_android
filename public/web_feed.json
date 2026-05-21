@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168000,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 168031,
+        "delta_value": 31,
+        "delta_percent": 0.02,
         "direction": "up",
-        "volume": 34,
-        "volatility": 7137
+        "volume": 36,
+        "volatility": 6938
     },
     "charts": {
         "history_dates": [
@@ -128,7 +128,8 @@
             "2026-05-16",
             "2026-05-18",
             "2026-05-19",
-            "2026-05-20"
+            "2026-05-20",
+            "2026-05-21"
         ],
         "history_prices": [
             166147,
@@ -250,7 +251,8 @@
             169135,
             168530,
             168000,
-            168000
+            168000,
+            168031
         ],
         "history_sma_7": [
             0,
@@ -372,7 +374,8 @@
             168512,
             168507,
             168427,
-            168346
+            168346,
+            168342
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163563,
@@ -381,7 +384,7 @@
             "MARTES IMPAR": 168790,
             "MARTES PAR": 171255,
             "MIERCOLES IMPAR": 172414,
-            "NO ESPECIFICADO": 168563,
+            "NO ESPECIFICADO": 169313,
             "VIERNES IMPAR": 155563,
             "VIERNES PAR": 169210
         }
@@ -499,6 +502,20 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38909 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 168063,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 990 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 989 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             },
             {
                 "fuente": "STAC",
@@ -670,5 +687,5 @@
             }
         ]
     },
-    "updated_at": "20/05/2026 10:27"
+    "updated_at": "21/05/2026 10:43"
 }
