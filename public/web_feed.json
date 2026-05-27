@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168031,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 169060,
+        "delta_value": 1029,
+        "delta_percent": 0.61,
         "direction": "up",
-        "volume": 38,
-        "volatility": 6871
+        "volume": 39,
+        "volatility": 6761
     },
     "charts": {
         "history_dates": [
@@ -133,7 +133,8 @@
             "2026-05-22",
             "2026-05-23",
             "2026-05-24",
-            "2026-05-25"
+            "2026-05-25",
+            "2026-05-27"
         ],
         "history_prices": [
             166147,
@@ -260,7 +261,8 @@
             168000,
             168031,
             168031,
-            168031
+            168031,
+            169060
         ],
         "history_sma_7": [
             0,
@@ -387,18 +389,19 @@
             168404,
             168246,
             168089,
-            168017
+            168017,
+            168169
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163563,
+            "JUEVES IMPAR": 163809,
             "JUEVES PAR": 167620,
-            "LUNES IMPAR": 173952,
+            "LUNES IMPAR": 172228,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 171255,
-            "MIERCOLES IMPAR": 172414,
+            "MIERCOLES IMPAR": 176828,
             "NO ESPECIFICADO": 169313,
-            "VIERNES IMPAR": 165685,
+            "VIERNES IMPAR": 173128,
             "VIERNES PAR": 169210
         }
     },
@@ -421,14 +424,6 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 160000,
-                "precio_total": 170000,
-                "valor_coche": 10000
-            },
-            {
                 "fuente": "STAC",
                 "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
@@ -443,9 +438,24 @@
                 "precio_neto": 162563,
                 "precio_total": 167000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "LUNES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 163563,
+                "precio_total": 168000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 173128,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 38965 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI PMR EN VENTA BARCELONA | LICENCIA..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 168000,
@@ -455,7 +465,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 176114,
+                "precio_neto": 172114,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 38949 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
@@ -466,13 +476,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38941 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI PMR EN VENTA BARCELONA | LICENCIA D..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 160000,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38937 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA..."
             },
             {
                 "fuente": "SOLANO",
@@ -515,6 +518,13 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38909 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 178992,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Referencia: 993 MIERCOLES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 4 años ..."
             },
             {
                 "fuente": "STAC",
@@ -714,5 +724,5 @@
             }
         ]
     },
-    "updated_at": "25/05/2026 11:15"
+    "updated_at": "27/05/2026 10:59"
 }
