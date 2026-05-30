@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168063,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 39,
-        "volatility": 7897
+        "current_price": 168031,
+        "delta_value": -32,
+        "delta_percent": -0.02,
+        "direction": "down",
+        "volume": 40,
+        "volatility": 7848
     },
     "charts": {
         "history_dates": [
@@ -136,7 +136,8 @@
             "2026-05-25",
             "2026-05-27",
             "2026-05-28",
-            "2026-05-29"
+            "2026-05-29",
+            "2026-05-30"
         ],
         "history_prices": [
             166147,
@@ -266,7 +267,8 @@
             168031,
             169060,
             168063,
-            168063
+            168063,
+            168031
         ],
         "history_sma_7": [
             0,
@@ -396,10 +398,11 @@
             168017,
             168169,
             168178,
-            168182
+            168182,
+            168187
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163563,
+            "JUEVES IMPAR": 163063,
             "JUEVES PAR": 162823,
             "LUNES IMPAR": 173952,
             "LUNES PAR": 165563,
@@ -524,6 +527,13 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES PAR",
                 "raw": "Ref:  | 38927 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA-MARTES PAR | LICENCI..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 162563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 994 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de OCTUBR..."
             },
             {
                 "fuente": "STAC",
@@ -730,5 +740,5 @@
             }
         ]
     },
-    "updated_at": "29/05/2026 10:51"
+    "updated_at": "30/05/2026 09:24"
 }
