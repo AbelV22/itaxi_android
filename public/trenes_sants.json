@@ -1,12 +1,18 @@
 [
     {
-        "hora": "00:06",
+        "hora": "00:00",
+        "origen": "Portbou",
+        "tren": "MD 78894",
+        "via": ""
+    },
+    {
+        "hora": "00:07",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06211",
         "via": "4"
     },
     {
-        "hora": "00:26",
+        "hora": "00:31",
         "origen": "Sevilla Santa Justa",
         "tren": "OUIGO 06415",
         "via": ""
@@ -186,6 +192,12 @@
         "via": ""
     },
     {
+        "hora": "12:12",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "EUROMED 01092",
+        "via": ""
+    },
+    {
         "hora": "12:29",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34730",
@@ -309,12 +321,6 @@
         "hora": "16:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06541",
-        "via": ""
-    },
-    {
-        "hora": "16:59",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03141",
         "via": ""
     },
     {
@@ -516,18 +522,6 @@
         "via": ""
     },
     {
-        "hora": "21:32",
-        "origen": "Paris Gare de Lyon",
-        "tren": "TGV INOUI 09715",
-        "via": ""
-    },
-    {
-        "hora": "21:35",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06181",
-        "via": "3"
-    },
-    {
         "hora": "21:35",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06181",
@@ -546,18 +540,6 @@
         "via": ""
     },
     {
-        "hora": "21:49",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03183",
-        "via": ""
-    },
-    {
-        "hora": "21:59",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03191",
-        "via": "5"
-    },
-    {
         "hora": "21:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03191",
@@ -567,18 +549,6 @@
         "hora": "22:04",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01192",
-        "via": ""
-    },
-    {
-        "hora": "22:12",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01192",
-        "via": "2"
-    },
-    {
-        "hora": "22:13",
-        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00437",
         "via": ""
     },
     {
@@ -594,18 +564,6 @@
         "via": ""
     },
     {
-        "hora": "22:37",
-        "origen": "Tafalla",
-        "tren": "ALVIA 10920",
-        "via": ""
-    },
-    {
-        "hora": "22:48",
-        "origen": "Portbou",
-        "tren": "MD 78886",
-        "via": ""
-    },
-    {
         "hora": "22:50",
         "origen": "Sevilla Santa Justa",
         "tren": "IRYO 06015",
@@ -618,7 +576,7 @@
         "via": ""
     },
     {
-        "hora": "23:07",
+        "hora": "22:59",
         "origen": "Sevilla Santa Justa",
         "tren": "AVE 03941",
         "via": ""
@@ -636,34 +594,28 @@
         "via": ""
     },
     {
+        "hora": "23:25",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "INTERCITY 01402",
+        "via": ""
+    },
+    {
         "hora": "23:28",
         "origen": "Sevilla Santa Justa",
         "tren": "OUIGO 06415",
         "via": ""
     },
     {
-        "hora": "23:30",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "INTERCITY 01402",
-        "via": ""
-    },
-    {
-        "hora": "23:40",
-        "origen": "Portbou",
-        "tren": "MD 78894",
-        "via": ""
-    },
-    {
-        "hora": "23:40",
-        "origen": "Portbou",
-        "tren": "MD 78894",
-        "via": ""
-    },
-    {
-        "hora": "23:42",
+        "hora": "23:37",
         "origen": "Sevilla Santa Justa",
         "tren": "IRYO 06013",
         "via": "3"
+    },
+    {
+        "hora": "23:40",
+        "origen": "Portbou",
+        "tren": "MD 78894",
+        "via": ""
     },
     {
         "hora": "23:47",
