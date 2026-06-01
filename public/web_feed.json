@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168031,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 168063,
+        "delta_value": 32,
+        "delta_percent": 0.02,
         "direction": "up",
-        "volume": 40,
-        "volatility": 7848
+        "volume": 39,
+        "volatility": 7703
     },
     "charts": {
         "history_dates": [
@@ -138,7 +138,8 @@
             "2026-05-28",
             "2026-05-29",
             "2026-05-30",
-            "2026-05-31"
+            "2026-05-31",
+            "2026-06-01"
         ],
         "history_prices": [
             166147,
@@ -270,7 +271,8 @@
             168063,
             168063,
             168031,
-            168031
+            168031,
+            168063
         ],
         "history_sma_7": [
             0,
@@ -402,19 +404,20 @@
             168178,
             168182,
             168187,
-            168187
+            168187,
+            168191
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163063,
+            "JUEVES IMPAR": 163563,
             "JUEVES PAR": 162823,
-            "LUNES IMPAR": 173952,
+            "LUNES IMPAR": 172342,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 171255,
             "MIERCOLES IMPAR": 172414,
             "NO ESPECIFICADO": 169313,
             "VIERNES IMPAR": 164345,
-            "VIERNES PAR": 169210
+            "VIERNES PAR": 170259
         }
     },
     "market_depth": {
@@ -437,18 +440,18 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 153563,
-                "precio_total": 158000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
                 "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "JUEVES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 157563,
+                "precio_total": 162000,
                 "valor_coche": 4437
             },
             {
@@ -533,7 +536,21 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 162563,
+                "precio_neto": 166563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 995/2 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 171386,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 995 LUNES IMPAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio au..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 157563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 994 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de OCTUBR..."
@@ -589,13 +606,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 169060,
-                "modelo": "FORD",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 984 VIERNES PAR |  | Se vende licencia con vehículo FORD MONDEO Híbrido y motor NUEVO co..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
@@ -631,24 +641,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 153563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 977 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
                 "raw": "Referencia: 975 MARTES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 163563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 973 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
             },
             {
                 "fuente": "STAC",
@@ -743,5 +739,5 @@
             }
         ]
     },
-    "updated_at": "31/05/2026 09:49"
+    "updated_at": "01/06/2026 12:44"
 }
