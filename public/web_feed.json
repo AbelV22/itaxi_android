@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 29,
-        "volatility": 7235
+        "volume": 30,
+        "volatility": 7113
     },
     "charts": {
         "history_dates": [
@@ -140,7 +140,8 @@
             "2026-05-30",
             "2026-05-31",
             "2026-06-01",
-            "2026-06-02"
+            "2026-06-02",
+            "2026-06-03"
         ],
         "history_prices": [
             166147,
@@ -273,6 +274,7 @@
             168063,
             168031,
             168031,
+            168063,
             168063,
             168063
         ],
@@ -408,7 +410,8 @@
             168187,
             168187,
             168191,
-            168196
+            168196,
+            168053
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163563,
@@ -417,7 +420,7 @@
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
             "MIERCOLES IMPAR": 178992,
-            "NO ESPECIFICADO": 169313,
+            "NO ESPECIFICADO": 168063,
             "VIERNES IMPAR": 165685,
             "VIERNES PAR": 169210
         }
@@ -466,6 +469,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "STAC",
+                "precio_neto": 168063,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVIE..."
+            },
             {
                 "fuente": "STAC",
                 "precio_neto": 166563,
@@ -671,5 +681,5 @@
             }
         ]
     },
-    "updated_at": "02/06/2026 11:23"
+    "updated_at": "03/06/2026 12:00"
 }
