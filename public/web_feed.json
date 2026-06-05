@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168063,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 168000,
+        "delta_value": -63,
+        "delta_percent": -0.04,
+        "direction": "down",
         "volume": 41,
-        "volatility": 7601
+        "volatility": 7525
     },
     "charts": {
         "history_dates": [
@@ -142,7 +142,8 @@
             "2026-06-01",
             "2026-06-02",
             "2026-06-03",
-            "2026-06-04"
+            "2026-06-04",
+            "2026-06-05"
         ],
         "history_prices": [
             166147,
@@ -278,7 +279,8 @@
             168063,
             168063,
             168063,
-            168063
+            168063,
+            168000
         ],
         "history_sma_7": [
             0,
@@ -414,16 +416,16 @@
             168191,
             168196,
             168053,
-            168053
+            168053,
+            168044
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163563,
-            "JUEVES PAR": 164193,
-            "LUNES IMPAR": 172342,
+            "JUEVES IMPAR": 164563,
+            "JUEVES PAR": 165563,
+            "LUNES IMPAR": 171386,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
-            "MARTES PAR": 171255,
-            "MIERCOLES IMPAR": 172414,
+            "MIERCOLES IMPAR": 168000,
             "NO ESPECIFICADO": 168063,
             "VIERNES IMPAR": 164345,
             "VIERNES PAR": 170259
@@ -475,6 +477,27 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 165592,
+                "modelo": "DACIA JOGGER",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 39021 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAX..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 174781,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39018 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE T..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 169911,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 39014 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 153000,
                 "modelo": "SIN COCHE",
                 "dia": "JUEVES PAR",
@@ -521,27 +544,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38941 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI PMR EN VENTA BARCELONA | LICENCIA D..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 176828,
-                "modelo": "DESCONOCIDO",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Ref:  | 38931 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICEBNCIA TAXI EN VENTA BARCELO..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 172342,
-                "modelo": "MERCEDES VITO",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38929 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 171255,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 38927 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA-MARTES PAR | LICENCI..."
             },
             {
                 "fuente": "STAC",
@@ -762,5 +764,5 @@
             }
         ]
     },
-    "updated_at": "04/06/2026 10:41"
+    "updated_at": "05/06/2026 10:52"
 }
