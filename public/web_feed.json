@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168000,
-        "delta_value": -63,
-        "delta_percent": -0.04,
+        "current_price": 167563,
+        "delta_value": -437,
+        "delta_percent": -0.26,
         "direction": "down",
         "volume": 41,
-        "volatility": 7525
+        "volatility": 7746
     },
     "charts": {
         "history_dates": [
@@ -143,7 +143,8 @@
             "2026-06-02",
             "2026-06-03",
             "2026-06-04",
-            "2026-06-05"
+            "2026-06-05",
+            "2026-06-06"
         ],
         "history_prices": [
             166147,
@@ -280,7 +281,8 @@
             168063,
             168063,
             168063,
-            168000
+            168000,
+            167563
         ],
         "history_sma_7": [
             0,
@@ -417,10 +419,11 @@
             168196,
             168053,
             168053,
-            168044
+            168044,
+            167978
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 164563,
+            "JUEVES IMPAR": 163563,
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 171386,
             "LUNES PAR": 165563,
@@ -428,7 +431,7 @@
             "MIERCOLES IMPAR": 168000,
             "NO ESPECIFICADO": 168063,
             "VIERNES IMPAR": 164345,
-            "VIERNES PAR": 170259
+            "VIERNES PAR": 169210
         }
     },
     "market_depth": {
@@ -466,15 +469,22 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "STAC",
+                "fuente": "SOLANO",
                 "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 160563,
-                "precio_total": 165000,
-                "valor_coche": 4437
+                "modelo": "DACIA JOGGER",
+                "precio_neto": 155893,
+                "precio_total": 172000,
+                "valor_coche": 16107
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 155893,
+                "modelo": "DACIA JOGGER",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39025 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE T..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 165592,
@@ -537,13 +547,6 @@
                 "modelo": "SIN COCHE",
                 "dia": "MIERCOLES IMPAR",
                 "raw": "Ref:  | 38953 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 171309,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 38941 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI PMR EN VENTA BARCELONA | LICENCIA D..."
             },
             {
                 "fuente": "STAC",
@@ -764,5 +767,5 @@
             }
         ]
     },
-    "updated_at": "05/06/2026 10:52"
+    "updated_at": "06/06/2026 09:29"
 }
