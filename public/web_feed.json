@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 165563,
-        "delta_value": -2000,
-        "delta_percent": -1.19,
-        "direction": "down",
-        "volume": 45,
-        "volatility": 13532
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
+        "volume": 47,
+        "volatility": 13241
     },
     "charts": {
         "history_dates": [
@@ -154,7 +154,8 @@
             "2026-06-14",
             "2026-06-15",
             "2026-06-16",
-            "2026-06-17"
+            "2026-06-17",
+            "2026-06-18"
         ],
         "history_prices": [
             166147,
@@ -302,6 +303,7 @@
             166563,
             167563,
             167563,
+            165563,
             165563
         ],
         "history_sma_7": [
@@ -450,15 +452,16 @@
             166848,
             166848,
             166920,
-            166705
+            166705,
+            166563
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162790,
             "JUEVES PAR": 162823,
-            "LUNES IMPAR": 169911,
+            "LUNES IMPAR": 169681,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
-            "MARTES PAR": 164063,
+            "MARTES PAR": 163446,
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 179384,
             "NO ESPECIFICADO": 168063,
@@ -579,6 +582,20 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "JUEVES PAR",
                 "raw": "Ref:  | 38984 | DIA DE FIESTA:  | JUEVES | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 165563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 1008 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 163446,
+                "modelo": "SEAT",
+                "dia": "MARTES PAR",
+                "raw": "Referencia: 1007 MARTES PAR |  | Se vende licencia con vehículo Seat Leon Gasolina/GLP con 7 años de..."
             },
             {
                 "fuente": "STAC",
@@ -827,5 +844,5 @@
             }
         ]
     },
-    "updated_at": "17/06/2026 11:55"
+    "updated_at": "18/06/2026 11:12"
 }
