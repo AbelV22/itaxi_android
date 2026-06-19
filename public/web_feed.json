@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 47,
-        "volatility": 13241
+        "volume": 48,
+        "volatility": 12938
     },
     "charts": {
         "history_dates": [
@@ -155,7 +155,8 @@
             "2026-06-15",
             "2026-06-16",
             "2026-06-17",
-            "2026-06-18"
+            "2026-06-18",
+            "2026-06-19"
         ],
         "history_prices": [
             166147,
@@ -303,6 +304,7 @@
             166563,
             167563,
             167563,
+            165563,
             165563,
             165563
         ],
@@ -453,18 +455,19 @@
             166848,
             166920,
             166705,
-            166563
+            166563,
+            166420
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 162790,
+            "JUEVES IMPAR": 163176,
             "JUEVES PAR": 162823,
             "LUNES IMPAR": 169681,
-            "LUNES PAR": 165563,
+            "LUNES PAR": 170786,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 163446,
-            "MIERCOLES IMPAR": 178992,
+            "MIERCOLES IMPAR": 170974,
             "MIERCOLES PAR": 179384,
-            "NO ESPECIFICADO": 168063,
+            "NO ESPECIFICADO": 166813,
             "VIERNES IMPAR": 171981,
             "VIERNES PAR": 169210
         }
@@ -488,14 +491,6 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 151563,
-                "precio_total": 156000,
-                "valor_coche": 4437
-            },
-            {
                 "fuente": "STAC",
                 "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
@@ -510,16 +505,17 @@
                 "precio_neto": 152893,
                 "precio_total": 169000,
                 "valor_coche": 16107
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 151563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 39054 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA DE TAXI SON EN VENTA BARCELONA | LICENCIA ..."
-            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 169452,
@@ -584,6 +580,20 @@
                 "raw": "Ref:  | 38984 | DIA DE FIESTA:  | JUEVES | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAXI EN..."
             },
             {
+                "fuente": "SOLANO",
+                "precio_neto": 162956,
+                "modelo": "TESLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 38977 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA D..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 176009,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES PAR",
+                "raw": "Referencia: 1009 LUNES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambio ..."
+            },
+            {
                 "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
@@ -634,7 +644,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 175563,
+                "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1002 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
@@ -844,5 +854,5 @@
             }
         ]
     },
-    "updated_at": "18/06/2026 11:12"
+    "updated_at": "19/06/2026 11:39"
 }
