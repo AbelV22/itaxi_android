@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 166273,
+        "delta_value": 710,
+        "delta_percent": 0.43,
         "direction": "up",
-        "volume": 49,
-        "volatility": 12792
+        "volume": 47,
+        "volatility": 12820
     },
     "charts": {
         "history_dates": [
@@ -159,7 +159,8 @@
             "2026-06-19",
             "2026-06-20",
             "2026-06-21",
-            "2026-06-22"
+            "2026-06-22",
+            "2026-06-23"
         ],
         "history_prices": [
             166147,
@@ -312,7 +313,8 @@
             165563,
             165563,
             165563,
-            165563
+            165563,
+            166273
         ],
         "history_sma_7": [
             0,
@@ -465,15 +467,16 @@
             166420,
             166277,
             166134,
-            165848
+            165848,
+            165664
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163563,
+            "JUEVES IMPAR": 164563,
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 172507,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
-            "MARTES PAR": 164504,
+            "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 170996,
             "MIERCOLES PAR": 179513,
             "NO ESPECIFICADO": 165563,
@@ -490,14 +493,6 @@
                 "precio_neto": 96162,
                 "precio_total": 100000,
                 "valor_coche": 3838
-            },
-            {
-                "fuente": "STAC",
-                "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
             },
             {
                 "fuente": "STAC",
@@ -522,6 +517,14 @@
                 "precio_neto": 159340,
                 "precio_total": 167000,
                 "valor_coche": 7660
+            },
+            {
+                "fuente": "STAC",
+                "dia": "MARTES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 160563,
+                "precio_total": 165000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
@@ -632,13 +635,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 162563,
-                "modelo": "DESCONOCIDO",
-                "dia": "MARTES PAR",
-                "raw": "Referencia: 1005 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 152563,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
@@ -692,13 +688,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVIE..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 994 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de OCTUBR..."
             },
             {
                 "fuente": "STAC",
@@ -870,5 +859,5 @@
             }
         ]
     },
-    "updated_at": "22/06/2026 12:54"
+    "updated_at": "23/06/2026 10:39"
 }
