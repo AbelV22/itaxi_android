@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 166273,
-        "delta_value": 710,
-        "delta_percent": 0.43,
+        "delta_value": 0,
+        "delta_percent": 0.0,
         "direction": "up",
-        "volume": 47,
-        "volatility": 12820
+        "volume": 49,
+        "volatility": 12600
     },
     "charts": {
         "history_dates": [
@@ -160,7 +160,8 @@
             "2026-06-20",
             "2026-06-21",
             "2026-06-22",
-            "2026-06-23"
+            "2026-06-23",
+            "2026-06-24"
         ],
         "history_prices": [
             166147,
@@ -314,6 +315,7 @@
             165563,
             165563,
             165563,
+            166273,
             166273
         ],
         "history_sma_7": [
@@ -468,15 +470,16 @@
             166277,
             166134,
             165848,
-            165664
+            165664,
+            165765
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 164563,
             "JUEVES PAR": 165563,
-            "LUNES IMPAR": 172507,
+            "LUNES IMPAR": 175563,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 168790,
-            "MARTES PAR": 165563,
+            "MARTES IMPAR": 167000,
+            "MARTES PAR": 164919,
             "MIERCOLES IMPAR": 170996,
             "MIERCOLES PAR": 179513,
             "NO ESPECIFICADO": 165563,
@@ -530,6 +533,13 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 167000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39116 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 173610,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -579,7 +589,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 167275,
+                "precio_neto": 164275,
                 "modelo": "SEAT",
                 "dia": "MARTES PAR",
                 "raw": "Ref:  | 39077 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
@@ -592,11 +602,18 @@
                 "raw": "Ref:  | 39075 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 169452,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39050 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+                "fuente": "STAC",
+                "precio_neto": 167563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES PAR",
+                "raw": "Referencia: 1012 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 174778,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 1011 MIÉRCOLES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
             },
             {
                 "fuente": "STAC",
@@ -859,5 +876,5 @@
             }
         ]
     },
-    "updated_at": "23/06/2026 10:39"
+    "updated_at": "24/06/2026 10:26"
 }
