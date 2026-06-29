@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 48,
-        "volatility": 12505
+        "volume": 51,
+        "volatility": 12375
     },
     "charts": {
         "history_dates": [
@@ -164,7 +164,8 @@
             "2026-06-24",
             "2026-06-25",
             "2026-06-27",
-            "2026-06-28"
+            "2026-06-28",
+            "2026-06-29"
         ],
         "history_prices": [
             166147,
@@ -321,6 +322,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563
         ],
@@ -480,15 +482,16 @@
             165765,
             166047,
             166047,
+            166047,
             166047
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 164000,
+            "JUEVES IMPAR": 164781,
             "JUEVES PAR": 164069,
-            "LUNES IMPAR": 173361,
+            "LUNES IMPAR": 170711,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 167000,
-            "MARTES PAR": 164504,
+            "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 170996,
             "MIERCOLES PAR": 175100,
             "NO ESPECIFICADO": 165563,
@@ -510,6 +513,14 @@
                 "fuente": "STAC",
                 "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
+                "precio_neto": 150563,
+                "precio_total": 155000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
                 "precio_neto": 152563,
                 "precio_total": 157000,
                 "valor_coche": 4437
@@ -521,14 +532,6 @@
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "JUEVES IMPAR",
-                "modelo": "TOYOTA PRIUS",
-                "precio_neto": 159340,
-                "precio_total": 167000,
-                "valor_coche": 7660
             },
             {
                 "fuente": "STAC",
@@ -612,6 +615,41 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 179409,
+                "modelo": "MODEL 3",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 734/2 LUNES IMPAR |  | Se vende licencia con vehículo Tesla MODEL 3 con 1.5 años de anti..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 164563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 734 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 150563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1014 VIERNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170195,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1013 VIERNES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 167563,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES PAR",
+                "raw": "Referencia: 1012 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 174778,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
@@ -686,13 +724,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 998 LICENCIA DE PREMIÀ DE DALT |  | Se vende licencia con vehículo con 2 años de antigüe..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 159340,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 999 JUEVES IMPAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
             },
             {
                 "fuente": "STAC",
@@ -868,15 +899,8 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 939 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 175563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 734 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
             }
         ]
     },
-    "updated_at": "28/06/2026 10:07"
+    "updated_at": "29/06/2026 12:04"
 }
