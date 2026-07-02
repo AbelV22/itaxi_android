@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 53,
-        "volatility": 13774
+        "volume": 45,
+        "volatility": 13374
     },
     "charts": {
         "history_dates": [
@@ -167,7 +167,8 @@
             "2026-06-28",
             "2026-06-29",
             "2026-06-30",
-            "2026-07-01"
+            "2026-07-01",
+            "2026-07-02"
         ],
         "history_prices": [
             166147,
@@ -324,6 +325,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563,
             165563,
@@ -489,19 +491,20 @@
             166047,
             166047,
             166047,
-            165945
+            165945,
+            165844
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 164000,
-            "JUEVES PAR": 164069,
-            "LUNES IMPAR": 170462,
+            "JUEVES IMPAR": 163063,
+            "JUEVES PAR": 165563,
+            "LUNES IMPAR": 172144,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 168790,
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 179513,
-            "NO ESPECIFICADO": 165563,
-            "VIERNES IMPAR": 161000,
+            "NO ESPECIFICADO": 166145,
+            "VIERNES IMPAR": 165685,
             "VIERNES PAR": 169210
         }
     },
@@ -517,7 +520,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
@@ -525,7 +528,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "JUEVES IMPAR",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
@@ -541,7 +544,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
+                "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -550,74 +553,18 @@
         ],
         "all_offers": [
             {
-                "fuente": "SOLANO",
-                "precio_neto": 184401,
-                "modelo": "DESCONOCIDO",
-                "dia": "MIERCOLES PAR",
-                "raw": "Ref:  | 39150 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 185517,
+                "fuente": "STAC",
+                "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 39148 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+                "raw": "Referencia: 1017 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 203495,
-                "modelo": "MERCEDES",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39146 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 165000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39141 | DIA DE FIESTA:  | MARTES PAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 165000,
-                "modelo": "SIN COCHE",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39139 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA- | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 161000,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 39131 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 162575,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 39129 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 164000,
-                "modelo": "TOYOTA",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 39127 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 170688,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MIERCOLES PAR",
-                "raw": "Ref:  | 39125 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 173361,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39123 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+                "fuente": "STAC",
+                "precio_neto": 166728,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 1016 MIÉRCOLES PAR |  | Se vende licencia con vehículo Fiat Tipo Gasolina GLP, Cambio ma..."
             },
             {
                 "fuente": "STAC",
@@ -922,5 +869,5 @@
             }
         ]
     },
-    "updated_at": "01/07/2026 10:45"
+    "updated_at": "02/07/2026 10:13"
 }
