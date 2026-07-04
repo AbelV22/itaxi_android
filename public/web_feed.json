@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 53,
-        "volatility": 13540
+        "volatility": 13518
     },
     "charts": {
         "history_dates": [
@@ -169,7 +169,8 @@
             "2026-06-30",
             "2026-07-01",
             "2026-07-02",
-            "2026-07-03"
+            "2026-07-03",
+            "2026-07-04"
         ],
         "history_prices": [
             166147,
@@ -326,6 +327,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563,
             165563,
@@ -495,10 +497,11 @@
             166047,
             165945,
             165844,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163781,
+            "JUEVES IMPAR": 163063,
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
@@ -523,26 +526,26 @@
             },
             {
                 "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 150563,
+                "precio_total": 155000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DACIA",
+                "precio_neto": 150821,
+                "precio_total": 157000,
+                "valor_coche": 6179
+            },
+            {
+                "fuente": "STAC",
                 "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
+                "precio_neto": 152563,
+                "precio_total": 157000,
                 "valor_coche": 4437
             },
             {
@@ -662,7 +665,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 150563,
+                "precio_neto": 152563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 1000 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Inc..."
@@ -732,10 +735,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
+                "precio_neto": 150821,
+                "modelo": "DACIA",
                 "dia": "VIERNES PAR",
-                "raw": "Referencia: 1001 VIERNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+                "raw": "Referencia: 1001 VIERNES PAR |  | Se vende licencia con vehículo Dacia Lodgy cambio manual con 7 año..."
             },
             {
                 "fuente": "STAC",
@@ -844,10 +847,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 165563,
+                "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 981 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+                "raw": "Referencia: 981 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Incl..."
             },
             {
                 "fuente": "STAC",
@@ -928,5 +931,5 @@
             }
         ]
     },
-    "updated_at": "03/07/2026 10:09"
+    "updated_at": "04/07/2026 09:28"
 }
