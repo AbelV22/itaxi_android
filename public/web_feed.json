@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 53,
-        "volatility": 13518
+        "volume": 50,
+        "volatility": 13909
     },
     "charts": {
         "history_dates": [
@@ -171,7 +171,8 @@
             "2026-07-02",
             "2026-07-03",
             "2026-07-04",
-            "2026-07-05"
+            "2026-07-05",
+            "2026-07-06"
         ],
         "history_prices": [
             166147,
@@ -328,6 +329,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563,
             165563,
@@ -501,10 +503,11 @@
             165844,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163063,
+            "JUEVES IMPAR": 161563,
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
@@ -514,7 +517,7 @@
             "MIERCOLES PAR": 175100,
             "NO ESPECIFICADO": 166728,
             "VIERNES IMPAR": 161000,
-            "VIERNES PAR": 169210
+            "VIERNES PAR": 160015
         }
     },
     "market_depth": {
@@ -693,13 +696,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES PAR",
                 "raw": "Referencia: 1014 VIERNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 170195,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 1013 VIERNES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
             },
             {
                 "fuente": "STAC",
@@ -906,20 +902,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 952/2 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 169818,
-                "modelo": "DACIA",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 952 JUEVES IMPAR |  | Se vende licencia con vehículo Dacia Lodgy con 8 años de antigüeda..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 176725,
                 "modelo": "DACIA JOGGER",
                 "dia": "LUNES IMPAR",
@@ -934,5 +916,5 @@
             }
         ]
     },
-    "updated_at": "05/07/2026 09:45"
+    "updated_at": "06/07/2026 11:41"
 }
