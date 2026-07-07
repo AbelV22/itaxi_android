@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 50,
-        "volatility": 13909
+        "volatility": 14130
     },
     "charts": {
         "history_dates": [
@@ -172,7 +172,8 @@
             "2026-07-03",
             "2026-07-04",
             "2026-07-05",
-            "2026-07-06"
+            "2026-07-06",
+            "2026-07-07"
         ],
         "history_prices": [
             166147,
@@ -329,6 +330,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563,
             165563,
@@ -504,6 +506,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -511,7 +514,7 @@
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 169509,
+            "MARTES IMPAR": 177534,
             "MARTES PAR": 166563,
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 175100,
@@ -564,6 +567,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 184368,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39162 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 184401,
@@ -626,13 +636,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39123 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 167000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 39116 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -916,5 +919,5 @@
             }
         ]
     },
-    "updated_at": "06/07/2026 11:41"
+    "updated_at": "07/07/2026 10:29"
 }
