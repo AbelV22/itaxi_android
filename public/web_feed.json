@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 50,
-        "volatility": 14130
+        "volume": 49,
+        "volatility": 14067
     },
     "charts": {
         "history_dates": [
@@ -173,7 +173,8 @@
             "2026-07-04",
             "2026-07-05",
             "2026-07-06",
-            "2026-07-07"
+            "2026-07-07",
+            "2026-07-08"
         ],
         "history_prices": [
             166147,
@@ -330,6 +331,7 @@
             166273,
             166273,
             167531,
+            165563,
             165563,
             165563,
             165563,
@@ -507,20 +509,21 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 161563,
+            "JUEVES IMPAR": 162563,
             "JUEVES PAR": 165563,
             "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 177534,
-            "MARTES PAR": 166563,
+            "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 175100,
             "NO ESPECIFICADO": 166728,
             "VIERNES IMPAR": 161000,
-            "VIERNES PAR": 160015
+            "VIERNES PAR": 169210
         }
     },
     "market_depth": {
@@ -543,14 +546,6 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DACIA",
-                "precio_neto": 150821,
-                "precio_total": 157000,
-                "valor_coche": 6179
-            },
-            {
-                "fuente": "STAC",
                 "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 152563,
@@ -564,12 +559,20 @@
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
             {
                 "fuente": "SOLANO",
-                "precio_neto": 184368,
+                "precio_neto": 183368,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
                 "raw": "Ref:  | 39162 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
@@ -594,13 +597,6 @@
                 "modelo": "MERCEDES",
                 "dia": "MARTES PAR",
                 "raw": "Ref:  | 39146 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 165000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39141 | DIA DE FIESTA:  | MARTES PAR | LICENCI TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
             },
             {
                 "fuente": "SOLANO",
@@ -636,6 +632,13 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39123 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 172610,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39096 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -734,13 +737,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MIERCOLES PAR",
                 "raw": "Referencia: 1006 MIERCOLES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 150821,
-                "modelo": "DACIA",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 1001 VIERNES PAR |  | Se vende licencia con vehículo Dacia Lodgy cambio manual con 7 año..."
             },
             {
                 "fuente": "STAC",
@@ -919,5 +915,5 @@
             }
         ]
     },
-    "updated_at": "07/07/2026 10:29"
+    "updated_at": "08/07/2026 09:30"
 }
