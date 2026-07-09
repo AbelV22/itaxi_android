@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 166145,
+        "delta_value": 582,
+        "delta_percent": 0.35,
         "direction": "up",
-        "volume": 49,
-        "volatility": 14067
+        "volume": 48,
+        "volatility": 14213
     },
     "charts": {
         "history_dates": [
@@ -174,7 +174,8 @@
             "2026-07-05",
             "2026-07-06",
             "2026-07-07",
-            "2026-07-08"
+            "2026-07-08",
+            "2026-07-09"
         ],
         "history_prices": [
             166147,
@@ -342,7 +343,8 @@
             165563,
             165563,
             165563,
-            165563
+            165563,
+            166145
         ],
         "history_sma_7": [
             0,
@@ -510,7 +512,8 @@
             165563,
             165563,
             165563,
-            165563
+            165563,
+            165646
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
@@ -798,13 +801,6 @@
                 "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Referencia: 991 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de principio..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 990 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
             },
@@ -915,5 +911,5 @@
             }
         ]
     },
-    "updated_at": "08/07/2026 09:30"
+    "updated_at": "09/07/2026 10:28"
 }
