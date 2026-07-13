@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 47,
-        "volatility": 14159
+        "volume": 48,
+        "volatility": 14026
     },
     "charts": {
         "history_dates": [
@@ -178,7 +178,8 @@
             "2026-07-09",
             "2026-07-10",
             "2026-07-11",
-            "2026-07-12"
+            "2026-07-12",
+            "2026-07-13"
         ],
         "history_prices": [
             166147,
@@ -348,6 +349,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563
@@ -522,6 +524,7 @@
             165646,
             165646,
             165646,
+            165646,
             165646
         ],
         "price_by_day_descanso": {
@@ -535,7 +538,7 @@
             "MIERCOLES PAR": 175345,
             "NO ESPECIFICADO": 166145,
             "VIERNES IMPAR": 161000,
-            "VIERNES PAR": 169210
+            "VIERNES PAR": 165816
         }
     },
     "market_depth": {
@@ -651,6 +654,13 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39096 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 162423,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1020 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
             },
             {
                 "fuente": "STAC",
@@ -913,5 +923,5 @@
             }
         ]
     },
-    "updated_at": "12/07/2026 09:08"
+    "updated_at": "13/07/2026 10:32"
 }
