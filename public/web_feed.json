@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 48,
-        "volatility": 14026
+        "volatility": 14283
     },
     "charts": {
         "history_dates": [
@@ -179,7 +179,8 @@
             "2026-07-10",
             "2026-07-11",
             "2026-07-12",
-            "2026-07-13"
+            "2026-07-13",
+            "2026-07-14"
         ],
         "history_prices": [
             166147,
@@ -349,6 +350,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -525,10 +527,11 @@
             165646,
             165646,
             165646,
+            165646,
             165646
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 162563,
+            "JUEVES IMPAR": 161563,
             "JUEVES PAR": 163063,
             "LUNES IMPAR": 170462,
             "LUNES PAR": 165563,
@@ -538,7 +541,7 @@
             "MIERCOLES PAR": 175345,
             "NO ESPECIFICADO": 166145,
             "VIERNES IMPAR": 161000,
-            "VIERNES PAR": 165816
+            "VIERNES PAR": 162423
         }
     },
     "market_depth": {
@@ -550,6 +553,14 @@
                 "precio_neto": 96162,
                 "precio_total": 100000,
                 "valor_coche": 3838
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "VIERNES PAR",
+                "modelo": "TOYOTA COROLLA",
+                "precio_neto": 148906,
+                "precio_total": 163000,
+                "valor_coche": 14094
             },
             {
                 "fuente": "STAC",
@@ -574,17 +585,16 @@
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 148906,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES PAR",
+                "raw": "Ref:  | 39178 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 175345,
@@ -649,13 +659,6 @@
                 "raw": "Ref:  | 39123 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 172610,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 39096 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
                 "fuente": "STAC",
                 "precio_neto": 162423,
                 "modelo": "TOYOTA PRIUS",
@@ -688,7 +691,7 @@
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES PAR",
-                "raw": "Referencia: 1015 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Preci..."
+                "raw": "Referencia: 1015 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Incluy..."
             },
             {
                 "fuente": "STAC",
@@ -769,7 +772,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160563,
+                "precio_neto": 157563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1002 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
@@ -923,5 +926,5 @@
             }
         ]
     },
-    "updated_at": "13/07/2026 10:32"
+    "updated_at": "14/07/2026 09:10"
 }
