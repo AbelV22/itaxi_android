@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 50,
-        "volatility": 14363
+        "volume": 51,
+        "volatility": 14167
     },
     "charts": {
         "history_dates": [
@@ -187,7 +187,8 @@
             "2026-07-18",
             "2026-07-19",
             "2026-07-20",
-            "2026-07-21"
+            "2026-07-21",
+            "2026-07-22"
         ],
         "history_prices": [
             166147,
@@ -357,6 +358,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -549,17 +551,18 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 161563,
             "JUEVES PAR": 163063,
-            "LUNES IMPAR": 167563,
+            "LUNES IMPAR": 166628,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 179165,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 178992,
-            "MIERCOLES PAR": 170688,
+            "MIERCOLES PAR": 169756,
             "NO ESPECIFICADO": 166145,
             "VIERNES IMPAR": 158281,
             "VIERNES PAR": 162423
@@ -611,6 +614,20 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 165176,
+                "modelo": "DACIA JOGGER",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 39202 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166628,
+                "modelo": "SEAT",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 39200 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 153000,
                 "modelo": "SIN COCHE",
                 "dia": "VIERNES IMPAR",
@@ -632,7 +649,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 183368,
+                "precio_neto": 179368,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
                 "raw": "Ref:  | 39162 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
@@ -666,18 +683,18 @@
                 "raw": "Ref:  | 39131 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 170688,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MIERCOLES PAR",
-                "raw": "Ref:  | 39125 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 173361,
+                "fuente": "STAC",
+                "precio_neto": 177064,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39123 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
+                "raw": "Referencia: 1024 LUNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 1002 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
             },
             {
                 "fuente": "STAC",
@@ -804,13 +821,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES PAR",
                 "raw": "Referencia: 1003 VIERNES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1002 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
             },
             {
                 "fuente": "STAC",
@@ -961,5 +971,5 @@
             }
         ]
     },
-    "updated_at": "21/07/2026 09:32"
+    "updated_at": "22/07/2026 09:32"
 }
