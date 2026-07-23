@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 51,
-        "volatility": 14167
+        "volume": 49,
+        "volatility": 14166
     },
     "charts": {
         "history_dates": [
@@ -188,7 +188,8 @@
             "2026-07-19",
             "2026-07-20",
             "2026-07-21",
-            "2026-07-22"
+            "2026-07-22",
+            "2026-07-23"
         ],
         "history_prices": [
             166147,
@@ -358,6 +359,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -552,6 +554,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -559,11 +562,11 @@
             "JUEVES PAR": 163063,
             "LUNES IMPAR": 166628,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 179165,
+            "MARTES IMPAR": 177165,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 178992,
-            "MIERCOLES PAR": 169756,
-            "NO ESPECIFICADO": 166145,
+            "MIERCOLES PAR": 160000,
+            "NO ESPECIFICADO": 165563,
             "VIERNES IMPAR": 158281,
             "VIERNES PAR": 162423
         }
@@ -684,17 +687,17 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 174045,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 1025 VIERNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 177064,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 1024 LUNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1002 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
             },
             {
                 "fuente": "STAC",
@@ -705,14 +708,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 171548,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 1022 VIERNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años d..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 179165,
+                "precio_neto": 177165,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
                 "raw": "Referencia: 1021 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 2.5 años ..."
@@ -740,7 +736,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 166728,
+                "precio_neto": 164728,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1016 MIÉRCOLES PAR |  | Se vende licencia con vehículo Fiat Tipo Gasolina GLP, Cambio ma..."
@@ -800,13 +796,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 1008 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 179513,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MIERCOLES PAR",
-                "raw": "Referencia: 1006 MIERCOLES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
             },
             {
                 "fuente": "STAC",
@@ -950,7 +939,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 178389,
+                "precio_neto": 173389,
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 962 MIÉRCOLES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP i camb..."
@@ -971,5 +960,5 @@
             }
         ]
     },
-    "updated_at": "22/07/2026 09:32"
+    "updated_at": "23/07/2026 09:29"
 }
