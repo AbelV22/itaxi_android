@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 49,
-        "volatility": 14166
+        "volatility": 14260
     },
     "charts": {
         "history_dates": [
@@ -190,7 +190,8 @@
             "2026-07-21",
             "2026-07-22",
             "2026-07-23",
-            "2026-07-24"
+            "2026-07-24",
+            "2026-07-26"
         ],
         "history_prices": [
             166147,
@@ -360,6 +361,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -558,6 +560,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -602,19 +605,19 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "JUEVES IMPAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
                 "valor_coche": 4437
             },
             {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
-                "modelo": "SIN COCHE",
-                "precio_neto": 153000,
-                "precio_total": 153000,
-                "valor_coche": 0
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 150563,
+                "precio_total": 155000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
@@ -690,6 +693,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 150563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 1026 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de SEPTI..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 174045,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
@@ -729,13 +739,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES PAR",
                 "raw": "Referencia: 1019 JUEVES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Inclu..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 1017 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             },
             {
                 "fuente": "STAC",
@@ -963,5 +966,5 @@
             }
         ]
     },
-    "updated_at": "24/07/2026 09:26"
+    "updated_at": "26/07/2026 09:19"
 }
