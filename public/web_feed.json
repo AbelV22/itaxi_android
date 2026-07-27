@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 49,
-        "volatility": 14260
+        "volume": 47,
+        "volatility": 14270
     },
     "charts": {
         "history_dates": [
@@ -191,7 +191,8 @@
             "2026-07-22",
             "2026-07-23",
             "2026-07-24",
-            "2026-07-26"
+            "2026-07-26",
+            "2026-07-27"
         ],
         "history_prices": [
             166147,
@@ -361,6 +362,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -561,6 +563,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -568,12 +571,12 @@
             "JUEVES PAR": 163063,
             "LUNES IMPAR": 166628,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 177165,
+            "MARTES IMPAR": 175693,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 160000,
             "NO ESPECIFICADO": 165563,
-            "VIERNES IMPAR": 158281,
+            "VIERNES IMPAR": 161000,
             "VIERNES PAR": 162423
         }
     },
@@ -597,10 +600,10 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 149563,
-                "precio_total": 154000,
+                "precio_neto": 150563,
+                "precio_total": 155000,
                 "valor_coche": 4437
             },
             {
@@ -612,12 +615,12 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
+                "fuente": "SOLANO",
+                "dia": "VIERNES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 153000,
+                "precio_total": 153000,
+                "valor_coche": 0
             }
         ],
         "all_offers": [
@@ -711,20 +714,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 1024 LUNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 149563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 1023 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 177165,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 1021 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 2.5 años ..."
             },
             {
                 "fuente": "STAC",
@@ -966,5 +955,5 @@
             }
         ]
     },
-    "updated_at": "26/07/2026 09:19"
+    "updated_at": "27/07/2026 10:49"
 }
