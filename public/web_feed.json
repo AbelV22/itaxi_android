@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 47,
-        "volatility": 14270
+        "volume": 48,
+        "volatility": 14501
     },
     "charts": {
         "history_dates": [
@@ -192,7 +192,8 @@
             "2026-07-23",
             "2026-07-24",
             "2026-07-26",
-            "2026-07-27"
+            "2026-07-27",
+            "2026-07-28"
         ],
         "history_prices": [
             166147,
@@ -362,6 +363,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -564,11 +566,12 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 161563,
-            "JUEVES PAR": 163063,
+            "JUEVES IMPAR": 162563,
+            "JUEVES PAR": 160563,
             "LUNES IMPAR": 166628,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 175693,
@@ -696,6 +699,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 187016,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 1027 JUEVES IMPAR PMR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR Adaptada...."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 150563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -724,7 +734,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160563,
+                "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES PAR",
                 "raw": "Referencia: 1019 JUEVES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Inclu..."
@@ -955,5 +965,5 @@
             }
         ]
     },
-    "updated_at": "27/07/2026 10:49"
+    "updated_at": "28/07/2026 09:40"
 }
