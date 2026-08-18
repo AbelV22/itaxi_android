@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 47,
-        "volatility": 14840
+        "volatility": 13910
     },
     "charts": {
         "history_dates": [
@@ -211,7 +211,8 @@
             "2026-08-14",
             "2026-08-15",
             "2026-08-16",
-            "2026-08-17"
+            "2026-08-17",
+            "2026-08-18"
         ],
         "history_prices": [
             166147,
@@ -381,6 +382,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -621,10 +623,11 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163063,
+            "JUEVES IMPAR": 162563,
             "JUEVES PAR": 158063,
             "LUNES IMPAR": 167095,
             "LUNES PAR": 165563,
@@ -681,6 +684,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 153000,
+                "modelo": "SIN COCHE",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39224 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARTCELONA | LICENCIA TAXI E..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 165000,
@@ -743,13 +753,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39148 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 203495,
-                "modelo": "MERCEDES",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39146 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
             },
             {
                 "fuente": "STAC",
@@ -1012,5 +1015,5 @@
             }
         ]
     },
-    "updated_at": "17/08/2026 07:56"
+    "updated_at": "18/08/2026 07:44"
 }
