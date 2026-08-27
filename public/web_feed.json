@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 48,
-        "volatility": 13327
+        "volume": 47,
+        "volatility": 13099
     },
     "charts": {
         "history_dates": [
@@ -219,7 +219,8 @@
             "2026-08-22",
             "2026-08-23",
             "2026-08-25",
-            "2026-08-26"
+            "2026-08-26",
+            "2026-08-27"
         ],
         "history_prices": [
             166147,
@@ -389,6 +390,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -645,6 +647,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -657,7 +660,7 @@
             "MIERCOLES IMPAR": 178992,
             "MIERCOLES PAR": 163000,
             "NO ESPECIFICADO": 165563,
-            "VIERNES IMPAR": 164804,
+            "VIERNES IMPAR": 174045,
             "VIERNES PAR": 169210
         }
     },
@@ -696,15 +699,22 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "STAC",
+                "fuente": "SOLANO",
                 "dia": "JUEVES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
+                "modelo": "SIN COCHE",
+                "precio_neto": 153000,
+                "precio_total": 153000,
+                "valor_coche": 0
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 155834,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39239 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 163000,
@@ -756,7 +766,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 165176,
+                "precio_neto": 162176,
                 "modelo": "DACIA JOGGER",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39202 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
@@ -767,13 +777,6 @@
                 "modelo": "SEAT",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39200 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 153000,
-                "modelo": "SIN COCHE",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 39192 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
                 "fuente": "STAC",
@@ -791,7 +794,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 187016,
+                "precio_neto": 182016,
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 1027 JUEVES IMPAR PMR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR Adaptada...."
@@ -1008,13 +1011,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 965 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 183051,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
@@ -1043,5 +1039,5 @@
             }
         ]
     },
-    "updated_at": "26/08/2026 07:51"
+    "updated_at": "27/08/2026 18:12"
 }
