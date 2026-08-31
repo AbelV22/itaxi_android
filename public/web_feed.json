@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 55,
-        "volatility": 12508
+        "volatility": 12506
     },
     "charts": {
         "history_dates": [
@@ -223,7 +223,8 @@
             "2026-08-27",
             "2026-08-28",
             "2026-08-29",
-            "2026-08-30"
+            "2026-08-30",
+            "2026-08-31"
         ],
         "history_prices": [
             166147,
@@ -393,6 +394,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -657,6 +659,7 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
@@ -719,6 +722,13 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 163000,
+                "modelo": "SIN COCHE",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 39255 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA- | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 153000,
                 "modelo": "SIN COCHE",
                 "dia": "VIERNES PAR",
@@ -779,13 +789,6 @@
                 "modelo": "VOLKSWAGEN",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39209 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 162176,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39202 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
                 "fuente": "STAC",
@@ -1104,5 +1107,5 @@
             }
         ]
     },
-    "updated_at": "30/08/2026 12:44"
+    "updated_at": "31/08/2026 15:00"
 }
