@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 59,
-        "volatility": 13590
+        "volume": 54,
+        "volatility": 9801
     },
     "charts": {
         "history_dates": [
@@ -227,7 +227,8 @@
             "2026-08-31",
             "2026-09-01",
             "2026-09-02",
-            "2026-09-03"
+            "2026-09-03",
+            "2026-09-04"
         ],
         "history_prices": [
             166147,
@@ -397,6 +398,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -669,19 +671,20 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 161563,
-            "JUEVES PAR": 160563,
-            "LUNES IMPAR": 170399,
+            "JUEVES IMPAR": 162563,
+            "JUEVES PAR": 160906,
+            "LUNES IMPAR": 169725,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 165995,
             "MARTES PAR": 167563,
-            "MIERCOLES IMPAR": 178992,
+            "MIERCOLES IMPAR": 175333,
             "MIERCOLES PAR": 160000,
-            "NO ESPECIFICADO": 168063,
-            "VIERNES IMPAR": 164801,
+            "NO ESPECIFICADO": 169476,
+            "VIERNES IMPAR": 174039,
             "VIERNES PAR": 155563
         }
     },
@@ -689,26 +692,10 @@
         "cheapest_offers": [
             {
                 "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 96162,
-                "precio_total": 100000,
-                "valor_coche": 3838
-            },
-            {
-                "fuente": "STAC",
                 "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 145563,
                 "precio_total": 150000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "JUEVES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 147563,
-                "precio_total": 152000,
                 "valor_coche": 4437
             },
             {
@@ -726,9 +713,39 @@
                 "precio_neto": 149000,
                 "precio_total": 149000,
                 "valor_coche": 0
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "JUEVES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 150000,
+                "precio_total": 150000,
+                "valor_coche": 0
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 150563,
+                "precio_total": 155000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 150000,
+                "modelo": "SIN COCHE",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39281 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 164675,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39279 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 149000,
@@ -784,20 +801,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39228 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 150000,
-                "modelo": "SIN COCHE",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 39224 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARTCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 165000,
-                "modelo": "SIN COCHE",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 39212 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
             },
             {
                 "fuente": "STAC",
@@ -899,13 +902,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 147563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES PAR",
-                "raw": "Referencia: 1029 JUEVES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 167563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
@@ -917,13 +913,6 @@
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 1027 JUEVES IMPAR PMR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR Adaptada...."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 1026 JUEVES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de SEPTI..."
             },
             {
                 "fuente": "STAC",
@@ -1018,13 +1007,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 96162,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 998 LICENCIA DE PREMIÀ DE DALT |  | Se vende licencia con vehículo con 2 años de antigüe..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES PAR",
@@ -1039,7 +1021,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 178992,
+                "precio_neto": 175333,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MIERCOLES IMPAR",
                 "raw": "Referencia: 993 MIERCOLES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 4 años ..."
@@ -1057,13 +1039,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 990 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 170563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 989 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             },
             {
                 "fuente": "STAC",
@@ -1130,19 +1105,12 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 173725,
+                "precio_neto": 169725,
                 "modelo": "DACIA JOGGER",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 951 LUNES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Híbrido, cambio automát..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 939 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             }
         ]
     },
-    "updated_at": "03/09/2026 12:03"
+    "updated_at": "04/09/2026 12:05"
 }
