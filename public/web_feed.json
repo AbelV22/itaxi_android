@@ -4,8 +4,8 @@
         "delta_value": 0,
         "delta_percent": 0.0,
         "direction": "up",
-        "volume": 54,
-        "volatility": 9801
+        "volume": 49,
+        "volatility": 10219
     },
     "charts": {
         "history_dates": [
@@ -228,7 +228,8 @@
             "2026-09-01",
             "2026-09-02",
             "2026-09-03",
-            "2026-09-04"
+            "2026-09-04",
+            "2026-09-05"
         ],
         "history_prices": [
             166147,
@@ -398,6 +399,7 @@
             165563,
             165563,
             166145,
+            165563,
             165563,
             165563,
             165563,
@@ -672,18 +674,19 @@
             165563,
             165563,
             165563,
+            165563,
             165563
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
             "JUEVES PAR": 160906,
-            "LUNES IMPAR": 169725,
+            "LUNES IMPAR": 168644,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 165995,
+            "MARTES IMPAR": 164730,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 175333,
             "MIERCOLES PAR": 160000,
-            "NO ESPECIFICADO": 169476,
+            "NO ESPECIFICADO": 173389,
             "VIERNES IMPAR": 174039,
             "VIERNES PAR": 155563
         }
@@ -839,13 +842,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Referencia: 1037/2 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 174218,
                 "modelo": "MERCEDES CLASE V",
                 "dia": "LUNES PAR",
@@ -944,17 +940,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 179409,
+                "precio_neto": 153409,
                 "modelo": "MODEL 3",
                 "dia": "LUNES IMPAR",
-                "raw": "Referencia: 734/2 LUNES IMPAR |  | Se vende licencia con vehículo TESLA model3 MODEL 3 con 1.5 años ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 164563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 734 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
+                "raw": "Referencia: 734 LUNES IMPAR |  | Se vende licencia con vehículo TESLA model3 MODEL 3 con 1.5 años de..."
             },
             {
                 "fuente": "STAC",
@@ -1038,13 +1027,6 @@
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 990 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 988 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | ..."
             },
             {
@@ -1053,13 +1035,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES PAR",
                 "raw": "Referencia: 985 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio au..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 970/2 MARTES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
             },
             {
                 "fuente": "STAC",
@@ -1084,13 +1059,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 172018,
-                "modelo": "DACIA JOGGER",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 970 MARTES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP y cambio ..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -1112,5 +1080,5 @@
             }
         ]
     },
-    "updated_at": "04/09/2026 12:05"
+    "updated_at": "05/09/2026 11:14"
 }
