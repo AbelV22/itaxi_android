@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165563,
-        "delta_value": -374,
-        "delta_percent": -0.23,
-        "direction": "down",
-        "volume": 40,
-        "volatility": 10465
+        "current_price": 166029,
+        "delta_value": 466,
+        "delta_percent": 0.28,
+        "direction": "up",
+        "volume": 51,
+        "volatility": 10534
     },
     "charts": {
         "history_dates": [
@@ -232,7 +232,8 @@
             "2026-09-05",
             "2026-09-06",
             "2026-09-07",
-            "2026-09-08"
+            "2026-09-08",
+            "2026-09-09"
         ],
         "history_prices": [
             166147,
@@ -458,7 +459,8 @@
             165563,
             165563,
             165937,
-            165563
+            165563,
+            166029
         ],
         "history_sma_7": [
             0,
@@ -684,18 +686,20 @@
             165563,
             165563,
             165616,
-            165616
+            165616,
+            165683
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 163063,
             "JUEVES PAR": 160906,
             "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
+            "MARTES IMPAR": 174346,
             "MARTES PAR": 167563,
-            "MIERCOLES IMPAR": 175333,
-            "NO ESPECIFICADO": 173389,
+            "MIERCOLES IMPAR": 182342,
+            "NO ESPECIFICADO": 169422,
             "VIERNES IMPAR": 174042,
-            "VIERNES PAR": 154886
+            "VIERNES PAR": 155563
         }
     },
     "market_depth": {
@@ -717,6 +721,14 @@
                 "valor_coche": 4437
             },
             {
+                "fuente": "SOLANO",
+                "dia": "JUEVES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 150000,
+                "precio_total": 150000,
+                "valor_coche": 0
+            },
+            {
                 "fuente": "STAC",
                 "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
@@ -731,17 +743,86 @@
                 "precio_neto": 153409,
                 "precio_total": 169000,
                 "valor_coche": 15591
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "TOYOTA PRIUS",
-                "precio_neto": 154210,
-                "precio_total": 165000,
-                "valor_coche": 10790
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 178785,
+                "modelo": "MERCEDES VITO",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39309 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 189352,
+                "modelo": "FORD",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39307 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 174849,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39304 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 154638,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39302 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 171955,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "MARTES PAR",
+                "raw": "Ref:  | 39297 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 179210,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39295 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166996,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39293 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166029,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Ref:  | 39288 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA-VIERNES PAR-JOGGER ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 150000,
+                "modelo": "SIN COCHE",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39281 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 164675,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39279 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 169907,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 1045 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, camb..."
+            },
             {
                 "fuente": "STAC",
                 "precio_neto": 155563,
@@ -751,7 +832,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 174422,
+                "precio_neto": 169422,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1043 MIÉRCOLES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, c..."
@@ -1024,5 +1105,5 @@
             }
         ]
     },
-    "updated_at": "08/09/2026 12:05"
+    "updated_at": "09/09/2026 12:16"
 }
