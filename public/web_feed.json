@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165983,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 52,
-        "volatility": 10659
+        "current_price": 165563,
+        "delta_value": -420,
+        "delta_percent": -0.25,
+        "direction": "down",
+        "volume": 53,
+        "volatility": 10850
     },
     "charts": {
         "history_dates": [
@@ -237,7 +237,8 @@
             "2026-09-10",
             "2026-09-11",
             "2026-09-12",
-            "2026-09-13"
+            "2026-09-13",
+            "2026-09-14"
         ],
         "history_prices": [
             166147,
@@ -468,7 +469,8 @@
             165983,
             165983,
             165983,
-            165983
+            165983,
+            165563
         ],
         "history_sma_7": [
             0,
@@ -699,14 +701,15 @@
             165743,
             165803,
             165863,
-            165923
+            165923,
+            165869
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
             "JUEVES PAR": 160906,
             "LUNES IMPAR": 166563,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 174346,
+            "MARTES IMPAR": 169907,
             "MARTES PAR": 167563,
             "MIERCOLES IMPAR": 182342,
             "NO ESPECIFICADO": 167492,
@@ -718,18 +721,18 @@
         "cheapest_offers": [
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 145563,
-                "precio_total": 150000,
+                "precio_neto": 144063,
+                "precio_total": 148500,
                 "valor_coche": 4437
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 148063,
-                "precio_total": 152500,
+                "precio_neto": 145563,
+                "precio_total": 150000,
                 "valor_coche": 4437
             },
             {
@@ -758,6 +761,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 160000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39316 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI BA..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 178785,
@@ -822,11 +832,11 @@
                 "raw": "Ref:  | 39261 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 160000,
-                "modelo": "SIN COCHE",
+                "fuente": "STAC",
+                "precio_neto": 155063,
+                "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39255 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA- | LICENCIA TAXI EN..."
+                "raw": "Referencia: 1048 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. INCL..."
             },
             {
                 "fuente": "STAC",
@@ -858,7 +868,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 148063,
+                "precio_neto": 144063,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 1042 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVI..."
@@ -998,7 +1008,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 167563,
+                "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
                 "raw": "Referencia: 1012 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
@@ -1124,5 +1134,5 @@
             }
         ]
     },
-    "updated_at": "13/09/2026 12:40"
+    "updated_at": "14/09/2026 13:50"
 }
