@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 165983,
+        "delta_value": 420,
+        "delta_percent": 0.25,
         "direction": "up",
-        "volume": 47,
-        "volatility": 10510
+        "volume": 50,
+        "volatility": 10022
     },
     "charts": {
         "history_dates": [
@@ -241,7 +241,8 @@
             "2026-09-14",
             "2026-09-15",
             "2026-09-16",
-            "2026-09-17"
+            "2026-09-17",
+            "2026-09-18"
         ],
         "history_prices": [
             166147,
@@ -476,7 +477,8 @@
             165563,
             165563,
             165563,
-            165563
+            165563,
+            165983
         ],
         "history_sma_7": [
             0,
@@ -711,42 +713,27 @@
             165869,
             165869,
             165803,
+            165743,
             165743
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 163063,
+            "JUEVES IMPAR": 162563,
             "JUEVES PAR": 160563,
-            "LUNES IMPAR": 166563,
+            "LUNES IMPAR": 167563,
             "LUNES PAR": 165563,
             "MARTES IMPAR": 171808,
-            "MARTES PAR": 163563,
+            "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 175333,
             "NO ESPECIFICADO": 167524,
-            "VIERNES IMPAR": 174042,
-            "VIERNES PAR": 155541
+            "VIERNES IMPAR": 174447,
+            "VIERNES PAR": 159782
         }
     },
     "market_depth": {
         "cheapest_offers": [
             {
                 "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 144063,
-                "precio_total": 148500,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 145563,
-                "precio_total": 150000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "JUEVES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
@@ -754,7 +741,7 @@
             },
             {
                 "fuente": "STAC",
-                "dia": "JUEVES PAR",
+                "dia": "VIERNES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
@@ -767,9 +754,95 @@
                 "precio_neto": 151563,
                 "precio_total": 156000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "LUNES IMPAR",
+                "modelo": "MODEL 3",
+                "precio_neto": 153409,
+                "precio_total": 169000,
+                "valor_coche": 15591
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "TOYOTA PRIUS",
+                "precio_neto": 154210,
+                "precio_total": 165000,
+                "valor_coche": 10790
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 172513,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39333 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 161265,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 39318 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 160000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39316 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI BA..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 178785,
+                "modelo": "MERCEDES VITO",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39309 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 189352,
+                "modelo": "FORD",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39307 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 174849,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39304 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 171955,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "MARTES PAR",
+                "raw": "Ref:  | 39297 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 179210,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39295 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166996,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39293 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 166029,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Ref:  | 39288 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA-VIERNES PAR-JOGGER ..."
+            },
             {
                 "fuente": "STAC",
                 "precio_neto": 156872,
@@ -783,13 +856,6 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1046 MIÉRCOLES IMPAR |  | Se vende licencia con vehículo Dacia Jogger GAS y cambio MANUA..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 152563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1016 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | P..."
             },
             {
                 "fuente": "STAC",
@@ -839,20 +905,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Referencia: 1044 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 169422,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1043 MIÉRCOLES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, c..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 144063,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 1042 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVI..."
             },
             {
                 "fuente": "STAC",
@@ -919,31 +971,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 145563,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 1031 VIERNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de OCTUBR..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 161250,
-                "modelo": "DACIA JOGGER",
-                "dia": "JUEVES PAR",
-                "raw": "Referencia: 1030 JUEVES PAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP, cambio MA..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 161563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
                 "raw": "Referencia: 1028 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 182016,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES IMPAR",
-                "raw": "Referencia: 1027 JUEVES IMPAR PMR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY PMR Adaptada...."
             },
             {
                 "fuente": "STAC",
@@ -998,13 +1029,6 @@
                 "fuente": "STAC",
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 1008 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
                 "raw": "Referencia: 1004 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir del 12 de ..."
             },
@@ -1024,7 +1048,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 164563,
+                "precio_neto": 154563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVIE..."
@@ -1101,5 +1125,5 @@
             }
         ]
     },
-    "updated_at": "17/09/2026 12:32"
+    "updated_at": "18/09/2026 12:10"
 }
