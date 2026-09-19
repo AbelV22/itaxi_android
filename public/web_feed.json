@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165983,
-        "delta_value": 420,
-        "delta_percent": 0.25,
-        "direction": "up",
+        "current_price": 165750,
+        "delta_value": -233,
+        "delta_percent": -0.14,
+        "direction": "down",
         "volume": 50,
-        "volatility": 10022
+        "volatility": 10107
     },
     "charts": {
         "history_dates": [
@@ -242,7 +242,8 @@
             "2026-09-15",
             "2026-09-16",
             "2026-09-17",
-            "2026-09-18"
+            "2026-09-18",
+            "2026-09-19"
         ],
         "history_prices": [
             166147,
@@ -478,7 +479,8 @@
             165563,
             165563,
             165563,
-            165983
+            165983,
+            165750
         ],
         "history_sma_7": [
             0,
@@ -714,7 +716,8 @@
             165869,
             165803,
             165743,
-            165743
+            165743,
+            165709
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
@@ -725,8 +728,8 @@
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 175333,
             "NO ESPECIFICADO": 167524,
-            "VIERNES IMPAR": 174447,
-            "VIERNES PAR": 159782
+            "VIERNES IMPAR": 174045,
+            "VIERNES PAR": 156872
         }
     },
     "market_depth": {
@@ -773,6 +776,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 157728,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39342 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 172513,
@@ -835,13 +845,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 39293 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BERCALONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 166029,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES PAR",
-                "raw": "Ref:  | 39288 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA TAXI EN VENTA BARCELONA-VIERNES PAR-JOGGER ..."
             },
             {
                 "fuente": "STAC",
@@ -1125,5 +1128,5 @@
             }
         ]
     },
-    "updated_at": "18/09/2026 12:10"
+    "updated_at": "19/09/2026 11:54"
 }
