@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 164907,
+        "delta_value": -656,
+        "delta_percent": -0.4,
+        "direction": "down",
         "volume": 49,
-        "volatility": 10088
+        "volatility": 10238
     },
     "charts": {
         "history_dates": [
@@ -245,7 +245,8 @@
             "2026-09-18",
             "2026-09-19",
             "2026-09-20",
-            "2026-09-21"
+            "2026-09-21",
+            "2026-09-22"
         ],
         "history_prices": [
             166147,
@@ -484,7 +485,8 @@
             165983,
             165750,
             165563,
-            165563
+            165563,
+            164907
         ],
         "history_sma_7": [
             0,
@@ -723,18 +725,19 @@
             165743,
             165709,
             165649,
-            165649
+            165649,
+            165556
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 161563,
             "JUEVES PAR": 160563,
             "LUNES IMPAR": 168644,
             "LUNES PAR": 165563,
-            "MARTES IMPAR": 171808,
+            "MARTES IMPAR": 169308,
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 172513,
             "NO ESPECIFICADO": 167524,
-            "VIERNES IMPAR": 165883,
+            "VIERNES IMPAR": 165716,
             "VIERNES PAR": 155541
         }
     },
@@ -765,16 +768,16 @@
                 "valor_coche": 0
             },
             {
-                "fuente": "STAC",
-                "dia": "JUEVES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
+                "fuente": "SOLANO",
+                "dia": "VIERNES IMPAR",
+                "modelo": "TOYOTA COROLLA",
+                "precio_neto": 149848,
+                "precio_total": 173000,
+                "valor_coche": 23152
             },
             {
                 "fuente": "STAC",
-                "dia": "VIERNES PAR",
+                "dia": "JUEVES PAR",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
@@ -833,7 +836,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 157728,
+                "precio_neto": 149848,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 39342 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
@@ -896,7 +899,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 169907,
+                "precio_neto": 164907,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
                 "raw": "Referencia: 1045 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, camb..."
@@ -1127,5 +1130,5 @@
             }
         ]
     },
-    "updated_at": "21/09/2026 13:52"
+    "updated_at": "22/09/2026 12:31"
 }
