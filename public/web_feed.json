@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 164907,
-        "delta_value": -656,
-        "delta_percent": -0.4,
+        "current_price": 163563,
+        "delta_value": -1344,
+        "delta_percent": -0.82,
         "direction": "down",
-        "volume": 49,
-        "volatility": 10238
+        "volume": 47,
+        "volatility": 10528
     },
     "charts": {
         "history_dates": [
@@ -246,7 +246,8 @@
             "2026-09-19",
             "2026-09-20",
             "2026-09-21",
-            "2026-09-22"
+            "2026-09-22",
+            "2026-09-23"
         ],
         "history_prices": [
             166147,
@@ -486,7 +487,8 @@
             165750,
             165563,
             165563,
-            164907
+            164907,
+            163563
         ],
         "history_sma_7": [
             0,
@@ -726,13 +728,14 @@
             165709,
             165649,
             165649,
-            165556
+            165556,
+            165270
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 161563,
             "JUEVES PAR": 160563,
-            "LUNES IMPAR": 168644,
-            "LUNES PAR": 165563,
+            "LUNES IMPAR": 169725,
+            "LUNES PAR": 167390,
             "MARTES IMPAR": 169308,
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 172513,
@@ -892,7 +895,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160563,
+                "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1047 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de DICI..."
@@ -997,7 +1000,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 165563,
+                "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES PAR",
                 "raw": "Referencia: 1015 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato. Incluy..."
@@ -1022,13 +1025,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 1011 MIÉRCOLES PAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 165563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Referencia: 1010 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Preci..."
             },
             {
                 "fuente": "STAC",
@@ -1088,13 +1084,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 167563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 982 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -1130,5 +1119,5 @@
             }
         ]
     },
-    "updated_at": "22/09/2026 12:31"
+    "updated_at": "23/09/2026 12:41"
 }
