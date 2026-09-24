@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163563,
-        "delta_value": -1344,
-        "delta_percent": -0.82,
+        "current_price": 162693,
+        "delta_value": -870,
+        "delta_percent": -0.53,
         "direction": "down",
-        "volume": 47,
-        "volatility": 10528
+        "volume": 53,
+        "volatility": 10349
     },
     "charts": {
         "history_dates": [
@@ -247,7 +247,8 @@
             "2026-09-20",
             "2026-09-21",
             "2026-09-22",
-            "2026-09-23"
+            "2026-09-23",
+            "2026-09-24"
         ],
         "history_prices": [
             166147,
@@ -488,7 +489,8 @@
             165563,
             165563,
             164907,
-            163563
+            163563,
+            162693
         ],
         "history_sma_7": [
             0,
@@ -729,10 +731,11 @@
             165649,
             165649,
             165556,
-            165270
+            165270,
+            164860
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 161563,
+            "JUEVES IMPAR": 162563,
             "JUEVES PAR": 160563,
             "LUNES IMPAR": 169725,
             "LUNES PAR": 167390,
@@ -740,18 +743,34 @@
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 172513,
             "NO ESPECIFICADO": 167524,
-            "VIERNES IMPAR": 165716,
-            "VIERNES PAR": 155541
+            "VIERNES IMPAR": 160997,
+            "VIERNES PAR": 156872
         }
     },
     "market_depth": {
         "cheapest_offers": [
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "TOYOTA PRIUS",
+                "precio_neto": 147676,
+                "precio_total": 160000,
+                "valor_coche": 12324
+            },
             {
                 "fuente": "SOLANO",
                 "dia": "JUEVES IMPAR",
                 "modelo": "SIN COCHE",
                 "precio_neto": 148000,
                 "precio_total": 148000,
+                "valor_coche": 0
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "VIERNES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 149000,
+                "precio_total": 149000,
                 "valor_coche": 0
             },
             {
@@ -765,26 +784,10 @@
             {
                 "fuente": "SOLANO",
                 "dia": "VIERNES IMPAR",
-                "modelo": "SIN COCHE",
-                "precio_neto": 149000,
-                "precio_total": 149000,
-                "valor_coche": 0
-            },
-            {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
                 "modelo": "TOYOTA COROLLA",
                 "precio_neto": 149848,
                 "precio_total": 173000,
                 "valor_coche": 23152
-            },
-            {
-                "fuente": "STAC",
-                "dia": "JUEVES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
@@ -857,6 +860,48 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES PAR",
                 "raw": "Ref:  | 39318 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 164602,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 1059 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring Híbrido, c..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 147676,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1058 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 161978,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1057 VIERNES PAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 6 plazas (NO renov..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 151854,
+                "modelo": "DACIA JOGGER",
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 1056 VIERNES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP y cambi..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 157161,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1055 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 166664,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "JUEVES IMPAR",
+                "raw": "Referencia: 1053 JUEVES IMPAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio ..."
             },
             {
                 "fuente": "STAC",
@@ -1119,5 +1164,5 @@
             }
         ]
     },
-    "updated_at": "23/09/2026 12:41"
+    "updated_at": "24/09/2026 12:40"
 }
