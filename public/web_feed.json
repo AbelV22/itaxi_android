@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 55,
-        "volatility": 10107
+        "current_price": 163128,
+        "delta_value": -435,
+        "delta_percent": -0.27,
+        "direction": "down",
+        "volume": 54,
+        "volatility": 10256
     },
     "charts": {
         "history_dates": [
@@ -253,7 +253,8 @@
             "2026-09-26",
             "2026-09-27",
             "2026-09-28",
-            "2026-09-29"
+            "2026-09-29",
+            "2026-09-30"
         ],
         "history_prices": [
             166147,
@@ -500,7 +501,8 @@
             162693,
             162693,
             163563,
-            163563
+            163563,
+            163128
         ],
         "history_sma_7": [
             0,
@@ -747,14 +749,15 @@
             163953,
             163543,
             163257,
-            163065
+            163065,
+            163003
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 161864,
             "JUEVES PAR": 160563,
             "LUNES IMPAR": 169725,
             "LUNES PAR": 167390,
-            "MARTES IMPAR": 171296,
+            "MARTES IMPAR": 172502,
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 172333,
             "NO ESPECIFICADO": 167524,
@@ -976,13 +979,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 164907,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MARTES IMPAR",
-                "raw": "Referencia: 1045 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, camb..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
@@ -1053,7 +1049,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 161563,
+                "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
                 "raw": "Referencia: 1028 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
@@ -1126,7 +1122,7 @@
                 "precio_neto": 154563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de NOVIE..."
+                "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
             },
             {
                 "fuente": "STAC",
@@ -1193,5 +1189,5 @@
             }
         ]
     },
-    "updated_at": "29/09/2026 13:56"
+    "updated_at": "30/09/2026 13:33"
 }
