@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163128,
+        "current_price": 162693,
         "delta_value": -435,
         "delta_percent": -0.27,
         "direction": "down",
-        "volume": 54,
-        "volatility": 10256
+        "volume": 53,
+        "volatility": 10355
     },
     "charts": {
         "history_dates": [
@@ -254,7 +254,8 @@
             "2026-09-27",
             "2026-09-28",
             "2026-09-29",
-            "2026-09-30"
+            "2026-09-30",
+            "2026-10-01"
         ],
         "history_prices": [
             166147,
@@ -502,7 +503,8 @@
             162693,
             163563,
             163563,
-            163128
+            163128,
+            162693
         ],
         "history_sma_7": [
             0,
@@ -750,6 +752,7 @@
             163543,
             163257,
             163065,
+            163003,
             163003
         ],
         "price_by_day_descanso": {
@@ -760,7 +763,7 @@
             "MARTES IMPAR": 172502,
             "MARTES PAR": 165563,
             "MIERCOLES IMPAR": 172333,
-            "NO ESPECIFICADO": 167524,
+            "NO ESPECIFICADO": 168231,
             "VIERNES IMPAR": 160997,
             "VIERNES PAR": 156872
         }
@@ -878,13 +881,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 39342 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 163571,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1061 MIÉRCOLES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio..."
             },
             {
                 "fuente": "STAC",
@@ -1189,5 +1185,5 @@
             }
         ]
     },
-    "updated_at": "30/09/2026 13:33"
+    "updated_at": "01/10/2026 14:23"
 }
