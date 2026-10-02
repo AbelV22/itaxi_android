@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 162693,
-        "delta_value": -435,
-        "delta_percent": -0.27,
+        "current_price": 162270,
+        "delta_value": -423,
+        "delta_percent": -0.26,
         "direction": "down",
-        "volume": 53,
-        "volatility": 10355
+        "volume": 54,
+        "volatility": 10488
     },
     "charts": {
         "history_dates": [
@@ -255,7 +255,8 @@
             "2026-09-28",
             "2026-09-29",
             "2026-09-30",
-            "2026-10-01"
+            "2026-10-01",
+            "2026-10-02"
         ],
         "history_prices": [
             166147,
@@ -504,7 +505,8 @@
             163563,
             163563,
             163128,
-            162693
+            162693,
+            162270
         ],
         "history_sma_7": [
             0,
@@ -753,12 +755,13 @@
             163257,
             163065,
             163003,
-            163003
+            163003,
+            162943
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 161864,
-            "JUEVES PAR": 160563,
-            "LUNES IMPAR": 169725,
+            "JUEVES PAR": 156063,
+            "LUNES IMPAR": 155563,
             "LUNES PAR": 167390,
             "MARTES IMPAR": 172502,
             "MARTES PAR": 165563,
@@ -773,10 +776,18 @@
             {
                 "fuente": "STAC",
                 "dia": "VIERNES PAR",
-                "modelo": "TOYOTA PRIUS",
-                "precio_neto": 147676,
-                "precio_total": 160000,
-                "valor_coche": 12324
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 145563,
+                "precio_total": 150000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "JUEVES PAR",
+                "modelo": "DACIA JOGGER",
+                "precio_neto": 147295,
+                "precio_total": 165000,
+                "valor_coche": 17705
             },
             {
                 "fuente": "SOLANO",
@@ -801,14 +812,6 @@
                 "precio_neto": 149000,
                 "precio_total": 149000,
                 "valor_coche": 0
-            },
-            {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
-                "modelo": "TOYOTA COROLLA",
-                "precio_neto": 149848,
-                "precio_total": 173000,
-                "valor_coche": 23152
             }
         ],
         "all_offers": [
@@ -884,6 +887,20 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 1064 LUNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 145563,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES PAR",
+                "raw": "Referencia: 1063 VIERNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pre..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 168938,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "NO ESPECIFICADO",
@@ -895,13 +912,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 1059 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring Híbrido, c..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 147676,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 1058 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
             },
             {
                 "fuente": "STAC",
@@ -1045,6 +1055,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 147295,
+                "modelo": "DACIA JOGGER",
+                "dia": "JUEVES PAR",
+                "raw": "Referencia: 1030 JUEVES PAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP, cambio MA..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
@@ -1052,7 +1069,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 174045,
+                "precio_neto": 169045,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 1025 VIERNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cam..."
@@ -1175,15 +1192,8 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 962 MIÉRCOLES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Gasolina/GLP i camb..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 169725,
-                "modelo": "DACIA JOGGER",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 951 LUNES IMPAR |  | Se vende licencia con vehículo Dacia Jogger Híbrido, cambio automát..."
             }
         ]
     },
-    "updated_at": "01/10/2026 14:23"
+    "updated_at": "02/10/2026 13:45"
 }
