@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 160563,
-        "delta_value": -1415,
-        "delta_percent": -0.87,
-        "direction": "down",
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
         "volume": 53,
-        "volatility": 11088
+        "volatility": 10881
     },
     "charts": {
         "history_dates": [
@@ -260,7 +260,8 @@
             "2026-10-03",
             "2026-10-04",
             "2026-10-05",
-            "2026-10-06"
+            "2026-10-06",
+            "2026-10-07"
         ],
         "history_prices": [
             166147,
@@ -514,6 +515,7 @@
             162270,
             162270,
             161978,
+            160563,
             160563
         ],
         "history_sma_7": [
@@ -768,16 +770,17 @@
             162882,
             162822,
             162596,
-            162167
+            162167,
+            161801
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 161864,
+            "JUEVES IMPAR": 162563,
             "JUEVES PAR": 151563,
             "LUNES IMPAR": 155563,
             "LUNES PAR": 166109,
-            "MARTES IMPAR": 172502,
+            "MARTES IMPAR": 171296,
             "MARTES PAR": 163063,
-            "MIERCOLES IMPAR": 172423,
+            "MIERCOLES IMPAR": 165166,
             "MIERCOLES PAR": 158000,
             "NO ESPECIFICADO": 165563,
             "VIERNES IMPAR": 166823,
@@ -804,14 +807,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "dia": "JUEVES IMPAR",
-                "modelo": "SIN COCHE",
-                "precio_neto": 148000,
-                "precio_total": 148000,
-                "valor_coche": 0
-            },
-            {
-                "fuente": "SOLANO",
                 "dia": "VIERNES IMPAR",
                 "modelo": "SIN COCHE",
                 "precio_neto": 148000,
@@ -825,9 +820,31 @@
                 "precio_neto": 148000,
                 "precio_total": 148000,
                 "valor_coche": 0
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 150563,
+                "precio_total": 155000,
+                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 155000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39402 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 158000,
+                "modelo": "SIN COCHE",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39400 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCINCIA T..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 158000,
@@ -883,20 +900,6 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 39354 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 148000,
-                "modelo": "SIN COCHE",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 39352 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 172513,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Ref:  | 39350 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
             },
             {
                 "fuente": "STAC",
@@ -1201,5 +1204,5 @@
             }
         ]
     },
-    "updated_at": "06/10/2026 14:06"
+    "updated_at": "07/10/2026 14:23"
 }
