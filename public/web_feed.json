@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 51,
-        "volatility": 10928
+        "volatility": 11707
     },
     "charts": {
         "history_dates": [
@@ -262,7 +262,8 @@
             "2026-10-05",
             "2026-10-06",
             "2026-10-07",
-            "2026-10-08"
+            "2026-10-08",
+            "2026-10-09"
         ],
         "history_prices": [
             166147,
@@ -516,6 +517,7 @@
             162270,
             162270,
             161978,
+            160563,
             160563,
             160563,
             160563
@@ -774,20 +776,21 @@
             162596,
             162167,
             161801,
-            161496
+            161496,
+            161252
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 162563,
+            "JUEVES IMPAR": 163063,
             "JUEVES PAR": 151563,
             "LUNES IMPAR": 155563,
             "LUNES PAR": 166109,
             "MARTES IMPAR": 171296,
             "MARTES PAR": 160563,
-            "MIERCOLES IMPAR": 158000,
+            "MIERCOLES IMPAR": 165166,
             "MIERCOLES PAR": 158000,
             "NO ESPECIFICADO": 165563,
             "VIERNES IMPAR": 171542,
-            "VIERNES PAR": 156872
+            "VIERNES PAR": 154210
         }
     },
     "market_depth": {
@@ -799,6 +802,14 @@
                 "precio_neto": 143219,
                 "precio_total": 156000,
                 "valor_coche": 12781
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES PAR",
+                "modelo": "TOYOTA PRIUS",
+                "precio_neto": 145161,
+                "precio_total": 148000,
+                "valor_coche": 2839
             },
             {
                 "fuente": "STAC",
@@ -823,17 +834,16 @@
                 "precio_neto": 148000,
                 "precio_total": 148000,
                 "valor_coche": 0
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 186861,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 39410 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 143219,
@@ -843,14 +853,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 158000,
-                "modelo": "SIN COCHE",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Ref:  | 39404 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 155000,
+                "precio_neto": 154000,
                 "modelo": "SIN COCHE",
                 "dia": "MARTES IMPAR",
                 "raw": "Ref:  | 39402 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
@@ -955,7 +958,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 157161,
+                "precio_neto": 145161,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES PAR",
                 "raw": "Referencia: 1055 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
@@ -1193,5 +1196,5 @@
             }
         ]
     },
-    "updated_at": "08/10/2026 14:30"
+    "updated_at": "09/10/2026 14:17"
 }
