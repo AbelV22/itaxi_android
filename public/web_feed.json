@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 159281,
-        "delta_value": 1281,
-        "delta_percent": 0.81,
-        "direction": "up",
-        "volume": 50,
-        "volatility": 12125
+        "current_price": 158000,
+        "delta_value": -1281,
+        "delta_percent": -0.8,
+        "direction": "down",
+        "volume": 51,
+        "volatility": 12147
     },
     "charts": {
         "history_dates": [
@@ -268,7 +268,8 @@
             "2026-10-11",
             "2026-10-12",
             "2026-10-13",
-            "2026-10-14"
+            "2026-10-14",
+            "2026-10-15"
         ],
         "history_prices": [
             166147,
@@ -530,7 +531,8 @@
             160563,
             160563,
             158000,
-            159281
+            159281,
+            158000
         ],
         "history_sma_7": [
             0,
@@ -792,19 +794,20 @@
             160765,
             160563,
             160196,
-            160013
+            160013,
+            159647
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
             "JUEVES PAR": 151563,
             "LUNES IMPAR": 155563,
             "LUNES PAR": 174255,
-            "MARTES IMPAR": 171296,
+            "MARTES IMPAR": 162798,
             "MARTES PAR": 163063,
             "MIERCOLES IMPAR": 165166,
             "MIERCOLES PAR": 158000,
             "NO ESPECIFICADO": 155563,
-            "VIERNES IMPAR": 164602,
+            "VIERNES IMPAR": 151854,
             "VIERNES PAR": 155541
         }
     },
@@ -828,30 +831,37 @@
             },
             {
                 "fuente": "STAC",
+                "dia": "VIERNES IMPAR",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 143563,
+                "precio_total": 148000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "SOLANO",
+                "dia": "VIERNES IMPAR",
+                "modelo": "SIN COCHE",
+                "precio_neto": 145000,
+                "precio_total": 145000,
+                "valor_coche": 0
+            },
+            {
+                "fuente": "STAC",
                 "dia": "VIERNES PAR",
                 "modelo": "TOYOTA PRIUS",
                 "precio_neto": 145161,
                 "precio_total": 148000,
                 "valor_coche": 2839
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 145563,
-                "precio_total": 150000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 145563,
-                "precio_total": 150000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 145000,
+                "modelo": "SIN COCHE",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 39428 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 176162,
@@ -916,11 +926,11 @@
                 "raw": "Ref:  | 39386 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 171296,
+                "fuente": "STAC",
+                "precio_neto": 143563,
                 "modelo": "DESCONOCIDO",
-                "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 39376 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+                "dia": "VIERNES IMPAR",
+                "raw": "Referencia: 1071 VIERNES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato / I..."
             },
             {
                 "fuente": "STAC",
@@ -1130,7 +1140,7 @@
                 "precio_neto": 165563,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES PAR",
-                "raw": "Referencia: 1004 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir del 12 de ..."
+                "raw": "Referencia: 1004 MARTES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
             },
             {
                 "fuente": "STAC",
@@ -1162,7 +1172,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 175807,
+                "precio_neto": 163807,
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "VIERNES IMPAR",
                 "raw": "Referencia: 992 VIERNES IMPAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY TDI 122CV cambio ..."
@@ -1204,5 +1214,5 @@
             }
         ]
     },
-    "updated_at": "14/10/2026 12:47"
+    "updated_at": "15/10/2026 12:34"
 }
