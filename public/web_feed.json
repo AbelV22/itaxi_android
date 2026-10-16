@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 158000,
-        "delta_value": -1281,
-        "delta_percent": -0.8,
+        "current_price": 155563,
+        "delta_value": -2437,
+        "delta_percent": -1.54,
         "direction": "down",
-        "volume": 51,
-        "volatility": 12147
+        "volume": 50,
+        "volatility": 11780
     },
     "charts": {
         "history_dates": [
@@ -269,7 +269,8 @@
             "2026-10-12",
             "2026-10-13",
             "2026-10-14",
-            "2026-10-15"
+            "2026-10-15",
+            "2026-10-16"
         ],
         "history_prices": [
             166147,
@@ -532,7 +533,8 @@
             160563,
             158000,
             159281,
-            158000
+            158000,
+            155563
         ],
         "history_sma_7": [
             0,
@@ -795,7 +797,8 @@
             160563,
             160196,
             160013,
-            159647
+            159647,
+            158933
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
@@ -804,11 +807,11 @@
             "LUNES PAR": 174255,
             "MARTES IMPAR": 162798,
             "MARTES PAR": 163063,
-            "MIERCOLES IMPAR": 165166,
-            "MIERCOLES PAR": 158000,
+            "MIERCOLES IMPAR": 168229,
+            "MIERCOLES PAR": 155000,
             "NO ESPECIFICADO": 155563,
-            "VIERNES IMPAR": 151854,
-            "VIERNES PAR": 155541
+            "VIERNES IMPAR": 148708,
+            "VIERNES PAR": 151978
         }
     },
     "market_depth": {
@@ -855,6 +858,20 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 168229,
+                "modelo": "DESCONOCIDO",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39434 | DIA DE FIESTA:  | MIEROLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI ..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 155000,
+                "modelo": "SIN COCHE",
+                "dia": "MIERCOLES PAR",
+                "raw": "Ref:  | 39432 | DIA DE FIESTA:  | MIEROLES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI VE..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 145000,
@@ -912,18 +929,11 @@
                 "raw": "Ref:  | 39400 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCINCIA T..."
             },
             {
-                "fuente": "SOLANO",
-                "precio_neto": 158000,
-                "modelo": "SIN COCHE",
-                "dia": "MIERCOLES PAR",
-                "raw": "Ref:  | 39389 | DIA DE FIESTA:  | LICENCIA TAXI VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELONA-M..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 186662,
+                "fuente": "STAC",
+                "precio_neto": 152181,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 39386 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+                "raw": "Referencia: 1072 VIERNES IMPAR |  | Se vende licencia con vehículo SsangYong TRIVOLI-XLV Gasolina/GL..."
             },
             {
                 "fuente": "STAC",
@@ -969,14 +979,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 164602,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES IMPAR",
-                "raw": "Referencia: 1059 VIERNES IMPAR |  | Se vende licencia con vehículo Toyota Corolla Touring Híbrido, c..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 161978,
+                "precio_neto": 151978,
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "VIERNES PAR",
                 "raw": "Referencia: 1057 VIERNES PAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 6 plazas (NO renov..."
@@ -1001,13 +1004,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 1053 JUEVES IMPAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 156872,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 1052 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio a..."
             },
             {
                 "fuente": "STAC",
@@ -1214,5 +1210,5 @@
             }
         ]
     },
-    "updated_at": "15/10/2026 12:34"
+    "updated_at": "16/10/2026 12:14"
 }
