@@ -272,7 +272,8 @@
             "2026-10-15",
             "2026-10-16",
             "2026-10-17",
-            "2026-10-18"
+            "2026-10-18",
+            "2026-10-19"
         ],
         "history_prices": [
             166147,
@@ -536,6 +537,7 @@
             158000,
             159281,
             158000,
+            155563,
             155563,
             155563,
             155563
@@ -804,15 +806,16 @@
             159647,
             158933,
             158219,
-            157504
+            157504,
+            156790
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
             "JUEVES PAR": 151563,
             "LUNES IMPAR": 155563,
             "LUNES PAR": 174255,
-            "MARTES IMPAR": 162798,
-            "MARTES PAR": 163063,
+            "MARTES IMPAR": 171596,
+            "MARTES PAR": 160563,
             "MIERCOLES IMPAR": 168229,
             "MIERCOLES PAR": 155000,
             "NO ESPECIFICADO": 155563,
@@ -889,8 +892,8 @@
                 "fuente": "SOLANO",
                 "precio_neto": 176162,
                 "modelo": "DESCONOCIDO",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39421 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA-MARTES PAR-COROLLA T..."
+                "dia": "MARTES IMPAR",
+                "raw": "Ref:  | 39421 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA-MARTES IMPAR-COROL..."
             },
             {
                 "fuente": "SOLANO",
@@ -1216,5 +1219,5 @@
             }
         ]
     },
-    "updated_at": "18/10/2026 12:00"
+    "updated_at": "19/10/2026 14:32"
 }
