@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 50,
-        "volatility": 11780
+        "volatility": 11879
     },
     "charts": {
         "history_dates": [
@@ -273,7 +273,8 @@
             "2026-10-16",
             "2026-10-17",
             "2026-10-18",
-            "2026-10-19"
+            "2026-10-19",
+            "2026-10-20"
         ],
         "history_prices": [
             166147,
@@ -537,6 +538,7 @@
             158000,
             159281,
             158000,
+            155563,
             155563,
             155563,
             155563,
@@ -807,18 +809,19 @@
             158933,
             158219,
             157504,
-            156790
+            156790,
+            156442
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 162563,
-            "JUEVES PAR": 151563,
+            "JUEVES PAR": 149429,
             "LUNES IMPAR": 155563,
-            "LUNES PAR": 174255,
+            "LUNES PAR": 174218,
             "MARTES IMPAR": 171596,
             "MARTES PAR": 160563,
             "MIERCOLES IMPAR": 168229,
             "MIERCOLES PAR": 155000,
-            "NO ESPECIFICADO": 155563,
+            "NO ESPECIFICADO": 164476,
             "VIERNES IMPAR": 148708,
             "VIERNES PAR": 151978
         }
@@ -939,6 +942,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 157563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES PAR",
+                "raw": "Referencia: 1073 LUNES PAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de DICIEMBR..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 152181,
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
@@ -1013,13 +1023,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Referencia: 1053 JUEVES IMPAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio ..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 1046 MIÉRCOLES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato |..."
             },
             {
                 "fuente": "STAC",
@@ -1156,7 +1159,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 151563,
+                "precio_neto": 145563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES PAR",
                 "raw": "Referencia: 997 JUEVES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Preci..."
@@ -1219,5 +1222,5 @@
             }
         ]
     },
-    "updated_at": "19/10/2026 14:32"
+    "updated_at": "20/10/2026 12:39"
 }
