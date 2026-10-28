@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 52,
-        "volatility": 11389
+        "volatility": 11343
     },
     "charts": {
         "history_dates": [
@@ -281,7 +281,8 @@
             "2026-10-24",
             "2026-10-25",
             "2026-10-26",
-            "2026-10-27"
+            "2026-10-27",
+            "2026-10-28"
         ],
         "history_prices": [
             166147,
@@ -555,6 +556,7 @@
             156000,
             156000,
             156000,
+            155781,
             155781,
             155781
         ],
@@ -831,7 +833,8 @@
             155719,
             155781,
             155812,
-            155843
+            155843,
+            155874
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 160563,
@@ -955,10 +958,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 176162,
+                "precio_neto": 174596,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 39421 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA-MARTES IMPAR-COROL..."
+                "raw": "Ref:  | 39419 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -1256,5 +1259,5 @@
             }
         ]
     },
-    "updated_at": "27/10/2026 13:06"
+    "updated_at": "28/10/2026 13:56"
 }
