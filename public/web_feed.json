@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 155781,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 157772,
+        "delta_value": 1991,
+        "delta_percent": 1.28,
         "direction": "up",
-        "volume": 52,
-        "volatility": 11343
+        "volume": 53,
+        "volatility": 12209
     },
     "charts": {
         "history_dates": [
@@ -282,7 +282,8 @@
             "2026-10-25",
             "2026-10-26",
             "2026-10-27",
-            "2026-10-28"
+            "2026-10-28",
+            "2026-10-29"
         ],
         "history_prices": [
             166147,
@@ -558,7 +559,8 @@
             156000,
             155781,
             155781,
-            155781
+            155781,
+            157772
         ],
         "history_sma_7": [
             0,
@@ -834,19 +836,20 @@
             155781,
             155812,
             155843,
-            155874
+            155874,
+            156159
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 160563,
             "JUEVES PAR": 151563,
-            "LUNES IMPAR": 153781,
-            "LUNES PAR": 157563,
+            "LUNES IMPAR": 153563,
+            "LUNES PAR": 174218,
             "MARTES IMPAR": 172138,
-            "MARTES PAR": 156000,
+            "MARTES PAR": 157781,
             "MIERCOLES IMPAR": 168229,
             "NO ESPECIFICADO": 173389,
             "VIERNES IMPAR": 148708,
-            "VIERNES PAR": 151978
+            "VIERNES PAR": 151270
         }
     },
     "market_depth": {
@@ -868,6 +871,14 @@
                 "valor_coche": 0
             },
             {
+                "fuente": "SOLANO",
+                "dia": "JUEVES PAR",
+                "modelo": "DACIA JOGGER",
+                "precio_neto": 143219,
+                "precio_total": 156000,
+                "valor_coche": 12781
+            },
+            {
                 "fuente": "STAC",
                 "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
@@ -882,17 +893,16 @@
                 "precio_neto": 145161,
                 "precio_total": 148000,
                 "valor_coche": 2839
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES IMPAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 145563,
-                "precio_total": 150000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 149563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES IMPAR",
+                "raw": "Ref:  | 39472 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA ..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 160061,
@@ -909,13 +919,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 154000,
-                "modelo": "SIN COCHE",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 39465 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 155000,
                 "modelo": "SIN COCHE",
                 "dia": "MARTES PAR",
@@ -927,20 +930,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39454 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 156000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 39452 | DIA DE FIESTA:  | MARTES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI VENT..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 152563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 39443 | DIA DE FIESTA:  | LUNES PAR | Precio:  | 157.000 | € | ESTOY INTERESADO..."
             },
             {
                 "fuente": "SOLANO",
@@ -964,11 +953,39 @@
                 "raw": "Ref:  | 39419 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
             },
             {
-                "fuente": "STAC",
-                "precio_neto": 150563,
+                "fuente": "SOLANO",
+                "precio_neto": 174293,
                 "modelo": "DESCONOCIDO",
+                "dia": "LUNES PAR",
+                "raw": "Ref:  | 39414 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 143219,
+                "modelo": "DACIA JOGGER",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 39406 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 161561,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES IMPAR",
+                "raw": "Referencia: 1078 LUNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 170518,
+                "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES IMPAR",
-                "raw": "Referencia: 1075 MARTES IMPAR |  | Se vende licencia sin vehículo. Disponibilidad: A partir de ENERO..."
+                "raw": "Referencia: 1077 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, camb..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 169458,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "JUEVES PAR",
+                "raw": "Referencia: 1076 JUEVES PAR |  | Se vende licencia con vehículo Toyota Corolla Touring Híbrido, camb..."
             },
             {
                 "fuente": "STAC",
@@ -1098,10 +1115,10 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 160563,
-                "modelo": "DESCONOCIDO",
+                "precio_neto": 182800,
+                "modelo": "VOLKSWAGEN CADDY",
                 "dia": "JUEVES PAR",
-                "raw": "Referencia: 1039 JUEVES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Prec..."
+                "raw": "Referencia: 1039 JUEVES PAR |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2025 Híbrido, cambi..."
             },
             {
                 "fuente": "STAC",
@@ -1224,13 +1241,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 154210,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES PAR",
-                "raw": "Referencia: 985 VIERNES PAR |  | Se vende licencia con vehículo Toyota Prius Plus Híbrido, cambio au..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 160563,
                 "modelo": "DESCONOCIDO",
                 "dia": "JUEVES IMPAR",
@@ -1259,5 +1269,5 @@
             }
         ]
     },
-    "updated_at": "28/10/2026 13:56"
+    "updated_at": "29/10/2026 14:04"
 }
