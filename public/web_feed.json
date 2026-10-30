@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 157772,
-        "delta_value": 1991,
-        "delta_percent": 1.28,
-        "direction": "up",
-        "volume": 53,
-        "volatility": 12209
+        "current_price": 157667,
+        "delta_value": -105,
+        "delta_percent": -0.07,
+        "direction": "down",
+        "volume": 52,
+        "volatility": 12346
     },
     "charts": {
         "history_dates": [
@@ -283,7 +283,8 @@
             "2026-10-26",
             "2026-10-27",
             "2026-10-28",
-            "2026-10-29"
+            "2026-10-29",
+            "2026-10-30"
         ],
         "history_prices": [
             166147,
@@ -560,7 +561,8 @@
             155781,
             155781,
             155781,
-            157772
+            157772,
+            157667
         ],
         "history_sma_7": [
             0,
@@ -837,12 +839,13 @@
             155812,
             155843,
             155874,
-            156159
+            156159,
+            156397
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 160563,
             "JUEVES PAR": 151563,
-            "LUNES IMPAR": 153563,
+            "LUNES IMPAR": 153486,
             "LUNES PAR": 174218,
             "MARTES IMPAR": 172138,
             "MARTES PAR": 157781,
@@ -965,13 +968,6 @@
                 "modelo": "DACIA JOGGER",
                 "dia": "JUEVES PAR",
                 "raw": "Ref:  | 39406 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 161561,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "LUNES IMPAR",
-                "raw": "Referencia: 1078 LUNES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, cambi..."
             },
             {
                 "fuente": "STAC",
@@ -1220,7 +1216,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 154563,
+                "precio_neto": 152563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 996 MIÉRCOLES PAR |  | Se vende licencia sin vehículo. Disponibilidad: De inmediato | Pr..."
@@ -1269,5 +1265,5 @@
             }
         ]
     },
-    "updated_at": "29/10/2026 14:04"
+    "updated_at": "30/10/2026 13:57"
 }
