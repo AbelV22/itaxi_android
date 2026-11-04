@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 157563,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 156666,
+        "delta_value": -897,
+        "delta_percent": -0.57,
+        "direction": "down",
         "volume": 51,
-        "volatility": 12089
+        "volatility": 11656
     },
     "charts": {
         "history_dates": [
@@ -288,7 +288,8 @@
             "2026-10-31",
             "2026-11-01",
             "2026-11-02",
-            "2026-11-03"
+            "2026-11-03",
+            "2026-11-04"
         ],
         "history_prices": [
             166147,
@@ -570,7 +571,8 @@
             157667,
             157667,
             157563,
-            157563
+            157563,
+            156666
         ],
         "history_sma_7": [
             0,
@@ -852,17 +854,18 @@
             156635,
             156873,
             157128,
-            157382
+            157382,
+            157509
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 160563,
             "JUEVES PAR": 156250,
             "LUNES IMPAR": 153486,
-            "LUNES PAR": 174218,
-            "MARTES IMPAR": 172138,
+            "LUNES PAR": 165890,
+            "MARTES IMPAR": 171328,
             "MARTES PAR": 157781,
-            "MIERCOLES IMPAR": 168229,
-            "MIERCOLES PAR": 154000,
+            "MIERCOLES IMPAR": 162220,
+            "MIERCOLES PAR": 151765,
             "NO ESPECIFICADO": 164476,
             "VIERNES IMPAR": 151854,
             "VIERNES PAR": 150563
@@ -914,6 +917,20 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 156896,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39489 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 149530,
+                "modelo": "DACIA JOGGER",
+                "dia": "MIERCOLES PAR",
+                "raw": "Ref:  | 39486 | DIA DE FIESTA:  | MIERCOLES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 154000,
                 "modelo": "SIN COCHE",
                 "dia": "MIERCOLES PAR",
@@ -928,7 +945,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 149563,
+                "precio_neto": 148563,
                 "modelo": "DESCONOCIDO",
                 "dia": "LUNES IMPAR",
                 "raw": "Ref:  | 39472 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA ..."
@@ -963,24 +980,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 168229,
+                "precio_neto": 164379,
                 "modelo": "DESCONOCIDO",
                 "dia": "MIERCOLES IMPAR",
                 "raw": "Ref:  | 39434 | DIA DE FIESTA:  | MIEROLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI ..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 174596,
-                "modelo": "DESCONOCIDO",
-                "dia": "MARTES IMPAR",
-                "raw": "Ref:  | 39419 | DIA DE FIESTA:  | MARTES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 174293,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES PAR",
-                "raw": "Ref:  | 39414 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
             },
             {
                 "fuente": "STAC",
@@ -1229,7 +1232,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 172333,
+                "precio_neto": 167333,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MIERCOLES IMPAR",
                 "raw": "Referencia: 993 MIERCOLES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 4 años ..."
@@ -1271,5 +1274,5 @@
             }
         ]
     },
-    "updated_at": "03/11/2026 14:58"
+    "updated_at": "04/11/2026 15:18"
 }
