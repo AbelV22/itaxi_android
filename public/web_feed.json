@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 155563,
-        "delta_value": -1103,
-        "delta_percent": -0.7,
-        "direction": "down",
-        "volume": 51,
-        "volatility": 11822
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
+        "volume": 52,
+        "volatility": 11759
     },
     "charts": {
         "history_dates": [
@@ -290,7 +290,8 @@
             "2026-11-02",
             "2026-11-03",
             "2026-11-04",
-            "2026-11-05"
+            "2026-11-05",
+            "2026-11-06"
         ],
         "history_prices": [
             166147,
@@ -574,6 +575,7 @@
             157563,
             157563,
             156666,
+            155563,
             155563
         ],
         "history_sma_7": [
@@ -858,14 +860,15 @@
             157128,
             157382,
             157509,
-            157193
+            157193,
+            156893
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 160563,
             "JUEVES PAR": 156250,
             "LUNES IMPAR": 151486,
             "LUNES PAR": 162890,
-            "MARTES IMPAR": 171328,
+            "MARTES IMPAR": 170518,
             "MARTES PAR": 157781,
             "MIERCOLES IMPAR": 166896,
             "MIERCOLES PAR": 153000,
@@ -987,6 +990,13 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39454 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 166494,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MARTES IMPAR",
+                "raw": "Referencia: 1082 MARTES IMPAR |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Híbrido, camb..."
             },
             {
                 "fuente": "STAC",
@@ -1277,5 +1287,5 @@
             }
         ]
     },
-    "updated_at": "05/11/2026 15:19"
+    "updated_at": "06/11/2026 14:55"
 }
