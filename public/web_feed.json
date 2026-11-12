@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 156666,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 155563,
+        "delta_value": -1103,
+        "delta_percent": -0.7,
+        "direction": "down",
         "volume": 53,
-        "volatility": 11810
+        "volatility": 11797
     },
     "charts": {
         "history_dates": [
@@ -296,7 +296,8 @@
             "2026-11-08",
             "2026-11-09",
             "2026-11-10",
-            "2026-11-11"
+            "2026-11-11",
+            "2026-11-12"
         ],
         "history_prices": [
             166147,
@@ -586,7 +587,8 @@
             154500,
             156666,
             156666,
-            156666
+            156666,
+            155563
         ],
         "history_sma_7": [
             0,
@@ -876,6 +878,7 @@
             156140,
             156012,
             155883,
+            155883,
             155883
         ],
         "price_by_day_descanso": {
@@ -938,6 +941,13 @@
         "all_offers": [
             {
                 "fuente": "SOLANO",
+                "precio_neto": 155000,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MIERCOLES IMPAR",
+                "raw": "Ref:  | 39502 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
+            },
+            {
+                "fuente": "SOLANO",
                 "precio_neto": 172194,
                 "modelo": "DESCONOCIDO",
                 "dia": "MARTES IMPAR",
@@ -998,13 +1008,6 @@
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 39454 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 164379,
-                "modelo": "DESCONOCIDO",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Ref:  | 39434 | DIA DE FIESTA:  | MIEROLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI ..."
             },
             {
                 "fuente": "STAC",
@@ -1309,5 +1312,5 @@
             }
         ]
     },
-    "updated_at": "11/11/2026 15:01"
+    "updated_at": "12/11/2026 15:54"
 }
